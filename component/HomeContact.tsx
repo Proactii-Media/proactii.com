@@ -1,7 +1,6 @@
 
 "use client";
-import React from "react";
-import { funFacts } from "@/constants/data";
+
 
 export default function ContactSection() {
     return (

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { plasticproduct } from "@/constants/data";
-import "../../engineering-products/[slug]/product-details.css";
 
 interface ProductDetailsProps {
     params: Promise<{

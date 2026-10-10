@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { products } from "@/constants/data";
+
 
 export default function HomeProducts() {
   const [itemsPerView, setItemsPerView] = useState(3);

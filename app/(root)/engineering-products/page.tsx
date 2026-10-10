@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { products } from "@/constants/data";
+
 
 export default function Productss() {
     const [activeFilter, setActiveFilter] = useState("");

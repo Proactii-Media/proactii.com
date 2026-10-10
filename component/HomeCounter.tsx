@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import { funFacts } from "@/constants/data";
 
 

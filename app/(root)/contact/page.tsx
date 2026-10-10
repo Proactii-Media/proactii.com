@@ -3,14 +3,7 @@
 "use client";
 
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { funFacts } from "@/constants/data";
-import { logos } from "@/constants/data";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";

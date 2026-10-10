@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { applications } from "@/constants/data";
+
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
