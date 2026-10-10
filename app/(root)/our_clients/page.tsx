@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { clientLogos} from "@/constants/data"
+
 
 export default function clinetLogos() {
     return (
