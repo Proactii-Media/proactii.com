@@ -275,7 +275,7 @@ export default function Header() {
                                         <img
                                             data-width="150"
                                             className="logo-white"
-                                            src="/assets/images/white_logo.png"
+                                            src="/assets/images/white_Logo.png"
                                             alt="Proactii Media"
                                         />
 
