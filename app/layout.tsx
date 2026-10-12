@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Proactii Media | IT Services & Digital Solutions",
   description: "Proactii Media - IT Services & Digital Solutions",
   icons: {
-    icon: "/assets/img/favicon/favicon.png",
+    icon: "/assets/images/fav.png",
   },
 };
 
