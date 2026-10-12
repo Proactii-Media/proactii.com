@@ -6,10 +6,6 @@
 import { logos } from "@/constants/data";
 import Image from "next/image";
 
-
-
-
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 

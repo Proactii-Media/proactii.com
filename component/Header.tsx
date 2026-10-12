@@ -124,7 +124,7 @@ export default function Header() {
 
                                     <li>
                                         <Link
-                                            href="#"
+                                            href="/blogs"
                                             onClick={() =>
                                                 setMobileMenuOpen(false)
                                             }
@@ -231,7 +231,7 @@ export default function Header() {
                                 <div className="col-xl-4">
                                     <div className="tp-header-welcome-text mb-15">
                                         <p>
-                                            Welcome to Proactii Media
+                                            Welcome to Proactii Media LLP
                                         </p>
                                     </div>
                                 </div>
@@ -398,7 +398,7 @@ export default function Header() {
 
                                                 {/* BLOG */}
                                                 <li>
-                                                    <Link href="#">
+                                                    <Link href="/blogs">
                                                         Blog
                                                     </Link>
                                                 </li>
