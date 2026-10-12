@@ -1,99 +1,6 @@
 @charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Hebo - Corporate Agency & Creative Portfolio HTML Template
-    Author: Theme_Pure
-    Support: https://help.themepure.net/support/
-    Description: Hebo – Corporate Agency & Creative Portfolio HTML Template is a modern and fully responsive template for agencies, studios, and freelancers. Clean design, smooth animations, easy customization, and SEO-friendly structure make it perfect for showcasing services and portfolios.
-    Version: 1.0.0
-
------------------------------------------------------------------------------------
-
-/************ TABLE OF CONTENTS ***************
-
-	-----------------
-    01. THEME CSS
-	-----------------
-		1.1 Theme Default
-		1.2 Common Classes
-
-	-----------------
-    02. COMPONENTS CSS
-	-----------------
-
-		2.1 Accordion
-		2.2 Animation
-		2.3 Background
-		2.4 Back to top
-		2.5 Breadcrumb
-		2.6 Buttons
-		2.7 Magic Cursor
-		2.8 Preloader
-		2.9 Search
-		2.10 Section Title
-
-	-----------------
-    03. HEADER CSS
-	-----------------
-		3.1 Header Style
-
-    ---------------------------------
-	04. MENU CSS
-	---------------------------------
-		4.1 Main Menu
-		4.2 Mobile Menu
-		4.3 offcanvas Menu
-
-	---------------------------------
-	05. BLOG CSS
-	---------------------------------
-		5.1 Blog css
-		5.2 Postbox css 
-		5.3 Recent Post css 
-		5.4 Sidebar css
-
-	---------------------------------
-	06. FOOTER CSS
-	---------------------------------
-		6.1 Footer Style 1
-		6.2 Footer Style 2
-		6.3 Footer Style 3
-		6.5 Footer Style 5
-		6.6 Footer Style 6
-		6.7 Footer Style 7
-		6.8 Footer Style 8
-		6.9 Footer Style 9
-		6.10 Footer Style 10
-
-	---------------------------------
-	07. PAGES CSS
-	---------------------------------
-		7.1 About css
-		7.2 Award Css
-		7.3 Banner Css
-		7.4 Blog Css
-		7.5 Brand Css
-		7.6 Choose Css
-		7.7 Contact Css
-		7.8 Dark Css
-		7.9 Experience Css
-		8.0 Faq Css
-		8.1 Feature Css
-		8.2 Funfact Css
-		8.3 Hero Css
-		8.4 Instagram Css
-		8.5 Portfolio Css
-		8.6 Price Css
-		8.7 Process Css
-		8.8 Project Css
-		8.9 Service Css
-		9.0 Success Css
-		9.1 Team Css
-		9.2 Testimonail Css
-		9.3 Text-slide Css
-
-
-**********************************************/
 /*----------------------------------------*/
 /*  1.1 Theme Default
 /*----------------------------------------*/
@@ -650,7 +557,7 @@ textarea {
   width: 100%;
   line-height: 60px;
   font-size: 16px;
-  padding-left: 26px;
+  padding-left: 16%;
   padding-right: 26px;
   border-radius: 8px;
   background: rgb(246, 246, 249);
@@ -17722,7 +17629,7 @@ padding-right: 20px;
 }
 @media (max-width: 575px) {
   .md-process-badge-box {
-    padding-left: 20px;
+    padding-left: 0px;
   }
 }
 .md-process-badge-item {
@@ -21933,5 +21840,47 @@ margin-bottom: 0;
 padding-right: 0px;
 }
 }
+
+.tp-footer-widget-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tp-footer-widget-social .social-link {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f2f5f8;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tp-footer-widget-social .linkedin {
+  color: #0a66c2;
+}
+
+.tp-footer-widget-social .instagram {
+  color: #e1306c;
+}
+
+.tp-footer-widget-social .facebook {
+  color: #1877f2;
+}
+
+.tp-footer-widget-social .social-link:hover {
+  background: #0098c6;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+
+
+
+
 
 

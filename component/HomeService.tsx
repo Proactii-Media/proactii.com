@@ -5,7 +5,7 @@ import { services } from "@/constants/data";
 import { useRef, useState } from "react";
 
 export default function HomeServices() {
-    const videoRef = useRef(null);
+   const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(true);
 
     const toggleVideo = async () => {

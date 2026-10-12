@@ -1,253 +1,267 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
+  try {
+    let body: Record<string, unknown>;
+
     try {
-        const body = await request.json();
-
-        const name = body.dzName;
-        const email = body.dzEmail;
-        const phone = body.dzOther?.Phone;
-        const subject = body.dzOther?.Subject;
-        const message = body.dzMessage;
-
-        // ===============================
-        // REQUIRED FIELD VALIDATION
-        // ===============================
-
-        if (!name || !email || !phone || !subject || !message) {
-            return NextResponse.json(
-                {
-                    success: false,
-                    message: "Please fill all required fields.",
-                },
-                { status: 400 }
-            );
-        }
-
-        // ===============================
-        // PHONE VALIDATION
-        // Exactly 10 digits
-        // ===============================
-
-        if (!/^\d{10}$/.test(phone)) {
-            return NextResponse.json(
-                {
-                    success: false,
-                    message: "Phone number must contain exactly 10 digits.",
-                },
-                { status: 400 }
-            );
-        }
-
-        // ===============================
-        // GMAIL TRANSPORTER
-        // ===============================
-
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: process.env.GMAIL_USER,
-                pass: process.env.GMAIL_APP_PASSWORD,
-            },
-        });
-
-        // ===============================
-        // SEND EMAIL
-        // ===============================
-
-        await transporter.sendMail({
-            from: process.env.GMAIL_USER,
-
-            to: [
-                "pm7244875@gmail.com",
-                "mukeshproactii@gmail.com",
-                "hello@proactii.com",
-            ],
-
-            replyTo: email,
-
-            subject: subject,
-
-            html: `
-                <table
-                    width="100%"
-                    cellpadding="0"
-                    cellspacing="0"
-                    border="0"
-                    style="background:#f5f5f5; font-family:Arial, Helvetica, sans-serif; color:#333333;"
-                >
-                    <tr>
-                        <td align="center" style="padding:30px 15px;">
-
-                            <table
-                                width="650"
-                                cellpadding="0"
-                                cellspacing="0"
-                                border="0"
-                                style="max-width:650px; width:100%; background:#ffffff; border-radius:10px; overflow:hidden; border:1px solid #e5e5e5;"
-                            >
-
-                                <!-- HEADER -->
-                                <tr>
-                                    <td
-                                        style="background:#d71920; padding:20px 30px; text-align:center;"
-                                    >
-                                        <h1
-                                            style="margin:0; color:#ffffff; font-size:24px; font-weight:700;"
-                                        >
-                                            New Contact Enquiry
-                                        </h1>
-
-                                        <p
-                                            style="margin:6px 0 0; color:#ffffff; font-size:14px;"
-                                        >
-                                            New enquiry received from your website
-                                        </p>
-                                    </td>
-                                </tr>
-
-                                <!-- CONTENT -->
-                                <tr>
-                                    <td style="padding:30px;">
-
-                                        <h2
-                                            style="
-                                                margin:0 0 20px;
-                                                font-size:18px;
-                                                color:#222222;
-                                                border-left:4px solid #d71920;
-                                                padding-left:12px;
-                                            "
-                                        >
-                                            Enquiry Details
-                                        </h2>
-
-                                        <!-- NAME -->
-                                        <div
-                                            style="padding:14px 16px; margin-bottom:10px; background:#fafafa; border-left:4px solid #d71920; border-radius:4px;"
-                                        >
-                                            <strong style="color:#d71920;">
-                                                Name
-                                            </strong>
-
-                                            <div
-                                                style="margin-top:5px; font-size:15px; color:#333;"
-                                            >
-                                                ${name}
-                                            </div>
-                                        </div>
-
-                                        <!-- EMAIL -->
-                                        <div
-                                            style="padding:14px 16px; margin-bottom:10px; background:#fafafa; border-left:4px solid #d71920; border-radius:4px;"
-                                        >
-                                            <strong style="color:#d71920;">
-                                                Email
-                                            </strong>
-
-                                            <div
-                                                style="margin-top:5px; font-size:15px; color:#333;"
-                                            >
-                                                ${email}
-                                            </div>
-                                        </div>
-
-                                        <!-- PHONE -->
-                                        <div
-                                            style="padding:14px 16px; margin-bottom:10px; background:#fafafa; border-left:4px solid #d71920; border-radius:4px;"
-                                        >
-                                            <strong style="color:#d71920;">
-                                                Phone
-                                            </strong>
-
-                                            <div
-                                                style="margin-top:5px; font-size:15px; color:#333;"
-                                            >
-                                                ${phone}
-                                            </div>
-                                        </div>
-
-                                        <!-- SUBJECT -->
-                                        <div
-                                            style="padding:14px 16px; margin-bottom:10px; background:#fafafa; border-left:4px solid #d71920; border-radius:4px;"
-                                        >
-                                            <strong style="color:#d71920;">
-                                                Subject
-                                            </strong>
-
-                                            <div
-                                                style="margin-top:5px; font-size:15px; color:#333;"
-                                            >
-                                                ${subject}
-                                            </div>
-                                        </div>
-
-                                        <!-- MESSAGE -->
-                                        <div
-                                            style="padding:18px; margin-top:20px; background:#fff5f5; border:1px solid #f1c1c1; border-radius:6px;"
-                                        >
-                                            <div
-                                                style="color:#d71920; font-weight:700; margin-bottom:10px;"
-                                            >
-                                                Message
-                                            </div>
-
-                                            <div
-                                                style="font-size:15px; line-height:1.7; color:#444444; white-space:pre-line;"
-                                            >
-                                                ${message}
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
-                                <!-- FOOTER -->
-                                <tr>
-                                    <td
-                                        style="background:#222222; padding:18px 25px; text-align:center;"
-                                    >
-                                        <p
-                                            style="margin:0; color:#ffffff; font-size:13px;"
-                                        >
-                                            This enquiry was submitted from your company website.
-                                        </p>
-
-                                        <p
-                                            style="margin:7px 0 0; color:#d71920; font-size:13px; font-weight:600;"
-                                        >
-                                            Subham Moulds & Engineering
-                                        </p>
-                                    </td>
-                                </tr>
-
-                            </table>
-
-                        </td>
-                    </tr>
-                </table>
-            `,
-        });
-
-        console.log("EMAIL SENT SUCCESSFULLY");
-
-        return NextResponse.json({
-            success: true,
-            message: "Your form submitted successfully.",
-        });
-    } catch (error) {
-        console.error("MAIL ERROR:", error);
-
-        return NextResponse.json(
-            {
-                success: false,
-                message:
-                    error instanceof Error
-                        ? error.message
-                        : "Mail failed. Please try again.",
-            },
-            { status: 500 }
-        );
+      body = await request.json();
+    } catch {
+      return NextResponse.json(
+        { success: false, message: "Invalid request data." },
+        { status: 400 }
+      );
     }
+
+    const getString = (value: unknown) =>
+      typeof value === "string" ? value.trim() : "";
+
+    const name = getString(body.name);
+    const email = getString(body.email);
+    const phone = getString(body.phone);
+    const subject = getString(body.subject);
+    const message = getString(body.message);
+
+    // Required fields
+    if (!name || !email || !phone || !subject || !message) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Please fill in all five required fields.",
+        },
+        { status: 400 }
+      );
+    }
+
+    // Field length validation
+    if (name.length < 2 || name.length > 100) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Name must contain between 2 and 100 characters.",
+        },
+        { status: 400 }
+      );
+    }
+
+    if (
+      email.length > 254 ||
+      subject.length > 200 ||
+      message.length > 5000
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "One or more fields exceed the allowed length.",
+        },
+        { status: 400 }
+      );
+    }
+
+    // Email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Please enter a valid email address.",
+        },
+        { status: 400 }
+      );
+    }
+
+    // Exactly 10 digits
+    if (!/^[0-9]{10}$/.test(phone)) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Phone number must contain exactly 10 digits.",
+        },
+        { status: 400 }
+      );
+    }
+
+    const gmailUser = process.env.GMAIL_USER;
+    const gmailPassword = process.env.GMAIL_APP_PASSWORD;
+
+    if (!gmailUser || !gmailPassword) {
+      console.error("Contact API: Gmail environment variables are missing.");
+
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Email service is not configured. Please try again later.",
+        },
+        { status: 500 }
+      );
+    }
+
+    const escapeHtml = (value: string) =>
+      value.replace(/[&<>"']/g, (character) => {
+        const entities: Record<string, string> = {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        };
+
+        return entities[character];
+      });
+
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone);
+    const safeSubject = escapeHtml(subject);
+    const safeMessage = escapeHtml(message).replace(/\n/g, "<br>");
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: gmailUser,
+        pass: gmailPassword,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"Proactii Website Contact" <${gmailUser}>`,
+      to: [
+        "pm7244875@gmail.com",
+        "mukeshproactii@gmail.com",
+        "hello@proactii.com",
+      ],
+      replyTo: email,
+      subject: `Website Contact: ${subject}`,
+      text: [
+        "New contact form submission",
+        "",
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone}`,
+        `Subject: ${subject}`,
+        "",
+        "Message:",
+        message,
+      ].join("\n"),
+    
+
+html: `
+<div style="margin:0;padding:20px 10px;background:#f3f5f8;font-family:Arial,Helvetica,sans-serif;color:#263445;">
+
+  <div style="max-width:580px;margin:0 auto;background:#ffffff;border:1px solid #e5e9ef;border-radius:8px;overflow:hidden;">
+
+    <!-- Brand Colors -->
+    <div style="height:4px;background:linear-gradient(90deg,#E80028 25%,#FFC928 25%,#FFC928 50%,#28A745 50%,#28A745 75%,#0098C6 75%);"></div>
+
+    <!-- Header -->
+    <div style="padding:20px 24px;border-bottom:1px solid #edf0f4;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="vertical-align:middle;">
+            <img
+              src="https://proactii.com/assets/images/logo/Proactii-New-Final-01-1-260x79.png"
+              alt="Proactii Media LLP"
+              width="135"
+              style="display:block;width:135px;max-width:100%;height:auto;"
+            />
+          </td>
+          <td style="text-align:right;vertical-align:middle;">
+            <span style="display:inline-block;padding:6px 9px;background:#eaf7fc;border-radius:4px;color:#007da5;font-size:10px;font-weight:bold;letter-spacing:0.5px;">
+              NEW ENQUIRY
+            </span>
+          </td>
+        </tr>
+      </table>
+
+      <h2 style="margin:20px 0 5px;font-size:21px;line-height:1.4;color:#172b3a;font-weight:700;">
+        New Contact Message
+      </h2>
+      <p style="margin:0;color:#788694;font-size:13px;line-height:1.6;">
+        A new enquiry has been received through your website.
+      </p>
+    </div>
+
+    <!-- Contact Details -->
+    <div style="padding:22px 24px;">
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:13px;">
+        <tr>
+          <td width="105" style="padding:11px 0;border-bottom:1px solid #edf0f4;color:#7b8794;">Name</td>
+          <td style="padding:11px 0;border-bottom:1px solid #edf0f4;color:#263445;font-weight:bold;">${safeName}</td>
+        </tr>
+        <tr>
+          <td style="padding:11px 0;border-bottom:1px solid #edf0f4;color:#7b8794;">Email</td>
+          <td style="padding:11px 0;border-bottom:1px solid #edf0f4;overflow-wrap:anywhere;">
+            <a href="mailto:${safeEmail}" style="color:#0086ad;text-decoration:none;">${safeEmail}</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:11px 0;border-bottom:1px solid #edf0f4;color:#7b8794;">Phone</td>
+          <td style="padding:11px 0;border-bottom:1px solid #edf0f4;">
+            <a href="tel:${safePhone}" style="color:#0086ad;text-decoration:none;">${safePhone}</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:11px 0;color:#7b8794;">Subject</td>
+          <td style="padding:11px 0;color:#263445;font-weight:bold;">${safeSubject}</td>
+        </tr>
+      </table>
+
+      <!-- Message -->
+      <div style="margin-top:20px;padding:16px;background:#f3f9fc;border-left:3px solid #0098C6;border-radius:4px;">
+        <div style="margin-bottom:9px;color:#007da5;font-size:12px;font-weight:bold;">
+          MESSAGE
+        </div>
+        <div style="font-size:13px;line-height:1.8;color:#394b59;white-space:pre-wrap;overflow-wrap:anywhere;">${safeMessage}</div>
+      </div>
+
+      <!-- Reply -->
+      <div style="margin-top:20px;">
+        <a href="mailto:${safeEmail}" style="display:inline-block;padding:10px 18px;background:#0098C6;border-radius:4px;color:#ffffff;font-size:12px;font-weight:bold;text-decoration:none;">
+          Reply to Enquiry
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div style="padding:16px 24px;background:#f8fafc;border-top:1px solid #edf0f4;">
+      <p style="margin:0 0 5px;color:#263445;font-size:12px;font-weight:bold;">
+        Proactii Media LLP
+      </p>
+      <p style="margin:0;color:#7b8794;font-size:11px;line-height:1.7;">
+        Digital Solutions &nbsp;|&nbsp;
+        <a href="https://proactii.com" style="color:#0086ad;text-decoration:none;">proactii.com</a>
+      </p>
+    </div>
+
+    <div style="height:3px;background:linear-gradient(90deg,#E80028,#FFC928,#28A745,#0098C6);"></div>
+
+  </div>
+</div>
+`,
+
+    });
+
+    return NextResponse.json({
+      success: true,
+      message: "Thank you! Your message has been sent successfully.",
+    });
+  } catch (error) {
+    console.error(
+      "Contact form email error:",
+      error instanceof Error ? error.message : "Unknown error"
+    );
+
+    return NextResponse.json(
+      {
+        success: false,
+        message:
+          "Unable to send your message right now. Please try again later.",
+      },
+      { status: 500 }
+    );
+  }
 }

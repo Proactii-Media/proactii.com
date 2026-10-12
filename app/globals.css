@@ -1078,7 +1078,6 @@ height: 543px;
     letter-spacing: -0.03em;
 }
 
-/* Tablet */
 @media (max-width: 1100px) {
     .agentra-section {
         min-height: auto;
@@ -1099,8 +1098,10 @@ height: 543px;
     .agentra-center-logo { grid-area: center; margin: 20px 0 30px; }
     .agentra-column-right { grid-area: right; margin-top: 0; }
 
-    .agentra-bg-large, .agentra-bg-medium {
-        position: fixed;
+    /* Circles stay absolutely positioned inside .agentra-section */
+    .agentra-bg-large,
+    .agentra-bg-medium {
+        position: absolute;
     }
 }
 
@@ -1186,9 +1187,7 @@ display: none !important;
 
 
 
-/* =========================================
-   RESPONSIVE (UPDATED)
-   ========================================= */
+
 @media (max-width: 768px) {
   .experience-slide {
     height: 350px;
@@ -1198,7 +1197,7 @@ display: none !important;
   }
 }
 
-/* Extra small devices (optional) */
+
 @media (max-width: 480px) {
   .experience-slide {
     height: 280px;
@@ -1229,7 +1228,7 @@ display: none !important;
   transform: scale(1.05);
 }
 
-/* 1. Default State: Gradient is hidden (opacity 0) */
+
 .gradient-overlay {
   position: absolute;
   top: 0;
@@ -1243,23 +1242,22 @@ display: none !important;
     rgba(0, 0, 0, 0) 75%          
   );
   pointer-events: none; 
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.4s ease; /* Smooth fade in */
+  opacity: 0; 
+  transition: opacity 0.4s ease; 
 }
 
-/* 2. Hover State: Gradient fades in */
+
 .team-card:hover .gradient-overlay {
   opacity: 1;
 }
 
-/* 3. Default State: Text is hidden and pushed down */
+
 .team-content {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.4s ease;
 }
 
-/* 4. Hover State: Text fades in and slides up */
 .team-card:hover .team-content {
   opacity: 1;
   transform: translateY(0);
@@ -1318,13 +1316,12 @@ a.contact-hover-btn svg {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Box hover animation */
 .proactii-badge:hover {
     transform: translateY(-8px);
     box-shadow: 0 18px 35px rgba(232, 0, 40, 0.35);
 }
 
-/* Icon floating animation */
+
 .proactii-badge-icon {
     width: 65px;
     height: 65px;
@@ -1338,7 +1335,7 @@ a.contact-hover-btn svg {
     transform: scale(1.15) rotate(-5deg);
 }
 
-/* Text styling */
+
 .proactii-badge .md-process-badge-content p {
     color: #ffffff;
     font-size: 17px;
@@ -1347,7 +1344,7 @@ a.contact-hover-btn svg {
     margin-bottom: 0;
 }
 
-/* Floating animation */
+
 @keyframes badgeFloat {
     0%, 100% {
         transform: translateY(0);
@@ -1357,7 +1354,7 @@ a.contact-hover-btn svg {
     }
 }
 
-/* Mobile adjustment */
+
 @media (max-width: 767px) {
     .proactii-badge {
         padding: 25px 15px;
@@ -1369,7 +1366,6 @@ a.contact-hover-btn svg {
     }
 }
 
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     .proactii-badge,
     .proactii-badge-icon {
@@ -1378,3 +1374,48 @@ a.contact-hover-btn svg {
     }
 }
 
+.linkedin-link {
+  text-align: -webkit-center;
+}
+
+.footer-contact-list {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #4b5563;
+  flex-shrink: 0;
+}
+
+.footer-contact-link {
+  color: #4b5563;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-contact-link:hover {
+  color: #0098C6;
+}
+
+
+.footer-contact-website {
+  color: #0098C6;
+  font-weight: 600;
+}
+
+.footer-contact-website:hover {
+  color: #007a9e;
+}
+
+
+.footer-contact-icon.me-15 {
+  margin-right: 15px;
+}

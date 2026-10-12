@@ -54,7 +54,14 @@ const rightServices = [
     },
 ];
 
-function ServiceCard({ item }) {
+type ServiceItem = {
+    title: string;
+    description: string;
+    icon: React.ComponentType<{ size?: number; strokeWidth?: number }>;
+    active?: boolean;
+};
+
+function ServiceCard({ item }: { item: ServiceItem }) {
     const Icon = item.icon;
 
     return (
