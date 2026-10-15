@@ -96,6 +96,7 @@ export default function HeroBanner() {
                       maxWidth: "650px",
                       fontSize: "18px",
                       lineHeight: "1.7",
+                      color: "#ffff",
                     }}
                   >
                     From websites and mobile apps to branding and digital

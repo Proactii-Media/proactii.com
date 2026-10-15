@@ -294,7 +294,7 @@ export default async function BlogDetailsPage({ params }) {
             {/* More Articles Section */}
             {/* More Articles Section */}
             <section className="tp-blog-gird-sidebar-ptb pt-80 pb-80">
-                <div className="container container-1324">
+                <div className="container container-1424">
                     <div className="row gx-30">
                         <div className="col-12 mb-40">
                             <h2 className="cr-section-content-title">

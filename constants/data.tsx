@@ -21,47 +21,47 @@ export const funFacts = [
     },
 ];
 
-export const services = [
-    {
-        id: 1,
-        number: "01",
-        title: "Online Branding",
-        description:
-            "Branding does not only create an impression in your target audience but also tells them what they can expect from your organization.",
-        icon: "/assets/images/services/branding.png",
-        link: "/services/online-branding",
-    },
+// export const services = [
+//     {
+//         id: 1,
+//         number: "01",
+//         title: "Online Branding",
+//         description:
+//             "Branding does not only create an impression in your target audience but also tells them what they can expect from your organization.",
+//         icon: "/assets/images/services/branding.png",
+//         link: "/services/online-branding",
+//     },
 
-    {
-        id: 2,
-        number: "02",
-        title: "Website Development",
-        description:
-            "Appealing and effective websites are one of the most potent marketing tools to reach wide audiences and satisfy their requirements.",
-        icon: "/assets/images/services/website.png",
-        link: "/services/web-development",
-    },
+//     {
+//         id: 2,
+//         number: "02",
+//         title: "Website Development",
+//         description:
+//             "Appealing and effective websites are one of the most potent marketing tools to reach wide audiences and satisfy their requirements.",
+//         icon: "/assets/images/services/website.png",
+//         link: "/services/web-development",
+//     },
 
-    {
-        id: 3,
-        number: "03",
-        title: "Mobile App Development",
-        description:
-            "With us, convert your ideas into user-friendly and easy-to-use applications, which increase your chances of success in the global market.",
-        icon: "/assets/images/services/app-development.png",
-        link: "/services/mobile-app-development",
-    },
+//     {
+//         id: 3,
+//         number: "03",
+//         title: "Mobile App Development",
+//         description:
+//             "With us, convert your ideas into user-friendly and easy-to-use applications, which increase your chances of success in the global market.",
+//         icon: "/assets/images/services/app-development.png",
+//         link: "/services/mobile-app-development",
+//     },
 
-    {
-        id: 4,
-        number: "04",
-        title: "Digital Marketing",
-        description:
-            "Digital marketing allows businesses to reach their customers where they are while strengthening their brands and expanding their customer base.",
-        icon: "/assets/images/services/advertising.png",
-        link: "/services/digital-marketing",
-    },
-];
+//     {
+//         id: 4,
+//         number: "04",
+//         title: "Digital Marketing",
+//         description:
+//             "Digital marketing allows businesses to reach their customers where they are while strengthening their brands and expanding their customer base.",
+//         icon: "/assets/images/services/advertising.png",
+//         link: "/services/digital-marketing",
+//     },
+// ];
 
 export const weareproactii = [
     {
@@ -642,12 +642,476 @@ export const blogPosts = [
         ]
     },
 
-
-
-
-
-
-
-
 ];
+
+
+``
+type RelatedService = {
+    title: string;
+    image: string;
+    link: string;
+
+    website_titile?: string;
+    website_des?: string[];
+    website_image?: string;
+
+    leverage_title?: string;
+    leverage?: {
+        icon: string;
+        title: string;
+        des: string;
+    }[];
+
+    process_title?: string;
+    process_des?: string | string[];
+    process_image?: string;
+
+    expertise_heading?: string;
+    expertise_titile?: string;
+    expertise_des?: string;
+
+    solution_title?: string;
+    solution_des?: string;
+
+    servicesbox?: {
+        servicesbox_icon: string;
+        servicesbox_tiitle: string;
+        servicesbox_des: string;
+    }[];
+};
+
+
+type Service = {
+    id: number;
+    number: string;
+    title: string;
+    slug: string;
+    description: string;
+    details: string | string[];
+    
+    icon: string;
+    image: string;
+    link: string;
+    highlights?: string[];
+    process: {
+        title: string;
+        description: string;
+    }[];
+    relatedServices: RelatedService[];
+};
+
+
+
+
+export const services: Service[] = [
+    {
+        id: 1,
+        number: "01",
+        title: "Online Branding",
+        slug: "online-branding",
+        description:
+            "Branding helps create an impression on your target audience and communicates what they can expect from your organization.",
+        details:
+            "Brand is the visible elements of a brand, such as color, design, and logo, that identify and distinguish the brand in consumers’ minds. Brand identity is distinct from brand image. The former corresponds to the intent behind the branding and the way a company does the following—all to cultivate a certain image in consumers’ minds:",
+        icon: "/assets/images/services/branding.png",
+        image: "/assets/images/services/online.png",
+        link: "/services-details/online-branding",
+
+        highlights: [
+            "Chooses its name",
+            "Designs its logo",
+            "Uses colors, shapes, and other visual elements in its products and promotions",
+            "Crafts the language in its advertisements",
+            "Trains employees to interact with customers"
+        ],
+
+        process: [
+            {
+                title: "Brand Discovery",
+                description: "We understand your business, target audience, competitors, and brand goals."
+            },
+            {
+                title: "Brand Strategy",
+                description: "We define your brand positioning, message, values, and visual direction."
+            },
+            {
+                title: "Brand Identity Design",
+                description: "We create your logo, color palette, typography, and other visual elements."
+            },
+            {
+                title: "Brand Implementation",
+                description: "We apply your brand identity consistently across digital platforms and promotional materials."
+            }
+        ],
+        relatedServices: [
+            {
+                title: "Brand Identity – Continue",
+                image: "/assets/images/services_details/brand.png",
+                link: "/services-category/brand-identity",
+
+                website_titile: "Brand Identity",
+                website_des: [
+                    "Proactii Media LLP is a brand identity is the face of a brand. As discussed in the previous section, a brand is an emotional and even philosophical concept, while brand identity is the visual component of a brand that represents those larger ideas.",
+                    "Brand identity includes logos, typography, colors, packaging, and messaging, and it complements and reinforces the existing reputation of a brand. Brand identity attracts new customers to a brand while making existing customers feel at home. It’s both outward- and inward-facing.",
+                    "It’s vital that brand identity be consistent. Because it’s representing and reinforcing the emotions of a brand, the message portrayed by brand identity components needs to be clear, and it needs to be the same no matter where it’s displayed.",
+                    "To manage brand identity, organizations should invest in a brand management system that helps them stay consistent while still having the flexibility and the speed necessary to succeed in today’s market. Components of this system might include a style guide, brand management software, and employee training."
+                ],
+                website_image: "/assets/images/services_details/brand.png",
+
+                leverage_title: "Leverage your <span class='text-red'>Business</span>",
+                leverage: [
+                    {
+                        icon: "/assets/images/icon/user.png",
+                        title: "Customer recognition",
+                        des: "Having a strong brand works to build customer recognition. This means when a customer is shopping for a particular product or considering a company to perform a service, they recognize your company in the running. Consumers are far more likely to choose a brand that they recognize over something unfamiliar, even if they don’t know a great deal about your company at the time.",
+                    },
+                    {
+                        icon: "/assets/images/icon/line.png",
+                        title: "Competitive edge in market",
+                        des: "Your brand is what differentiates you in the marketplace. When customers recognize and back your brand, it helps lend a competitive edge to your company. The more recognition you receive and the more you build your brand, the more you will find that your brand elevates and is competitive with other well-known brands.",
+                    },
+                    {
+                        icon: "/assets/images/icon/megaphone.png",
+                        title: "Easy introduction of new products",
+                        des: "When you already have a strong brand and loyal customers, it is often easier and less expensive to introduce new products or test them out before you further invest in them. If you have a loyal brand following, your customers will often be interested in your new products and even anticipate them being released.",
+                    },
+                    {
+                        icon: "/assets/images/icon/customer-loyalty.png",
+                        title: "Customer loyalty and shared values",
+                        des: "The recognition and elevation that a strong brand builds upon all lend to greater customer loyalty. Customers are attracted to brands that they share values with. When you build a strong brand, you need to convey these values to build an emotional connection with customers. Brand loyalty often lasts a lifetime and even transfers to future generations.",
+                    },
+                    {
+                        icon: "/assets/images/icon/shopping-cart.png",
+                        title: "Enhanced credibility and ease of purchase",
+                        des: "Having a strong, well-known brand enhances your credibility with customers, your industry, and the marketplace as a whole. As you build your credibility, you also build recognition, loyalty, and competitiveness. Everything goes hand-in-hand, and you'll find that your credibility has a direct connection to customers ease of purchase. We want to buy from companies we like, know, and trust. If your brand is credible, you're far more likely to get the sale.",
+                    },
+                    {
+                        icon: "/assets/images/icon/expand.png",
+                        title: "Easy to Expand Business",
+                        des: "When you become a known brand, you can further expand your business. Once people know about your products and services, you may easily achieve this goal. Numerous companies would want to associate with your business and this can help you to expand your business to different locations. This exponentially increases sales and provides numerous benefits. If you want your business to thrive, it is important to have a strong brand identity that conveys your essence, makes you stand out from your competitors and creates a brand experience that persuades the target audience to connect with you.",
+                    }
+                ],
+
+                process_title: "OUR <span class='text-red'>BRAND IDENTITY </span> PROCESS",
+                process_des: "Our specific set of processes attract the right customers for your business.",
+                process_image: "/assets/images/category/web-design.gif",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_titile: "BRANDING <span class='text-red'>IDENTITY</span>",
+                expertise_des: "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand.",
+
+                solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
+                solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
+
+                servicesbox:
+                    [
+                        {
+                            servicesbox_icon: "/assets/images/icon/square.png",
+                            servicesbox_tiitle: "Define your Firm",
+                            servicesbox_des: "Define your company with a brand identity. At Proactii Media LLP we know what works and what doesn't. We transfer your logo into an actual identity for your company. Who is your target audience? Demographics? What kind of language is your audience is using to communicate their informational and transnational intent?",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/roundabout.png",
+                            servicesbox_tiitle: "Impact of re-branding",
+                            servicesbox_des: "During a branding redesign, even for a small business, choices of color and its impact on overall branding should be considered. There may be times and reasons to go ahead with a re-branding attempt, but the impact should be considered and the pros and cons weighed.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/consistency.png",
+                            servicesbox_tiitle: "Consistency",
+                            servicesbox_des: "As we've seen, consistency throughout all marketing media is powerful. Any business attempting to build a strong branded image should include its website in its overall marketing plan, and the design should reflect the image being built. If you want to have consistent visitors and leads to your site.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/paint-brush.png",
+                            servicesbox_tiitle: "Color Choices",
+                            servicesbox_des: "When a company is being established or a new branding is being planned and developed, colors should be given plenty of thought and consideration. A solid choice from the start will make everything easier down the road. Google Ads operates on a pay-per-click model.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/customer-review.png",
+                            servicesbox_tiitle: "The subconscious of customers",
+                            servicesbox_des: "Most of the time, customers do not consciously associate specific colors with a company. But over the course of time, with a company's successful branding efforts, those customers will match the colors and company whether they realize it or not.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/team-collaboration.png",
+                            servicesbox_tiitle: "Unity among the different elements",
+                            servicesbox_des: "Unity among the different elements in the logo. The logo must fit together as a single unit, and not just appear as a jumble of elements pasted together.. A unified layout is one that works as a whole rather than being identified as separate pieces.",
+                        }
+                    ]
+            },
+
+
+            {
+                title: "Logo Design – Continue",
+                image: "/assets/images/services_details/logo.png",
+                link: "/services-category/logo-design",
+
+
+                website_titile: "Brand Identity",
+                website_des: [
+                    "Proactii Media LLP is a brand identity is the face of a brand. As discussed in the previous section, a brand is an emotional and even philosophical concept, while brand identity is the visual component of a brand that represents those larger ideas.",
+                    "Brand identity includes logos, typography, colors, packaging, and messaging, and it complements and reinforces the existing reputation of a brand. Brand identity attracts new customers to a brand while making existing customers feel at home. It’s both outward- and inward-facing.",
+                    "It’s vital that brand identity be consistent. Because it’s representing and reinforcing the emotions of a brand, the message portrayed by brand identity components needs to be clear, and it needs to be the same no matter where it’s displayed.",
+                    "To manage brand identity, organizations should invest in a brand management system that helps them stay consistent while still having the flexibility and the speed necessary to succeed in today’s market. Components of this system might include a style guide, brand management software, and employee training."
+                ],
+                website_image: "/assets/images/services_details/brand.png",
+
+                leverage_title: "Leverage your <span class='text-red'>Business</span>",
+                leverage: [
+                    {
+                        icon: "/assets/images/icon/user.png",
+                        title: "Customer recognition",
+                        des: "Having a strong brand works to build customer recognition. This means when a customer is shopping for a particular product or considering a company to perform a service, they recognize your company in the running. Consumers are far more likely to choose a brand that they recognize over something unfamiliar, even if they don’t know a great deal about your company at the time.",
+                    },
+                    {
+                        icon: "/assets/images/icon/line.png",
+                        title: "Competitive edge in market",
+                        des: "Your brand is what differentiates you in the marketplace. When customers recognize and back your brand, it helps lend a competitive edge to your company. The more recognition you receive and the more you build your brand, the more you will find that your brand elevates and is competitive with other well-known brands.",
+                    },
+                    {
+                        icon: "/assets/images/icon/megaphone.png",
+                        title: "Easy introduction of new products",
+                        des: "When you already have a strong brand and loyal customers, it is often easier and less expensive to introduce new products or test them out before you further invest in them. If you have a loyal brand following, your customers will often be interested in your new products and even anticipate them being released.",
+                    },
+                    {
+                        icon: "/assets/images/icon/customer-loyalty.png",
+                        title: "Customer loyalty and shared values",
+                        des: "The recognition and elevation that a strong brand builds upon all lend to greater customer loyalty. Customers are attracted to brands that they share values with. When you build a strong brand, you need to convey these values to build an emotional connection with customers. Brand loyalty often lasts a lifetime and even transfers to future generations.",
+                    },
+                    {
+                        icon: "/assets/images/icon/shopping-cart.png",
+                        title: "Enhanced credibility and ease of purchase",
+                        des: "Having a strong, well-known brand enhances your credibility with customers, your industry, and the marketplace as a whole. As you build your credibility, you also build recognition, loyalty, and competitiveness. Everything goes hand-in-hand, and you'll find that your credibility has a direct connection to customers ease of purchase. We want to buy from companies we like, know, and trust. If your brand is credible, you're far more likely to get the sale.",
+                    },
+                    {
+                        icon: "/assets/images/icon/expand.png",
+                        title: "Easy to Expand Business",
+                        des: "When you become a known brand, you can further expand your business. Once people know about your products and services, you may easily achieve this goal. Numerous companies would want to associate with your business and this can help you to expand your business to different locations. This exponentially increases sales and provides numerous benefits. If you want your business to thrive, it is important to have a strong brand identity that conveys your essence, makes you stand out from your competitors and creates a brand experience that persuades the target audience to connect with you.",
+                    }
+                ],
+
+                process_title: "OUR <span class='text-red'>BRAND IDENTITY </span> PROCESS",
+                process_des: "Our specific set of processes attract the right customers for your business.",
+                process_image: "/assets/images/category/web-design.gif",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_titile: "BRANDING <span class='text-red'>IDENTITY</span>",
+                expertise_des: "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand.",
+
+                solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
+                solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
+
+                servicesbox:
+                    [
+                        {
+                            servicesbox_icon: "/assets/images/icon/magnifying-glass.png",
+                            servicesbox_tiitle: "Define your Firm",
+                            servicesbox_des: "Define your company with a brand identity. At Proactii Media LLP we know what works and what doesn't. We transfer your logo into an actual identity for your company. Who is your target audience? Demographics? What kind of language is your audience is using to communicate their informational and transnational intent?",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/roundabout.png",
+                            servicesbox_tiitle: "Impact of re-branding",
+                            servicesbox_des: "During a branding redesign, even for a small business, choices of color and its impact on overall branding should be considered. There may be times and reasons to go ahead with a re-branding attempt, but the impact should be considered and the pros and cons weighed.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/consistency.png",
+                            servicesbox_tiitle: "Consistency",
+                            servicesbox_des: "As we've seen, consistency throughout all marketing media is powerful. Any business attempting to build a strong branded image should include its website in its overall marketing plan, and the design should reflect the image being built. If you want to have consistent visitors and leads to your site.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/paint-brush.png",
+                            servicesbox_tiitle: "Color Choices",
+                            servicesbox_des: "When a company is being established or a new branding is being planned and developed, colors should be given plenty of thought and consideration. A solid choice from the start will make everything easier down the road. Google Ads operates on a pay-per-click model.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/customer-review.png",
+                            servicesbox_tiitle: "The subconscious of customers",
+                            servicesbox_des: "Most of the time, customers do not consciously associate specific colors with a company. But over the course of time, with a company's successful branding efforts, those customers will match the colors and company whether they realize it or not.",
+                        },
+                        {
+                            servicesbox_icon: "/assets/images/icon/team-collaboration.png",
+                            servicesbox_tiitle: "Unity among the different elements",
+                            servicesbox_des: "Unity among the different elements in the logo. The logo must fit together as a single unit, and not just appear as a jumble of elements pasted together.. A unified layout is one that works as a whole rather than being identified as separate pieces.",
+                        }
+                    ]
+
+
+
+            },
+            // {
+            //     title: "Graphic Design – Continue",
+            //     image: "/assets/images/services_details/graphic.png",
+            //     link: "/services-category/graphic-design",
+            // },
+        ],
+    },
+    {
+        id: 2,
+        number: "02",
+        title: "Website Development",
+        slug: "web-development",
+        description:
+            "Appealing and effective websites are one of the most potent marketing tools to reach wide audiences and satisfy their requirements.",
+        details: [
+            "The age of emotionally engaging websites is here, and Proactii Media LLP is ready to deliver. From thoughtful information architecture to visually appealing designs, our full-service team brings together the technical expertise and creative vision needed to build exceptional websites.",
+
+            "As the web continues to evolve, we believe collaboration is the key to success. Our creative and development teams work closely throughout every stage of the project, ensuring that user interface design, visual elements, and technology work together to deliver an outstanding user experience.",
+
+            "We also listen carefully to our users and understand their behavior to identify opportunities for improvement. By learning from user interactions, we create websites that are more intuitive, engaging, and aligned with your business goals."
+        ],
+        icon: "/assets/images/services/website.png",
+        image: "/assets/images/services/websiteservice1.png",
+        link: "/services-details/web-development",
+        process: [
+            {
+                title: "Requirement Analysis",
+                description:
+                    "We understand your business goals, target audience, and website requirements."
+            },
+            {
+                title: "Planning & Design",
+                description:
+                    "We plan the website structure, create page layouts, and design a user-friendly experience."
+            },
+            {
+                title: "Development & Testing",
+                description:
+                    "We develop responsive website pages, implement functionality, and test across devices and browsers."
+            },
+            {
+                title: "Launch & Support",
+                description:
+                    "We launch your website after final checks and provide ongoing support to keep it running smoothly."
+            }
+        ],
+        relatedServices: [
+            // {
+            //     title: "Website Designing and Development",
+            //     image: "/assets/images/services_details/web.png",
+            //     link: "/services-category/web-development",
+            // },
+            // {
+            //     title: "E-Commerce Web Solution",
+            //     image: "/assets/images/services_details/ewebsite.png",
+            //     link: "/services-category/mobile-app-development",
+            // },
+            // {
+            //     title: "Web Application",
+            //     image: "/assets/images/services_details/web-application.png",
+            //     link: "/services-category/digital-marketing",
+            // },
+        ],
+    },
+    {
+        id: 3,
+        number: "03",
+        title: "Mobile App Development",
+        slug: "mobile-app-development",
+        description:
+            "With us, convert your ideas into user-friendly and easy-to-use applications, which increase your chances of success in the global market.",
+
+        details: [
+            "Proactii Media LLP develops custom mobile applications and responsive websites compatible with the latest technologies and platforms, tailored to your business strategy.",
+
+            "We design and build superior mobile experiences that meet your users' needs while supporting your business goals.",
+
+            "Mobile applications and responsive websites extend your business's digital presence. Our solutions are lightweight, seamless, and engaging, providing consumers and enterprise users with anytime, anywhere access to your products, services, and information."
+        ],
+
+        icon: "/assets/images/services/app-development.png",
+        image: "/assets/images/services/app-development2.png",
+        link: "/services-details/mobile-app-development",
+
+        process: [
+            {
+                title: "Requirement Analysis",
+                description:
+                    "We understand your app idea, business goals, target audience, and required features."
+            },
+            {
+                title: "UI/UX Design",
+                description:
+                    "We design intuitive app screens and user flows to create a smooth mobile experience."
+            },
+            {
+                title: "Development & Testing",
+                description:
+                    "We develop the mobile application and test its functionality, performance, and compatibility."
+            },
+            {
+                title: "Launch & Support",
+                description:
+                    "We help prepare your app for release and provide ongoing support and improvements."
+            }
+        ],
+        relatedServices: [
+            // {
+            //     title: "App Design",
+            //     image: "/assets/images/services_details/app.png",
+            //     link: "/services-category/mobile-app-development",
+            // },
+        ],
+
+    },
+    {
+        id: 4,
+        number: "04",
+        title: "Digital Marketing",
+        slug: "digital-marketing",
+        description:
+            "Digital marketing allows businesses to reach their customers where they are while strengthening their brands and expanding their customer base.",
+
+        details: [
+            "Every successful digital marketing campaign starts with the right questions. What are your campaign goals—brand awareness, customer engagement, or conversions? Who is your target audience? What is your budget, where are the growth opportunities, and how will we measure success?",
+
+            "By answering these questions at the beginning, Proactii Media LLP develops strategic, measurable digital marketing campaigns designed to achieve meaningful results and support your business objectives.",
+
+            "Whether you want to build a website from scratch, improve your visibility on Google, increase customer engagement through innovative social media campaigns, or identify the right digital marketing strategy for your business, Proactii Media LLP is here to help."
+        ],
+
+        icon: "/assets/images/services/advertising.png",
+        image: "/assets/images/services/digital2.png",
+        link: "/services-details/digital-marketing",
+
+        process: [
+            {
+                title: "Research & Analysis",
+                description:
+                    "We analyze your target audience, competitors, market trends, and business objectives."
+            },
+            {
+                title: "Strategy & Planning",
+                description:
+                    "We develop a digital marketing strategy tailored to your goals, audience, and budget."
+            },
+            {
+                title: "Campaign Execution",
+                description:
+                    "We implement SEO, social media marketing, and other relevant digital campaigns to reach your target audience."
+            },
+            {
+                title: "Performance & Optimization",
+                description:
+                    "We track campaign results, measure key performance indicators, and optimize strategies for continuous growth."
+            }
+        ],
+        relatedServices: [
+            {
+                title: "Search Engine Optimization",
+                image: "/assets/images/services_details/search.png",
+                link: "/services-category/digital-marketing",
+            },
+            {
+                title: "Social Media Optimization",
+                image: "/assets/images/services_details/social.png",
+                link: "/services-category/digital-marketing",
+            },
+            {
+                title: "Pay Per Click Campaign",
+                image: "/assets/images/services_details/pay.png",
+                link: "/services-category/digital-marketing",
+            },
+        ],
+
+    }
+];
+
 

@@ -100,20 +100,58 @@ export default function Header() {
                                         </Link>
                                     </li>
 
-                                    <li>
-                                        <Link
-                                            href="#"
-                                            onClick={() =>
-                                                setMobileMenuOpen(false)
-                                            }
-                                        >
-                                            Services
-                                        </Link>
-                                    </li>
 
                                     <li>
                                         <Link
-                                            href="#"
+                                            href="/services"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            Services
+                                        </Link>
+
+                                        <ul className="tp-submenu submenu">
+                                            <li>
+                                                <Link
+                                                    href="/services-details/online-branding"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    Online Branding
+                                                </Link>
+                                            </li>
+
+                                            <li>
+                                                <Link
+                                                    href="/services-details/web-development"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    Website Development
+                                                </Link>
+                                            </li>
+
+                                            <li>
+                                                <Link
+                                                    href="/services-details/mobile-app-development"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    Mobile App Development
+                                                </Link>
+                                            </li>
+
+                                            <li>
+                                                <Link
+                                                    href="/services-details/digital-marketing"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    Digital Marketing
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li>
+                                        <Link
+                                            href="/portfolio"
                                             onClick={() =>
                                                 setMobileMenuOpen(false)
                                             }
@@ -337,38 +375,44 @@ export default function Header() {
                                                 {/* SERVICES */}
                                                 <li className="has-dropdown">
 
-                                                    <Link href="#">
+                                                    <Link href="/services">
                                                         Services
                                                     </Link>
 
-                                                    <ul className="tp-submenu submenu">
 
+                                                    <ul className="tp-submenu submenu">
                                                         <li>
-                                                            <Link href="#">
-                                                                Web Development
+                                                            <Link href="/services-details/online-branding">
+                                                                Online Branding
                                                             </Link>
                                                         </li>
 
                                                         <li>
-                                                            <Link href="#">
+                                                            <Link href="/services-details/web-development">
+                                                                Website Development
+                                                            </Link>
+                                                        </li>
+
+                                                        <li>
+                                                            <Link href="/services-details/mobile-app-development">
                                                                 Mobile App Development
                                                             </Link>
                                                         </li>
 
                                                         <li>
-                                                            <Link href="#">
+                                                            <Link href="/services-details/digital-marketing">
                                                                 Digital Marketing
                                                             </Link>
                                                         </li>
-
                                                     </ul>
+
 
                                                 </li>
 
                                                 {/* PORTFOLIO */}
                                                 <li className="has-dropdown">
 
-                                                    <Link href="#">
+                                                    <Link href="/portfolio">
                                                         Portfolio
                                                     </Link>
 
@@ -431,13 +475,13 @@ export default function Header() {
                                                 <Link
                                                     href="/contact"
                                                     className="tp-btn-yellow-square"
-                                                        style={{
-            display: "inline-flex",       /* Forces items into a row */
-            alignItems: "center",         /* Vertically centers the text and arrow */
-            gap: "10px",                  /* Adds space between text and arrow */
-            flexDirection: "row",         /* Ensures horizontal layout */
-            textDecoration: "none"        /* Removes underline from link */
-        }}
+                                                    style={{
+                                                        display: "inline-flex",       /* Forces items into a row */
+                                                        alignItems: "center",         /* Vertically centers the text and arrow */
+                                                        gap: "10px",                  /* Adds space between text and arrow */
+                                                        flexDirection: "row",         /* Ensures horizontal layout */
+                                                        textDecoration: "none"        /* Removes underline from link */
+                                                    }}
                                                 >
                                                     Let's Talk
 

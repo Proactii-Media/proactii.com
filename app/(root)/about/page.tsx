@@ -320,15 +320,7 @@ export default function About() {
                         <div className="col-xl-4 col-lg-4 col-md-12 mb-4 mb-lg-0 ">
                             <div className="tp-experience-left-wrapper">
                                 <div className="tp-section-content-wrapper mb-40">
-
-
-
-
                                     <p className="textalign" >Our design ethos is rooted in our aspiration to provide every client with something unique, a fresh perspective that blends both aesthetics and functionality. A wise man once rightly said, “In the world of design, minimalism has its place but so does the extravaganza.” So, some of our projects are inspired by the philosophy ‘less is more’ but for others, our approach is ‘just enough is more’. At Proactii Media LLP, we focus on developing impactful strategies tailor-made for each of our clients, retaining what is essential while letting go of the extraneous.</p>
-
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -472,7 +464,7 @@ export default function About() {
                         <div className="col-xl-8 col-lg-7 text-start mb-4 mb-lg-0">
                             <div className="md-section-content-wrapper  ">
 
-                                <h3 className="cr-section-content-title  mb-20 md-section-title tp_fade_anim text-black">We will help you overcome your <br /> <span style={{ color: "#0098C6" }}>technology challenges</span></h3>
+                                <h3 className="cr-section-content-title  mb-20 md-section-title tp_fade_anim text-black">We will help you overcome your  <span style={{ color: "#0098C6" }}>technology challenges</span></h3>
                             </div>
 
                             <p className="text-black mb-0 text-black">
