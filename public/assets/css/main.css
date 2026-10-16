@@ -22165,6 +22165,12 @@ padding-right: 0px;
     background: #fff0f2;
 }
 
+
+
+.row > div:nth-child(odd) .solution {
+  background-color: rgb(255, 243, 232);
+}
+
 .row > div:nth-child(odd) .service-wrapper7 .icon {
     background: #ffffff;
 }
@@ -22177,6 +22183,11 @@ padding-right: 0px;
 .row > div:nth-child(even) .service-wrapper7 .icon {
     background: #fff0f2;
 }
+
+.row > div:nth-child(even) .service-wrapper7 .icon.solutionbox {
+    background-color: rgb(255, 243, 232) !important;
+}
+
 
 /* Icon Styling */
 .service-wrapper7 .icon {

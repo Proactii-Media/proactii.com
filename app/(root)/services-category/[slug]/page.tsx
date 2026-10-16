@@ -193,7 +193,7 @@ export default function ServiceCategory() {
 
                                             <h3 className=" mt-20" style={{ fontSize: "23px" }} >{item.title}</h3>
 
-                                            <p className="" style={{ fontSize: "15px", textAlign: "justify" }}>{item.des}</p>
+                                            <p className="" style={{ fontSize: "15px", textAlign: "justify", color:"#333333" }}>{item.des}</p>
                                         </div>
                                     </div>
                                 )
@@ -339,7 +339,7 @@ export default function ServiceCategory() {
                                 <div className="md-section-content-wrapper  ">
 
                                     <h3
-                                        className="cr-section-content-title md-section-title tp_fade_anim text-black"
+                                        className="cr-section-content-title md-section-title tp_fade_anim text-black" 
                                         dangerouslySetInnerHTML={{
                                             __html: relatedService?.solution_title || "",
                                         }}
@@ -362,19 +362,19 @@ export default function ServiceCategory() {
                                 servicesbox_des: string;
                             }, index: number) => (
                                 <div className="col-lg-4 col-md-6" key={index}>
-                                    <div className="service-wrapper7">
-                                        <div className="icon">
+                                    <div className="service-wrapper7 solution ">
+                                        <div className="icon solutionbox">
                                             <img
                                                 src={item.servicesbox_icon}
                                                 alt={item.servicesbox_tiitle}
                                             />
                                         </div>
 
-                                        <h3 className="desc mt-20" style={{ fontSize:"20px"}}>
+                                        <h3 className="desc mt-20" style={{ fontSize:"23px"}}>
                                             {item.servicesbox_tiitle}
                                         </h3>
 
-                                        <p className="desc" style={{fontSize:"15px", textAlign:"justify"}}>
+                                        <p className="desc" style={{fontSize:"15px", textAlign:"justify", color:"#333333"}}>
                                             {item.servicesbox_des}
                                         </p>
                                     </div>
