@@ -21,6 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
         <link rel="stylesheet" href="/assets/css/bootstrap.css" />
         <link rel="stylesheet" href="/assets/css/swiper-bundle.css" />
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
@@ -133,6 +137,7 @@ export default function RootLayout({
           src="/assets/js/distortion-img.js"
           strategy="afterInteractive"
         />
+       
       </body>
     </html>
   );

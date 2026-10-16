@@ -744,7 +744,7 @@ type RelatedService = {
 
     expertise_heading?: string;
     expertise_titile?: string;
-    expertise_des?: string;
+    expertise_des?: string[];
 
     solution_title?: string;
     solution_des?: string;
@@ -837,32 +837,32 @@ export const services: Service[] = [
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
                     {
-                        icon: "/assets/images/icon/user.png",
+                        icon: "fa-solid fa-user",
                         title: "Customer recognition",
                         des: "Having a strong brand works to build customer recognition. This means when a customer is shopping for a particular product or considering a company to perform a service, they recognize your company in the running. Consumers are far more likely to choose a brand that they recognize over something unfamiliar, even if they don’t know a great deal about your company at the time.",
                     },
                     {
-                        icon: "/assets/images/icon/line.png",
+                        icon: "fa-solid fa-chart-line",
                         title: "Competitive edge in market",
                         des: "Your brand is what differentiates you in the marketplace. When customers recognize and back your brand, it helps lend a competitive edge to your company. The more recognition you receive and the more you build your brand, the more you will find that your brand elevates and is competitive with other well-known brands.",
                     },
                     {
-                        icon: "/assets/images/icon/megaphone.png",
+                        icon: "fa-solid fa-bullhorn",
                         title: "Easy introduction of new products",
                         des: "When you already have a strong brand and loyal customers, it is often easier and less expensive to introduce new products or test them out before you further invest in them. If you have a loyal brand following, your customers will often be interested in your new products and even anticipate them being released.",
                     },
                     {
-                        icon: "/assets/images/icon/customer-loyalty.png",
+                        icon: "fa-solid fa-share-from-square",
                         title: "Customer loyalty and shared values",
                         des: "The recognition and elevation that a strong brand builds upon all lend to greater customer loyalty. Customers are attracted to brands that they share values with. When you build a strong brand, you need to convey these values to build an emotional connection with customers. Brand loyalty often lasts a lifetime and even transfers to future generations.",
                     },
                     {
-                        icon: "/assets/images/icon/shopping-cart.png",
+                        icon: "fa-solid fa-cart-shopping",
                         title: "Enhanced credibility and ease of purchase",
                         des: "Having a strong, well-known brand enhances your credibility with customers, your industry, and the marketplace as a whole. As you build your credibility, you also build recognition, loyalty, and competitiveness. Everything goes hand-in-hand, and you'll find that your credibility has a direct connection to customers ease of purchase. We want to buy from companies we like, know, and trust. If your brand is credible, you're far more likely to get the sale.",
                     },
                     {
-                        icon: "/assets/images/icon/expand.png",
+                        icon: "fa-solid fa-up-right-and-down-left-from-center",
                         title: "Easy to Expand Business",
                         des: "When you become a known brand, you can further expand your business. Once people know about your products and services, you may easily achieve this goal. Numerous companies would want to associate with your business and this can help you to expand your business to different locations. This exponentially increases sales and provides numerous benefits. If you want your business to thrive, it is important to have a strong brand identity that conveys your essence, makes you stand out from your competitors and creates a brand experience that persuades the target audience to connect with you.",
                     }
@@ -874,7 +874,9 @@ export const services: Service[] = [
 
                 expertise_heading: "LAST A LIFETIME WITH",
                 expertise_titile: "BRANDING <span class='text-red'>IDENTITY</span>",
-                expertise_des: "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand.",
+             expertise_des: [
+    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
+],
 
                 solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
                 solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
@@ -882,32 +884,32 @@ export const services: Service[] = [
                 servicesbox:
                     [
                         {
-                            servicesbox_icon: "/assets/images/icon/square.png",
+                            servicesbox_icon: "fa fa-square-o",
                             servicesbox_tiitle: "Define your Firm",
                             servicesbox_des: "Define your company with a brand identity. At Proactii Media LLP we know what works and what doesn't. We transfer your logo into an actual identity for your company. Who is your target audience? Demographics? What kind of language is your audience is using to communicate their informational and transnational intent?",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/roundabout.png",
+                            servicesbox_icon: "fa fa-refresh",
                             servicesbox_tiitle: "Impact of re-branding",
                             servicesbox_des: "During a branding redesign, even for a small business, choices of color and its impact on overall branding should be considered. There may be times and reasons to go ahead with a re-branding attempt, but the impact should be considered and the pros and cons weighed.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/consistency.png",
+                            servicesbox_icon: "fa fa-retweet",
                             servicesbox_tiitle: "Consistency",
                             servicesbox_des: "As we've seen, consistency throughout all marketing media is powerful. Any business attempting to build a strong branded image should include its website in its overall marketing plan, and the design should reflect the image being built. If you want to have consistent visitors and leads to your site.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/paint-brush.png",
+                            servicesbox_icon: "fa fa-paint-brush",
                             servicesbox_tiitle: "Color Choices",
                             servicesbox_des: "When a company is being established or a new branding is being planned and developed, colors should be given plenty of thought and consideration. A solid choice from the start will make everything easier down the road. Google Ads operates on a pay-per-click model.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/customer-review.png",
+                            servicesbox_icon: "fa fa-users",
                             servicesbox_tiitle: "The subconscious of customers",
                             servicesbox_des: "Most of the time, customers do not consciously associate specific colors with a company. But over the course of time, with a company's successful branding efforts, those customers will match the colors and company whether they realize it or not.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/team-collaboration.png",
+                            servicesbox_icon: "fa fa-ellipsis-h",
                             servicesbox_tiitle: "Unity among the different elements",
                             servicesbox_des: "Unity among the different elements in the logo. The logo must fit together as a single unit, and not just appear as a jumble of elements pasted together.. A unified layout is one that works as a whole rather than being identified as separate pieces.",
                         }
@@ -933,32 +935,32 @@ export const services: Service[] = [
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
                     {
-                        icon: "/assets/images/icon/user.png",
+                        icon: "fa-solid fa-file-lines",
                         title: "Customer recognition",
                         des: "Having a strong brand works to build customer recognition. This means when a customer is shopping for a particular product or considering a company to perform a service, they recognize your company in the running. Consumers are far more likely to choose a brand that they recognize over something unfamiliar, even if they don’t know a great deal about your company at the time.",
                     },
                     {
-                        icon: "/assets/images/icon/line.png",
+                        icon: "fa-solid fa-file-video",
                         title: "Competitive edge in market",
                         des: "Your brand is what differentiates you in the marketplace. When customers recognize and back your brand, it helps lend a competitive edge to your company. The more recognition you receive and the more you build your brand, the more you will find that your brand elevates and is competitive with other well-known brands.",
                     },
                     {
-                        icon: "/assets/images/icon/megaphone.png",
+                        icon: "fa-solid fa-gem",
                         title: "Easy introduction of new products",
                         des: "When you already have a strong brand and loyal customers, it is often easier and less expensive to introduce new products or test them out before you further invest in them. If you have a loyal brand following, your customers will often be interested in your new products and even anticipate them being released.",
                     },
                     {
-                        icon: "/assets/images/icon/customer-loyalty.png",
+                        icon: "fa-solid fa-clock",
                         title: "Customer loyalty and shared values",
                         des: "The recognition and elevation that a strong brand builds upon all lend to greater customer loyalty. Customers are attracted to brands that they share values with. When you build a strong brand, you need to convey these values to build an emotional connection with customers. Brand loyalty often lasts a lifetime and even transfers to future generations.",
                     },
                     {
-                        icon: "/assets/images/icon/shopping-cart.png",
+                        icon: "fa-solid fa-fire",
                         title: "Enhanced credibility and ease of purchase",
                         des: "Having a strong, well-known brand enhances your credibility with customers, your industry, and the marketplace as a whole. As you build your credibility, you also build recognition, loyalty, and competitiveness. Everything goes hand-in-hand, and you'll find that your credibility has a direct connection to customers ease of purchase. We want to buy from companies we like, know, and trust. If your brand is credible, you're far more likely to get the sale.",
                     },
                     {
-                        icon: "/assets/images/icon/expand.png",
+                        icon: "fa-solid fa-thumbs-up",
                         title: "Easy to Expand Business",
                         des: "When you become a known brand, you can further expand your business. Once people know about your products and services, you may easily achieve this goal. Numerous companies would want to associate with your business and this can help you to expand your business to different locations. This exponentially increases sales and provides numerous benefits. If you want your business to thrive, it is important to have a strong brand identity that conveys your essence, makes you stand out from your competitors and creates a brand experience that persuades the target audience to connect with you.",
                     }
@@ -970,7 +972,9 @@ export const services: Service[] = [
 
                 expertise_heading: "LAST A LIFETIME WITH",
                 expertise_titile: "BRANDING <span class='text-red'>IDENTITY</span>",
-                expertise_des: "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand.",
+               expertise_des: [
+    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
+],
 
                 solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
                 solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
@@ -978,32 +982,32 @@ export const services: Service[] = [
                 servicesbox:
                     [
                         {
-                            servicesbox_icon: "/assets/images/icon/magnifying-glass.png",
+                            servicesbox_icon: "fa-solid fa-magnifying-glass",
                             servicesbox_tiitle: "Define your Firm",
                             servicesbox_des: "Define your company with a brand identity. At Proactii Media LLP we know what works and what doesn't. We transfer your logo into an actual identity for your company. Who is your target audience? Demographics? What kind of language is your audience is using to communicate their informational and transnational intent?",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/roundabout.png",
+                            servicesbox_icon: "fa-solid fa-closed-captioning",
                             servicesbox_tiitle: "Impact of re-branding",
                             servicesbox_des: "During a branding redesign, even for a small business, choices of color and its impact on overall branding should be considered. There may be times and reasons to go ahead with a re-branding attempt, but the impact should be considered and the pros and cons weighed.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/consistency.png",
+                            servicesbox_icon: "fa-solid fa-clock",
                             servicesbox_tiitle: "Consistency",
                             servicesbox_des: "As we've seen, consistency throughout all marketing media is powerful. Any business attempting to build a strong branded image should include its website in its overall marketing plan, and the design should reflect the image being built. If you want to have consistent visitors and leads to your site.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/paint-brush.png",
+                            servicesbox_icon: "fa-solid fa-gear",
                             servicesbox_tiitle: "Color Choices",
                             servicesbox_des: "When a company is being established or a new branding is being planned and developed, colors should be given plenty of thought and consideration. A solid choice from the start will make everything easier down the road. Google Ads operates on a pay-per-click model.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/customer-review.png",
+                            servicesbox_icon: "fa-solid fa-circle-check",
                             servicesbox_tiitle: "The subconscious of customers",
                             servicesbox_des: "Most of the time, customers do not consciously associate specific colors with a company. But over the course of time, with a company's successful branding efforts, those customers will match the colors and company whether they realize it or not.",
                         },
                         {
-                            servicesbox_icon: "/assets/images/icon/team-collaboration.png",
+                            servicesbox_icon: "fa-solid fa-right-left",
                             servicesbox_tiitle: "Unity among the different elements",
                             servicesbox_des: "Unity among the different elements in the logo. The logo must fit together as a single unit, and not just appear as a jumble of elements pasted together.. A unified layout is one that works as a whole rather than being identified as separate pieces.",
                         }
@@ -1012,11 +1016,34 @@ export const services: Service[] = [
 
 
             },
-            // {
-            //     title: "Graphic Design – Continue",
-            //     image: "/assets/images/services_details/graphic.png",
-            //     link: "/services-category/graphic-design",
-            // },
+            {
+                title: "Graphic Design – Continue",
+                image: "/assets/images/services_details/graphic.png",
+                link: "/services-category/graphic-design",
+
+
+                website_titile: "Brand Identity",
+                website_des: [
+                    "Attract a massive audience and improve customer engagement with the design that matters. Our graphic designers have the vision, creativity and potential to create a technical piece of art, which can convey your ideas through a graphic component, logo, and illustration.",
+                    "Graphic design is an essential part of any business and that is as true for your company’s image and your marketing. Proactii Media LLP is a well-known graphic design company in Indore, India that offers creative graphic design solutions for all your business needs.",
+                    "Our skilled designers understand every aspect of graphic designing and create designs according to your business requirements that leave a long-lasting impact on the user’s mind and are pleasing to eyes. Our graphics team has the ability and creativity to design a wide range of graphic designs including logo design, print design, digital media design, banners, posters, web design mockups, mobile apps mockups, wireframes design, portfolio design and more. We create colorful, high-resolution images, engaging videos and illustrative graphics that can help potential customers better understand your products and services.",
+
+                ],
+                website_image: "/assets/images/services_details/graphic.png",
+
+
+                process_title: "OUR <span class='text-red'>GRAPHIC DESIGN </span> PROCESS",
+                process_des: "Our specific set of processes attract the right customers for your business.",
+                process_image: "/assets/images/category/web-design.gif",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_titile: "<span class='text-red'> GRAPHIC DESIGN  </span>",
+               expertise_des: [
+    "It’s a competitive world out there, and making a good first impression is vital to communicating your objectives and establishing relationships with prospective clients. That is why developing a professional image and eye-catching materials is an essential part of an effective marketing strategy. Our design team works collaboratively to give your company an eye-catching brand to put you ahead of your competitors. From logos to print work to packaging, we deliver inspired, effective, intelligent work for your brand."
+],
+
+
+            },
         ],
     },
     {
@@ -1059,21 +1086,310 @@ export const services: Service[] = [
             }
         ],
         relatedServices: [
-            // {
-            //     title: "Website Designing and Development",
-            //     image: "/assets/images/services_details/web.png",
-            //     link: "/services-category/web-development",
-            // },
-            // {
-            //     title: "E-Commerce Web Solution",
-            //     image: "/assets/images/services_details/ewebsite.png",
-            //     link: "/services-category/mobile-app-development",
-            // },
-            // {
-            //     title: "Web Application",
-            //     image: "/assets/images/services_details/web-application.png",
-            //     link: "/services-category/digital-marketing",
-            // },
+            {
+                title: "Website Designing and Development",
+                image: "/assets/images/services_details/web.png",
+                link: "/services-category/web-development",
+
+                website_titile: "Brand Identity",
+                website_des: [
+                    "Proactii Media LLP brings to you the appropriate websites designs that meet your needs. With providing our users with responsive web designs and amplifying it in order to increase the company's reach, our web designers believe in executing the websites that deliver a visual aspect to the audience. Our team conceptualizes and build the websites by determining the layout, graphics, text styles, colors, etc., that would be appropriate and suitable for your product.",
+                    "Proactii Media LLP offers you the best path and platform to reach the audience and boost the company's sales by providing you the affordable digital marketing services. With our website development facilities, we help the clients unravel their potential. The team of talented web developers creates customized websites so that you can increase your business reach optimally.",
+
+                ],
+                website_image: "/assets/images/services_details/brand.png",
+
+                leverage_title: "Leverage your <span class='text-red'>Business</span>",
+                leverage: [
+                    {
+                        icon: "fa-solid fa-crosshairs",
+                        title: "Cross-Platform Capabilities",
+                        des: "Web applications can be accessed by users regardless of what operating systems they might be using, such as Windows, Mac etc",
+                    },
+                    {
+                        icon: "fa-solid fa-arrow-right-from-bracket",
+                        title: "Accommodates Expandability With Ease",
+                        des: "Responsive design's \"one size fits all\" approach means less headache for developers, business owners etc.",
+                    },
+                    {
+                        icon: "fa-solid fa-wrench",
+                        title: "Easy Maintenance",
+                        des: "Popular among businesses having avid interest in enhancing UX and bringing about efficiency and effectiveness to their systems.",
+                    },
+                    {
+                        icon: "fa-solid fa-indian-rupee-sign",
+                        title: "Saves Money",
+                        des: "MWeb developed software saves companies from having to purchase robust hardware to support software, maintain numerous systems",
+                    },
+                    {
+                        icon: "fa-solid fa-download",
+                        title: "Improved SEO",
+                        des: "Stronger backlinks and better bounce rates translate into higher search rankings, but there's an extra SEO benefit for mobile optimized sites.",
+                    },
+                    {
+                        icon: "fa-solid fa-wrench",
+                        title: "Lower Maintenance Needs",
+                        des: "Responsive design's \"one size fits all\" approach means less headache for developers, business owners, and consumers.",
+                    },
+                    {
+                        icon: "fa-solid fa-indian-rupee-sign",
+                        title: "Lower Bounce Rates",
+                        des: "it is much more likely that they'll stick around for a longer period of time and explore different areas of your site",
+                    },
+                    {
+                        icon: "fa-solid fa-flag",
+                        title: "Easier Analytics Reporting",
+                        des: "Having a single responsive site greatly simplifies the monitoring process",
+                    }
+                ],
+
+                process_title: "OUR RECIPE FOR YOUR <span class='text-red'>PPC SUCCESS </span>",
+                process_des: "Our specific set of processes attract the right customers for your business.",
+                process_image: "/assets/images/category/web-design.gif",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_titile: "Of Course It's Mobile-Responsive",
+                expertise_des: [
+    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
+],
+
+                solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
+                solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
+
+                servicesbox: [
+                    {
+                        servicesbox_icon: "fa-solid fa-arrows-rotate",
+                        servicesbox_tiitle: "High Performance",
+                        servicesbox_des: "The page loading time is a key factor for the overall performance of a website. To keep the speed to minimum we reduce HTTP request, minify, cookie-free domain, and use SSD hosting to maintain the speed.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-chart-line",
+                        servicesbox_tiitle: "Scalability",
+                        servicesbox_des: "Customized website development gives you an advantage of selecting technologies on which you want your website to be developed. Later on, this can help you in scaling your business and update your website for future business necessities",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-shield-halved",
+                        servicesbox_tiitle: "Security",
+                        servicesbox_des: "An unprotected website is a security risk to customers, and can spread a malware. A website created by our website developers is highly secure. Customers have a peace of mind that the site can be trusted and the information is safe.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-wallet",
+                        servicesbox_tiitle: "Customized Package",
+                        servicesbox_des: "Option for custom web development services gives you the opportunity to pay only for those functionalities that you require. So, there is no bank breaking budget, and you can easily plan your money timeline prior to the development.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-bars-staggered",
+                        servicesbox_tiitle: "Agile Approach",
+                        servicesbox_des: "We develop our projects based on agile approach that takes away time-sucks, performing frequent sanity checks, and making sure that you're not spending excessive time on things that don't add value to the project.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-gear",
+                        servicesbox_tiitle: "Content Management",
+                        servicesbox_des: "Web Apps that are customized comprises of easy site management tools where the non-technical members of the organization like managers, content editors, and other team members can make changes to the website without any technical assistance.",
+                    }
+                ],
+
+
+
+
+
+            },
+            {
+                title: "E-Commerce Web Solution",
+                image: "/assets/images/services_details/ewebsite.png",
+                link: "/services-category/mobile-app-development",
+
+                   website_titile: "Brand Identity",
+                website_des: [
+                    "E-commerce business Website is the medium in fact, a Platform in which you can list your multi Product furthermore, offer it online Globally. Proactii Media LLP Help you in Designing your own Digital Shop from where you can offer your Product online in various Parts of Country, City and Area. Here you ought to have your own site to feature your Products for that you have to Contact E-commerce Website Designing Company like us. We make best website designs and templates for giving you an idea about how web pages look alike. You can choose from those designed templates in fact, we can design new according to your demands.",
+                    "Proactii Media LLP Services are extraordinary compared to other web based business site outlining organization in Vapi. We practice to give online business arrangements as per your necessities and market. Therefore, offering your item in an exceedingly focused market.",
+
+                ],
+                website_image: "/assets/images/services_details/brand.png",
+
+                leverage_title: "Leverage your <span class='text-red'>Business</span>",
+               leverage: [
+    {
+        icon: "fa-solid fa-database",
+        title: "Hassle free Data Maintenance",
+        des: "Centralization of business logic will lessen your efforts, making your work worthwhile. As a result, business information's can be maintained with consistency.",
+    },
+    {
+        icon: "fa-solid fa-e",
+        title: "Easy to implement",
+        des: "It becomes easy to test business logic using various tools. It is a lightweight architecture and is good for devices, which have limited bandwidth like smart cell phones.",
+    },
+    {
+        icon: "fa-solid fa-users-gear",
+        title: "Scalable with Multi-clients",
+        des: "These RESTful Web APIs are accessible by a variety of HTTP clients like Windows 7, Windows 8, Android, iPhone, iPad, WPF Client, Windows Phone 8 etc. It uses low band-width.",
+    },
+    {
+        icon: "fa-solid fa-mobile-screen-button",
+        title: "More Mobile Traffic",
+        des: "Many surveys proved more than half of traffic to top websites came from mobile devices. It is becoming the norm because it offers greater versatility.",
+    },
+    {
+        icon: "fa-solid fa-indian-rupee-sign",
+        title: "Enhance Conversion rate",
+        des: "Consistent user experience will have a positive impact on your conversion rates as people are familiar with navigation and site or system use across devices.",
+    },
+    {
+        icon: "fa-solid fa-chart-column",
+        title: "Consolidate your analytics",
+        des: "A single responsive site means that you no longer have to track user journeys, conversion paths, funnels and redirections between your sites.",
+    }
+],
+
+                process_title: "OUR RECIPE FOR YOUR <span class='text-red'>PPC SUCCESS </span>",
+                process_des: "Our specific set of processes attract the right customers for your business.",
+                process_image: "/assets/images/category/web-design.gif",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_titile: "The Sparks of Collaboration",
+                expertise_des: [
+    "As the web becomes ever-more dynamic, we know true collaboration is what sparks success. Our creative and tech teams work in close tandem throughout the project lifecycle, ensuring our user interface, visual design, and the technologies with which we deliver them are always top of our game.",
+    "And we listen closely to our users as well, because what their behavior reveals makes them the best collaborators of all."
+],
+
+                solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
+                solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
+
+               servicesbox: [
+    {
+        servicesbox_icon: "fa-solid fa-chart-bar",
+        servicesbox_tiitle: "High Performance",
+        servicesbox_des: "The page loading time is a key factor for the overall performance of a website. To keep the speed to minimum we reduce HTTP request, minify, cookie-free domain, and use SSD hosting to maintain the speed.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-chart-simple",
+        servicesbox_tiitle: "Scalability",
+        servicesbox_des: "Customized website development gives you an advantage of selecting technologies on which you want your website to be developed. Later on, this can help you in scaling your business and update your website for future business necessities",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-lock",
+        servicesbox_tiitle: "Security",
+        servicesbox_des: "An unprotected website is a security risk to customers, and can spread a malware. A website created by our website developers is highly secure. Customers have a peace of mind that the site can be trusted and the information is safe.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-file-lines",
+        servicesbox_tiitle: "Customized Package",
+        servicesbox_des: "Option for custom web development services gives you the opportunity to pay only for those functionalities that you require. So, there is no bank breaking budget, and you can easily plan your money timeline prior to the development.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-square-check",
+        servicesbox_tiitle: "Agile Approach",
+        servicesbox_des: "We develop our projects based on agile approach that takes away time-sucks, performing frequent sanity checks, and making sure that you're not spending excessive time on things that don't add value to the project.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-gears",
+        servicesbox_tiitle: "Content Management",
+        servicesbox_des: "Web Apps that are customized comprises of easy site management tools where the non-technical members of the organization like managers, content editors, and other team members can make changes to the website without any technical assistance.",
+    }
+],
+            },
+            {
+                title: "Web Application",
+                image: "/assets/images/services_details/web-application.png",
+                link: "/services-category/web_application",
+
+                 website_titile: "Brand Identity",
+                website_des: [
+                    "Proactii Media LLP is a radical web app development company. We have always believed versatility and flexibility is paramount for any business organization to function at full operational effectiveness. Our custom web application development is geared to promote instinctive web solutions. We have collaborated successfully with over a 100 + projects for web application development constantly delivering products that are easy maintenance, safe, tested, and reliable.",
+                    "Our web application products are capable of sorting through a huge influx of data and conduct elaborate transactions without missing performance quality. We are committed towards the advancement of technology and improved productivity through our high functioning web application development services.",
+"Proactii Media LLP gives shape to your ideas. With the boom in technology, having just a website is not enough. To keep the web alive you need to have a software which runs through a browser – Web Application. Web applications are much more interactive than websites. Applications developed over the web helps to engage more users and for organizations who want to stream lime their digital processes, web applications is a great way to achieve desired results."
+                ],
+                website_image: "/assets/images/services_details/brand.png",
+
+                leverage_title: "Leverage your <span class='text-red'>Business</span>",
+ leverage: [
+   {
+        icon: "fa-solid fa-indian-rupee-sign",
+        title: "Cost effective development",
+        des: "With web-based applications, users access the system via a uniform environment—the web browser. While the user interaction with the application needs to be thoroughly tested on different web browsers, the application itself needs only be developed for a single operating system. There is no need to develop and test it on all possible operating system versions and configurations. This makes development and troubleshooting much easier and for web applications that use a Flash front end testing and troubleshooting is even easier.",
+    },
+    {
+        icon: "fa-solid fa-wheelchair-move",
+        title: "Accessible anywhere",
+        des: "Unlike traditional applications, web systems are accessible anytime, anywhere and via any PC with an Internet connection. This puts the user firmly in charge of where and when they access the application. It also opens up exciting, modern possibilities such as global teams, home working and real-time collaboration. The idea of sitting in front of a single computer and working in a fixed location is a thing of the past with web-based applications.",
+    },
+    {
+        icon: "fa-solid fa-clone",
+        title: "Easily customisable",
+        des: "The user interface of web-based applications is easier to customise than is the case with desktop applications. This makes it easier to update the look and feel of the application or to customise the presentation of information to different user groups. Therefore, there is no longer any need for everyone to settle for using exactly the same interface at all times. Instead, you can find the perfect look for each situation and user.",
+    },
+     {
+        icon: "fa-solid fa-desktop",
+        title: "Accessible for a range of devices",
+        des: "In addition to being customizable for user groups, content can also be customized for use on any device connected to the internet. This includes the likes of PDAs, mobile phones and tablets. This further extends the user's ability to receive and interact with information in a way that suits them. In this way, the up to date information is always at the fingertips of the people who need it.",
+    },
+    {
+        icon: "fa-solid fa-wrench",
+        title: "Easier installation and maintenance",
+        des: "With the web-based approach installation and maintenance becomes less complicated too. Once a new version or upgrade is installed on the host server all users can access it straight away and there is no need to upgrade the PC of each and every potential user.",
+    },
+    {
+        icon: "fa-solid fa-chart-column",
+        title: "Consolidate your analytics",
+        des: "A single responsive site means that you no longer have to track user journeys, conversion paths, funnels and redirections between your sites. Rolling out new software can be accomplished more easily, requiring only that users have up-to-date browsers and plugins. As the upgrades are only performed by an experienced professional to a single server the results are also more predictable and reliable.",
+    },
+     {
+        icon: "fa-solid fa-shield-halved",
+        title: "Increased Security",
+        des: "Web-based applications are typically deployed on dedicated servers, which are monitored and maintained by experienced server administrators. This is far more effective than monitoring hundreds or even thousands of client computers as is the case with desktop applications. This means that security is tighter and any potential breaches should be noticed far more quickly.",
+    }
+],
+
+                process_title: "OUR RECIPE FOR YOUR <span class='text-red'>PPC SUCCESS </span>",
+                process_des: "Our specific set of processes attract the right customers for your business.",
+                process_image: "/assets/images/category/web-design.gif",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_titile: "The Sparks of Collaboration",
+                expertise_des: [
+    "As the web becomes ever-more dynamic, we know true collaboration is what sparks success. Our creative and tech teams work in close tandem throughout the project lifecycle, ensuring our user interface,visual design, and the technologies with which we deliver them are always top of our game.",
+    "And we listen closely to our users as well, because what their behavior reveals makes them the best collaborators of all.",
+    
+],
+
+                solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
+                solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
+
+               servicesbox: [
+     {
+        servicesbox_icon: "fa-solid fa-earth-americas",
+        servicesbox_tiitle: "One Website for It All",
+        servicesbox_des: "By choosing our custom web app solutions, you'll get a user-friendly website that is compatible with all browsers and devices. This means that you won't have bother designing multiple website versions just for compatibility issues.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-clock",
+        servicesbox_tiitle: "Real-Time Maintenance and Support",
+        servicesbox_des: "We'll also provide you with a dedicated account manager and support team for your custom website. This allows you to enjoy real-time maintenance and support during the execution of the entire project.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-comment-dots",
+        servicesbox_tiitle: "Commitment to Quality",
+        servicesbox_des: "Our custom web app developers are industry experts, who strictly obey all standards as well as international coding guidelines. We also make sure that our custom websites meet the best standards of quality and we ensure timely delivery.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-thumbs-up",
+        servicesbox_tiitle: "Superb Integration",
+        servicesbox_des: "We're also experts at integrating your website with other codes and APIs. If you need any functionality from third-party sources, our project solutions will offer seamless integration. You can also get customer reviews, which are independently verified through our services.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-comment-dots",
+        servicesbox_tiitle: "Effective Communication",
+        servicesbox_des: "We work very closely with clients to ensure that our custom solutions completely reflect their business goals. Before website development begins, our team will sit down with you to understand your requirements and goals in detail. This ensures that you get the exact solution that you are looking.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-gem",
+        servicesbox_tiitle: "Exceptional Value for Money",
+        servicesbox_des: "Our custom services are priced very reasonably. Whether it is a one-time project or a multi-year arrangement, our solutions offer incredible value for money. We offer a range of flexible engagement models, which enable efficiency and a significant amount of cost savings for you.",
+    }
+],
+
+
+            },
         ],
     },
     {
