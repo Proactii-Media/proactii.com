@@ -47,11 +47,6 @@ export default function HomeCounter() {
                         {/* RIGHT CONTENT */}
                         <div className="col-xl-7 col-lg-6 col-md-12 col-12">
                             <div className="tp-experience-wrapper tp-panel-pin-area pl-70">
-
-                                {/* ITEM ROW 1 */}
-
-
-                                {/* ITEM ROW 2 */}
                                 <div
                                     className="tp-experience-item-wrapper tp-panel-pin"
                                     data-end="bottom 85%"

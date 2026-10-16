@@ -2,15 +2,9 @@
 
 "use client";
 
-
 import { blogPosts } from "@/constants/data";
 
-
-
-
 export default function Blogs() {
-
-
 
     return (
         <>
@@ -22,8 +16,6 @@ export default function Blogs() {
                     backgroundImage: "url('/assets/images/banner/about1.png')",
                 }}
             >
-
-
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xxl-12">
@@ -80,17 +72,11 @@ export default function Blogs() {
                                     Explore the NanoSoft IT Blog for valuable insights and thought leadership on industry
                                     best practices in managed IT services and enterprise IT trends.
                                 </p>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </section>
-
 
             <section className="tp-blog-gird-sidebar-ptb pb-80">
                 <div className="container container-1424">
@@ -174,9 +160,7 @@ export default function Blogs() {
                                         </h3>
 
                                         <div className="tp-blog-masonry-btn">
-
                                             <a
-
                                                 className="people-special-link bg-red" href={`/blog-details/${post.slug}`}
                                             >Read more
                                                 <svg
@@ -197,7 +181,6 @@ export default function Blogs() {
                                             </a>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         ))}

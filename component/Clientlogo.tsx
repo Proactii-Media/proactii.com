@@ -1,8 +1,6 @@
 "use client";
 import { logos } from "@/constants/data";
 
-
-
 export default function ClientLogo() {
   return (
     <>
@@ -62,14 +60,7 @@ export default function ClientLogo() {
         </div>
       </section>
 
-
-
       <div className="cr-brand-area-2 cr-brand-style-3 tp-brand fix pt-60 pb-60" data-bg-color="#f7f7f7">
-
-
-
-
-
         <div className="container-fluid p-0">
           <div className="cr-brand-inner-wrap">
             <div className="swiper cr-brand-logo-slide-active" data-bg-color="#fff">
@@ -81,14 +72,14 @@ export default function ClientLogo() {
                       className="cr-brand-item-2"
                       style={{
                         width: "100%",
-                        height: "120px", // Adjust this height as needed
+                        height: "120px", 
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        padding: "10px" // Adds space around the logo
+                        padding: "10px" 
                       }}
                     >
-                      {/* 2. Image fills the container but keeps its shape */}
+              
                       <img
                         src={`/assets/images/client/${logo}`}
                         alt={logo.replace('.png', '')}

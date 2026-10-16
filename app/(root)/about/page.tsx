@@ -6,6 +6,8 @@
 import { logos } from "@/constants/data";
 import Image from "next/image";
 
+import { slides, teamMembers } from "@/constants/data";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -14,63 +16,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function About() {
-    const slides = [
-        {
-            image: "/assets/images/home/weare1.png",
-            text: "INNOVATION", // Shortened to match your reference image style
-        },
-        {
-            image: "/assets/images/home/weare2.png",
-            text: "DEVELOPMENT",
-        },
-        {
-            image: "/assets/images/home/weare3.png",
-            text: "DIGITAL PRESENCE",
-        },
-    ];
 
-    const teamMembers = [
-        {
-            name: "Manhar Nakhuva",
-            role: "Founder",
-            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            name: "Dainik Tandel",
-            role: "Web developer",
-            image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            name: "Sonali Kharpade",
-            role: "Graphic Designer",
-            image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            name: "Trupal Patel",
-            role: "Social Media Marketer",
-            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            name: "Roshani Mistry",
-            role: "Web Developer",
-            image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            name: "Satish Patel",
-            role: "App Developer",
-            image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            name: "Nitin Patel",
-            role: "Web Designer",
-            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            name: "Ramiya Nair",
-            role: "SEO Executive",
-            image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
-        }
-    ];
 
     return (
         <>
@@ -82,8 +28,6 @@ export default function About() {
                     backgroundImage: "url('/assets/images/banner/about1.png')",
                 }}
             >
-
-
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xxl-12">
@@ -180,22 +124,13 @@ export default function About() {
                                     <p style={{ fontWeight: "600", color: "#0098C6" }} >Dream. Create. Deliver </p>
                                     <p className="textalign" >We Proactii Media LLP help individuals and corporate businesses to get started with a unique marketing strategies and creative ideas that represent your company’s mission and vision across the world in a more efficient and feasible manner.</p>
                                     <p className="textalign">Starting from 2011; our ambition is to become the most trusted & expert online brand development agency based in Vapi, Gujarat, Today we’ve been acknowledged as the best results driven by an inbound marketing industry from our respective clients.</p>
-
-
-
                                     {/* --- END: The "10 Years" Element --- */}
-
                                 </div>
                             </div>
                         </div>
                         {/* RIGHT CONTENT */}
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12">
                             <div className="tp-experience-wrapper tp-panel-pin-area pl-70">
-
-                                {/* ITEM ROW 1 */}
-
-
-                                {/* ITEM ROW 2 */}
                                 <div
                                     className="tp-experience-item-wrapper tp-panel-pin"
                                     data-end="bottom 85%"
@@ -206,14 +141,11 @@ export default function About() {
                                         <p className="textalign">Moreover, Proactii Media LLP is known for consulting many corporate clients, agencies and small businesses with its years of experience about how to drive more sales, website traffic, lead generation, business/brand/product development. maintain online reputation, search engine optimization, and internet marketing to get tangible results.</p>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
 
             {/* ========== Vision, Mission, Approach & Values Start ========== */}
             <section className="neo-section pt-100 pb-80">
@@ -287,7 +219,6 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-
             </section>
             {/* ========== Vision, Mission, Approach & Values End ========== */}
 
@@ -296,7 +227,6 @@ export default function About() {
                 data-bg-color="#fff"
                 style={{ backgroundColor: "#fff" }}
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper mb-80">
                         <div className="row">
@@ -324,10 +254,6 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                        {/* RIGHT CONTENT */}
-
-
-
                         <div className="col-xl-8 col-lg-8 col-md-12">
                             <div className="tp-experience-wrapper tp-panel-pin-area pl-70">
                                 <div className="tp-experience-item-wrapper">
@@ -374,21 +300,15 @@ export default function About() {
                 data-bg-color="#f7f7f7"
 
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper mb-60">
                         <div className="row">
-
                             <div className="col-xl-12 text-center ">
-
-
                                 <div className="md-section-content-wrapper  ">
-
                                     <h3 className="cr-section-content-title  mb-20 md-section-title tp_fade_anim text-black">Our experience <span style={{ color: "#0098C6" }}>experts Profile</span></h3>
                                 </div>
                                 <span className="md-section-subtitle mb-20 tp_fade_anim">GREAT PRODUCT STARTS WITH A GREAT TEAM</span>
                                 <p >Proactii Media LLP leadership team has a long history of success in technology, business management, and franchising.</p>
-
                             </div>
                         </div>
                     </div>
@@ -396,33 +316,23 @@ export default function About() {
 
                 <div className="container container-1424">
                     <div className="row">
-
                         <div className="col-12">
-
                             <div className="tp-experience-left-wrapper">
                                 <div className="tp-section-content-wrapper">
-
-
-
                                     {/* 2. Team Grid Container */}
                                     <div className="row justify-content-center g-4">
                                         {teamMembers.map((member, index) => (
                                             <div className="col-lg-3 col-md-4 col-12" key={index}>
-
-                                                {/* --- TEAM CARD START --- */}
                                                 <div className="team-card position-relative overflow-hidden rounded-4 shadow-lg">
 
-                                                    {/* Image */}
                                                     <img
                                                         src={member.image}
                                                         alt={member.name}
                                                         className="w-100 h-100 object-fit-cover team-img"
                                                     />
 
-                                                    {/* Gradient Overlay */}
                                                     <div className="gradient-overlay"></div>
 
-                                                    {/* Text Content */}
                                                     <div className="team-content position-absolute bottom-0 w-100 text-center p-4">
                                                         <h4 className="text-white fw-bold mb-1">{member.name}</h4>
                                                         <p className="text-white-50 mb-0 small text-uppercase tracking-wider">
@@ -431,8 +341,6 @@ export default function About() {
                                                     </div>
 
                                                 </div>
-                                                {/* --- TEAM CARD END --- */}
-
                                             </div>
                                         ))}
                                     </div>
@@ -442,8 +350,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
-            
 
 
             <section
@@ -501,49 +407,44 @@ export default function About() {
                 </div>
             </section>
 
-                <div className="cr-brand-area-2 cr-brand-style-3 tp-brand fix pt-60 pb-60" data-bg-color="#f7f7f7">
-            
-            
-            
-            
-            
-                    <div className="container-fluid p-0">
-                      <div className="cr-brand-inner-wrap">
+            <div className="cr-brand-area-2 cr-brand-style-3 tp-brand fix pt-60 pb-60" data-bg-color="#f7f7f7">
+
+                <div className="container-fluid p-0">
+                    <div className="cr-brand-inner-wrap">
                         <div className="swiper cr-brand-logo-slide-active" data-bg-color="#fff">
-                          <div className="swiper-wrapper slide-transition">
-                            {logos.map((logo, index) => (
-                              <div className="swiper-slide" key={index}>
-                                {/* 1. Move sizing to the parent container */}
-                                <div
-                                  className="cr-brand-item-2"
-                                  style={{
-                                    width: "100%",
-                                    height: "120px", // Adjust this height as needed
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    padding: "10px" // Adds space around the logo
-                                  }}
-                                >
-                                  {/* 2. Image fills the container but keeps its shape */}
-                                  <img
-                                    src={`/assets/images/client/${logo}`}
-                                    alt={logo.replace('.png', '')}
-                                    style={{
-                                      width: "80%",
-                                      height: "100%",
-                                      objectFit: "contain"
-                                    }}
-                                  />
-                                </div>
-                              </div>
-                            ))}
-                          </div>
+                            <div className="swiper-wrapper slide-transition">
+                                {logos.map((logo, index) => (
+                                    <div className="swiper-slide" key={index}>
+
+                                        <div
+                                            className="cr-brand-item-2"
+                                            style={{
+                                                width: "100%",
+                                                height: "120px",
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                padding: "10px"
+                                            }}
+                                        >
+                                            <img
+                                                src={`/assets/images/client/${logo}`}
+                                                alt={logo.replace('.png', '')}
+                                                style={{
+                                                    width: "80%",
+                                                    height: "100%",
+                                                    objectFit: "contain"
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-        
+                </div>
+            </div>
+
         </>
     );
 }

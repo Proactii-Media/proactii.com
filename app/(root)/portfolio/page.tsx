@@ -2,15 +2,7 @@
 
 "use client";
 
-
-
-
-
-
-
 export default function Portfolio() {
-
-
 
     return (
         <>
@@ -22,8 +14,6 @@ export default function Portfolio() {
                     backgroundImage: "url('/assets/images/banner/about1.png')",
                 }}
             >
-
-
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xxl-12">
@@ -56,7 +46,6 @@ export default function Portfolio() {
                 data-bg-color="#fff"
                 style={{ backgroundColor: "#fff" }}
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper">
                         <div className="row">
@@ -79,25 +68,16 @@ export default function Portfolio() {
                                 >
                                     Explore our portfolio of creative designs, innovative websites, and digital solutions crafted to strengthen brands, engage audiences, and drive business growth.
                                 </p>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </section>
 
 
             <div className="tp-portfolio-area tp-portfolio-space-2 pb-90">
                 <div className="container container-1424">
-
-
-
                     <div className="row protfoliomargin gx-50 grid">
-
                         {/* Portfolio 1 - Image Left */}
                         <div className="col-12 grid-item branding marketing">
                             <div className="tp-pr-item">
@@ -193,12 +173,9 @@ export default function Portfolio() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
         </>
     );
 }

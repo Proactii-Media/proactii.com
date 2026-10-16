@@ -77,7 +77,6 @@ export default function Header() {
                         <div className="tp-offcanvas-menu d-xl-none">
                             <nav>
                                 <ul>
-
                                     <li>
                                         <Link
                                             href="/"
@@ -147,7 +146,6 @@ export default function Header() {
                                             </li>
                                         </ul>
                                     </li>
-
 
                                     <li>
                                         <Link
@@ -348,28 +346,11 @@ export default function Header() {
                                                 </li>
 
                                                 {/* ABOUT */}
-                                                <li className="has-dropdown">
+                                                <li >
 
                                                     <Link href="/about">
                                                         About Us
                                                     </Link>
-
-                                                    <ul className="tp-submenu submenu">
-
-                                                        <li>
-                                                            <Link href="/about">
-                                                                About Us
-                                                            </Link>
-                                                        </li>
-
-                                                        <li>
-                                                            <Link href="#">
-                                                                Our Team
-                                                            </Link>
-                                                        </li>
-
-                                                    </ul>
-
                                                 </li>
 
                                                 {/* SERVICES */}
@@ -378,8 +359,6 @@ export default function Header() {
                                                     <Link href="/services">
                                                         Services
                                                     </Link>
-
-
                                                     <ul className="tp-submenu submenu">
                                                         <li>
                                                             <Link href="/services-details/online-branding">
@@ -476,11 +455,11 @@ export default function Header() {
                                                     href="/contact"
                                                     className="tp-btn-yellow-square"
                                                     style={{
-                                                        display: "inline-flex",       /* Forces items into a row */
-                                                        alignItems: "center",         /* Vertically centers the text and arrow */
-                                                        gap: "10px",                  /* Adds space between text and arrow */
-                                                        flexDirection: "row",         /* Ensures horizontal layout */
-                                                        textDecoration: "none"        /* Removes underline from link */
+                                                        display: "inline-flex",      
+                                                        alignItems: "center",         
+                                                        gap: "10px",                  
+                                                        flexDirection: "row",        
+                                                        textDecoration: "none"        
                                                     }}
                                                 >
                                                     Let's Talk
@@ -498,9 +477,7 @@ export default function Header() {
                                                             />
                                                         </svg>
                                                     </span>
-
                                                 </Link>
-
                                             </div>
 
                                             {/* MOBILE MENU BUTTON */}
@@ -519,23 +496,14 @@ export default function Header() {
                                                         <i></i>
                                                     </span>
                                                 </button>
-
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </header>
         </>
     );

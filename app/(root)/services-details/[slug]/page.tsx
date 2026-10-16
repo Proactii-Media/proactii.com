@@ -13,7 +13,6 @@ export function generateStaticParams() {
     }));
 }
 
-
 export async function generateMetadata({
     params,
 }: ServiceDetailsProps) {
@@ -26,8 +25,6 @@ export async function generateMetadata({
             title: "Service Not Found | Proactii Media LLP",
         };
     }
-
-
 }
 
 export default async function ServiceDetails({
@@ -71,7 +68,6 @@ export default async function ServiceDetails({
                                 <h3 className="tp-breadcrumb-title tp-char-animation text-white">
                                     {service.title}
                                 </h3>
-
                                 <div className="tp-breadcrumb-list mb-25">
                                     <span className="text-white">
                                         <Link href="/">Home</Link>
@@ -142,9 +138,6 @@ export default async function ServiceDetails({
                                         </h2>
                                     </div>
 
-
-
-
                                     <div className="tp-service-section-text mb-30">
                                         {(Array.isArray(service.details)
                                             ? service.details
@@ -163,14 +156,6 @@ export default async function ServiceDetails({
                                             </p>
                                         ))}
                                     </div>
-
-
-
-
-
-
-
-
                                     {(service.highlights?.length ?? 0) > 0 && (
                                         <ul
                                             className="service-highlights"
@@ -254,9 +239,6 @@ export default async function ServiceDetails({
                 </div>
             </section>
 
-
-
-
             <div className="tp-instagram-area p-relative pt-80 pb-80">
                 <div className="container container-1424">
                     <div className="row row-cols-lg-3 row-cols-4 g-3">
@@ -301,8 +283,6 @@ export default async function ServiceDetails({
                     </div>
                 </div>
             </div>
-
-
 
             <section
                 className="tp-experience-area pt-80 pb-80"

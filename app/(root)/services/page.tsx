@@ -2,16 +2,10 @@
 
 "use client";
 
-
 import { services } from "@/constants/data"
 import Image from "next/image";
 
-
-
-
 export default function Service() {
-
-
 
     return (
         <>
@@ -23,8 +17,6 @@ export default function Service() {
                     backgroundImage: "url('/assets/images/banner/about1.png')",
                 }}
             >
-
-
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xxl-12">
@@ -32,20 +24,15 @@ export default function Service() {
                                 <h3 className="tp-breadcrumb-title tp-char-animation text-white">
                                     Our Services
                                 </h3>
-
                                 <div className="tp-breadcrumb-list mb-25 ">
                                     <span className="text-white">
                                         <a href="/">Home</a>
                                     </span>
-
                                     <span className="dvdr text-white  ">
                                         <i>|</i>
                                     </span>
-
                                     <span className="text-white">services</span>
                                 </div>
-
-                          
                             </div>
                         </div>
                     </div>
@@ -58,14 +45,11 @@ export default function Service() {
                 data-bg-color="#fff"
                 style={{ backgroundColor: "#fff" }}
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper">
                         <div className="row">
-
                             <div className="col-xl-12 text-center ">
                                 <div className="md-section-content-wrapper mb-20 ">
-
                                     <h3 className="cr-section-content-title md-section-title tp_fade_anim text-black">Digital Solutions That Drive Your Business Forward</h3>
                                 </div>
                                 <p
@@ -81,18 +65,11 @@ export default function Service() {
                                 >
                                     From high-performing websites and mobile apps to powerful branding and targeted digital marketing, we help your business attract more customers, strengthen its online presence, and achieve measurable growth.
                                 </p>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </section>
-
-
 
             <section id="down" className="md-service-area pb-80">
                 <div className="container-fluid p-0">
@@ -165,12 +142,6 @@ export default function Service() {
                     </div>
                 </div>
             </section>
-
-
-
-
-
-
         </>
     );
 }

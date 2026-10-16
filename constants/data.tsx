@@ -1,3 +1,120 @@
+import {
+    Asterisk,
+    PieChart,
+    Award,
+    IndianRupee,
+    Settings,
+    Users,
+    Rocket,
+} from "lucide-react";
+
+
+
+export const slides = [
+    {
+        image: "/assets/images/home/weare1.png",
+        text: "INNOVATION",
+    },
+    {
+        image: "/assets/images/home/weare2.png",
+        text: "DEVELOPMENT",
+    },
+    {
+        image: "/assets/images/home/weare3.png",
+        text: "DIGITAL PRESENCE",
+    },
+];
+
+export const teamMembers = [
+    {
+        name: "Manhar Nakhuva",
+        role: "Founder",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+        name: "Dainik Tandel",
+        role: "Web developer",
+        image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+        name: "Sonali Kharpade",
+        role: "Graphic Designer",
+        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+        name: "Trupal Patel",
+        role: "Social Media Marketer",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+        name: "Roshani Mistry",
+        role: "Web Developer",
+        image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+        name: "Satish Patel",
+        role: "App Developer",
+        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+        name: "Nitin Patel",
+        role: "Web Designer",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+        name: "Ramiya Nair",
+        role: "SEO Executive",
+        image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
+    }
+];
+
+export const rightServices = [
+    {
+        title: "Standard of Excellence",
+        description:
+            "Every day our team will strive to meet your standard of excellence and do our best to exceed expectations.",
+        icon: Award,
+    },
+    {
+        title: "Spectrum of Services",
+        description:
+            "We ensure you meet all your digital marketing needs under one roof, including SEO, SMM, PPC, web design and development, and more.",
+        icon: Settings,
+    },
+
+    {
+        title: "Dedicated Support",
+        description:
+            "We provide 24/7 dedicated support to ensure your business runs smoothly and your questions are always answered.",
+        icon: Rocket,
+    },
+];
+
+
+export const leftServices = [
+    {
+        title: "Proven Results",
+        description:
+            "We don’t boast about our services. On the contrary, we let our results speak for themselves. We deliver what we promised.",
+        icon: PieChart,
+
+    },
+    {
+        title: "Cost Effective",
+        description:
+            "We will try not to burn a hole in your pocket. We offer a range of marketing services at reasonable prices.",
+        icon: IndianRupee,
+    },
+    {
+        title: "Strong Teamwork",
+        description:
+            "Our versatile and talented team of digital marketers collaborate with each other to provide you with the best results.",
+        icon: Users,
+    },
+];
+
+
+
 export const funFacts = [
     {
         number: 99,
@@ -21,47 +138,6 @@ export const funFacts = [
     },
 ];
 
-// export const services = [
-//     {
-//         id: 1,
-//         number: "01",
-//         title: "Online Branding",
-//         description:
-//             "Branding does not only create an impression in your target audience but also tells them what they can expect from your organization.",
-//         icon: "/assets/images/services/branding.png",
-//         link: "/services/online-branding",
-//     },
-
-//     {
-//         id: 2,
-//         number: "02",
-//         title: "Website Development",
-//         description:
-//             "Appealing and effective websites are one of the most potent marketing tools to reach wide audiences and satisfy their requirements.",
-//         icon: "/assets/images/services/website.png",
-//         link: "/services/web-development",
-//     },
-
-//     {
-//         id: 3,
-//         number: "03",
-//         title: "Mobile App Development",
-//         description:
-//             "With us, convert your ideas into user-friendly and easy-to-use applications, which increase your chances of success in the global market.",
-//         icon: "/assets/images/services/app-development.png",
-//         link: "/services/mobile-app-development",
-//     },
-
-//     {
-//         id: 4,
-//         number: "04",
-//         title: "Digital Marketing",
-//         description:
-//             "Digital marketing allows businesses to reach their customers where they are while strengthening their brands and expanding their customer base.",
-//         icon: "/assets/images/services/advertising.png",
-//         link: "/services/digital-marketing",
-//     },
-// ];
 
 export const weareproactii = [
     {
@@ -688,7 +764,7 @@ type Service = {
     slug: string;
     description: string;
     details: string | string[];
-    
+
     icon: string;
     image: string;
     link: string;

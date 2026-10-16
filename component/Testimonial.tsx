@@ -11,7 +11,6 @@ export default function Testimonial() {
                 style={{
                     background: "#f7f7f7"
                 }}
-
             >
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper mb-80">
@@ -36,7 +35,6 @@ export default function Testimonial() {
                                     background: "#ffff", color: "black"
 
                                 }}
-
                             >
                                 {testimonials.map((item) => (
                                     <div className="swiper-slide" key={item.id}>
@@ -50,25 +48,24 @@ export default function Testimonial() {
                                                     />
                                                 </div>
 
-                                                <div className="md-testimonial-author-info mb-2" style={{color:"#FFCF27;"}}>
+                                                <div className="md-testimonial-author-info mb-2" style={{ color: "#FFCF27;" }}>
 
-                                                       {Array.from({ length: item.rating }, (_, index) => (
-                                                    <span key={index} style={{ display: "inline-flex" }}>
-                                                        <svg
-                                                            width="18"
-                                                            height="17"
-                                                            viewBox="0 0 18 17"
-                                                            fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                        >
-                                                            <path
-                                                                d="M8.55951 0L10.5801 6.21885H17.119L11.829 10.0623L13.8496 16.2812L8.55951 12.4377L3.26944 16.2812L5.29007 10.0623L9.53674e-07 6.21885H6.53888L8.55951 0Z"
-                                                                fill="currentColor"
-                                                            />
-                                                        </svg>
-                                                    </span>
-                                                ))}
-
+                                                    {Array.from({ length: item.rating }, (_, index) => (
+                                                        <span key={index} style={{ display: "inline-flex" }}>
+                                                            <svg
+                                                                width="18"
+                                                                height="17"
+                                                                viewBox="0 0 18 17"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    d="M8.55951 0L10.5801 6.21885H17.119L11.829 10.0623L13.8496 16.2812L8.55951 12.4377L3.26944 16.2812L5.29007 10.0623L9.53674e-07 6.21885H6.53888L8.55951 0Z"
+                                                                    fill="currentColor"
+                                                                />
+                                                            </svg>
+                                                        </span>
+                                                    ))}
 
                                                     <h3 className="md-testimonial-author-title">
                                                         {item.name}
@@ -83,8 +80,6 @@ export default function Testimonial() {
                                             <div className="md-testimonial-text">
                                                 <p className="people-special-text">{item.text}</p>
                                             </div>
-
-
                                         </div>
                                     </div>
                                 ))}

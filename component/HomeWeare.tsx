@@ -7,43 +7,44 @@ import { weareproactii } from "@/constants/data";
 export default function HomeWeAre() {
     return (
         <section className="md-service-area md-service-space pt-100 pb-80">
-       <div className="container container-1424">
-    <div className="md-section-content-wrapper mb-35 text-center">
-        {/* Title */}
-        <h2
-            className="cr-section-content-title fs-80 mb-15 tp_fade_anim"
-            style={{ textAlign: "center" }}
-        >
-            We are{" "}
-            <span style={{ color: "#0098C6" }}>
-                Proactii Media LLP
-            </span>
-        </h2>
+            <div className="container container-1424">
+                <div className="md-section-content-wrapper mb-35 text-center">
 
-        {/* Subtitle */}
-        <span className="md-section-subtitle  mb-20 tp_fade_anim">THE LEADING IT SOLUTIONS COMPANY</span>
+                    {/* Title */}
+                    <h2
+                        className="cr-section-content-title fs-80 mb-15 tp_fade_anim"
+                        style={{ textAlign: "center" }}
+                    >
+                        We are{" "}
+                        <span style={{ color: "#0098C6" }}>
+                            Proactii Media LLP
+                        </span>
+                    </h2>
 
-        {/* Paragraph - Responsive Fix */}
-        <p
-            className=" fs-20 tp_fade_anim mb-30"
-            style={{ 
-                textAlign: "center",
-                display: "block",
-                width: "100%",          
-                maxWidth: "1000px",    
-                margin: "0 auto",       
-                padding: "0 15px"       
-            }}
-        >
-            Today we’re proud to boast a strong team of IT engineers who
-            thrive on rolling up their sleeves and solving your IT
-            problems and meeting your business needs.
-        </p>
-    </div>
-</div>
+                    {/* Subtitle */}
+                    <span className="md-section-subtitle  mb-20 tp_fade_anim">THE LEADING IT SOLUTIONS COMPANY</span>
+
+                    {/* Paragraph - Responsive Fix */}
+                    <p
+                        className=" fs-20 tp_fade_anim mb-30"
+                        style={{
+                            textAlign: "center",
+                            display: "block",
+                            width: "100%",
+                            maxWidth: "1000px",
+                            margin: "0 auto",
+                            padding: "0 15px"
+                        }}
+                    >
+                        Today we’re proud to boast a strong team of IT engineers who
+                        thrive on rolling up their sleeves and solving your IT
+                        problems and meeting your business needs.
+                    </p>
+                </div>
+            </div>
 
             <div className="container-fluid p-0">
-        
+
                 <div className="tp-service-pin tp-panel-pin-service-area">
                     {weareproactii.map((section, index) => (
                         <div
@@ -51,6 +52,7 @@ export default function HomeWeAre() {
                             key={section.title}
                         >
                             <div className="row gx-0 align-items-center">
+                                
                                 {/* CONTENT */}
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-12 pb-xl-0 pb-lg-0 pb-md-30 pb-30">
                                     <div className="tp-experience-wrapper pl-70">

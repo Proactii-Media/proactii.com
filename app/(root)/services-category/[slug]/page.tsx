@@ -26,8 +26,8 @@ export default function ServiceCategory() {
     );
 
     if (!relatedService) {
-    return <div>Service not found</div>;
-}
+        return <div>Service not found</div>;
+    }
 
 
 
@@ -81,14 +81,10 @@ export default function ServiceCategory() {
                 data-bg-color="#fff"
                 style={{ backgroundColor: "#fff" }}
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper mb-40">
                         <div className="row">
-
                             <div className="col-xl-12 text-center ">
-
-
                                 <div className="md-section-content-wrapper  ">
 
                                     <h3 className="cr-section-content-title md-section-title tp_fade_anim text-black">{relatedService?.title}</h3>
@@ -105,26 +101,16 @@ export default function ServiceCategory() {
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12">
                             <div className="tp-experience-left-wrapper">
                                 <div className="tp-section-content-wrapper mb-40">
-
-
-
                                     <img
                                         src={relatedService?.website_image || "/assets/images/category/e-commerce.png"}
                                         alt={relatedService?.website_titile || "Service image"}
                                     />
-
-
                                 </div>
                             </div>
                         </div>
                         {/* RIGHT CONTENT */}
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12">
                             <div className="tp-experience-wrapper tp-panel-pin-area pl-70">
-
-                                {/* ITEM ROW 1 */}
-
-
-                                {/* ITEM ROW 2 */}
                                 <div
                                     className="tp-experience-item-wrapper tp-panel-pin"
                                     data-end="bottom 85%"
@@ -132,41 +118,31 @@ export default function ServiceCategory() {
                                     <div className="row">
                                         {Array.isArray(relatedService?.website_des) &&
                                             relatedService.website_des.map((paragraph: string, index: number) => (
-                                                <p key={index}>{paragraph}</p>
+                                                <p key={index} style={{ textAlign:"justify"}} >{paragraph}</p>
                                             ))}
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
             <section
                 className="tp-experience-area pt-80 pb-80  "
                 data-bg-color="#f7f7f7"
                 style={{ backgroundColor: "#f7f7f7" }}
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper mb-80">
                         <div className="row">
-
-
-
-
                             <div className="col-xl-12 text-center md-section-content-wrapper  ">
-
                                 <h3
                                     className="cr-section-content-title md-section-title tp_fade_anim text-black"
                                     dangerouslySetInnerHTML={{
                                         __html: relatedService?.leverage_title || "",
                                     }}
                                 />
-
                             </div>
                         </div>
                     </div>
@@ -176,9 +152,6 @@ export default function ServiceCategory() {
 
                 <div className="container container-1424">
                     <div className="row g-5">
-
-
-
                         {Array.isArray(relatedService?.leverage) &&
                             relatedService.leverage.map(
                                 (item: { icon: string; title: string; des: string }, index: number) => (
@@ -193,17 +166,13 @@ export default function ServiceCategory() {
 
                                             <h3 className=" mt-20" style={{ fontSize: "23px" }} >{item.title}</h3>
 
-                                            <p className="" style={{ fontSize: "15px", textAlign: "justify", color:"#333333" }}>{item.des}</p>
+                                            <p className="" style={{ fontSize: "15px", textAlign: "justify", color: "#333333" }}>{item.des}</p>
                                         </div>
                                     </div>
                                 )
                             )}
-
-
-
                     </div>
                 </div>
-
             </section>
 
 
@@ -212,7 +181,6 @@ export default function ServiceCategory() {
                 data-bg-color="#fff"
                 style={{ backgroundColor: "#d83434" }}
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper">
                         <div className="row">
@@ -240,21 +208,13 @@ export default function ServiceCategory() {
                                 >
                                     {relatedService?.process_des}
                                 </p>
-
-
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
 
                 <div className="tp-portfolio-area tp-portfolio-space-2 pb-80 pt-60 ">
                     <div className="container container-1424">
-
-
-
                         <div className="row protfoliomargin gx-50 grid">
 
                             {/* Portfolio 1 - Image Left */}
@@ -268,28 +228,15 @@ export default function ServiceCategory() {
                                                     src={relatedService?.process_image || "/assets/images/category/e-commerce.png"}
                                                     alt={relatedService?.process_title || "Service image"}
                                                 />
-
-
-
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-
                     </div>
                 </div>
-
-
             </section>
-
-
-
 
             <section
                 className="tp-experience-area pt-80 pb-60  "
@@ -300,26 +247,21 @@ export default function ServiceCategory() {
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper ">
                         <div className="row">
-
                             <div className="col-xl-12 text-center ">
                                 <span className="md-section-subtitle  mb-15 tp_fade_anim font-extrabold" style={{ fontWeight: "600" }}>{relatedService.expertise_heading}</span>
-
                                 <div className="md-section-content-wrapper  ">
-
                                     <h3
                                         className="cr-section-content-title md-section-title tp_fade_anim text-black"
                                         dangerouslySetInnerHTML={{
                                             __html: relatedService?.expertise_titile || "",
                                         }}
                                     />
-
                                 </div>
                                 <p className="desc mt-20">{relatedService.expertise_des}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </section>
 
 
@@ -328,7 +270,6 @@ export default function ServiceCategory() {
                 data-bg-color="#ffff"
                 style={{ backgroundColor: "#ffff" }}
             >
-
                 <div className="container container-1424">
                     <div className="md-section-content-top-wrapper ">
                         <div className="row">
@@ -339,7 +280,7 @@ export default function ServiceCategory() {
                                 <div className="md-section-content-wrapper  ">
 
                                     <h3
-                                        className="cr-section-content-title md-section-title tp_fade_anim text-black" 
+                                        className="cr-section-content-title md-section-title tp_fade_anim text-black"
                                         dangerouslySetInnerHTML={{
                                             __html: relatedService?.solution_title || "",
                                         }}
@@ -351,7 +292,6 @@ export default function ServiceCategory() {
                         </div>
                     </div>
                 </div>
-
 
                 <div className="container container-1424 mt-60">
                     <div className="row g-5">
@@ -370,11 +310,11 @@ export default function ServiceCategory() {
                                             />
                                         </div>
 
-                                        <h3 className="desc mt-20" style={{ fontSize:"23px"}}>
+                                        <h3 className="desc mt-20" style={{ fontSize: "23px" }}>
                                             {item.servicesbox_tiitle}
                                         </h3>
 
-                                        <p className="desc" style={{fontSize:"15px", textAlign:"justify", color:"#333333"}}>
+                                        <p className="desc" style={{ fontSize: "15px", textAlign: "justify", color: "#333333" }}>
                                             {item.servicesbox_des}
                                         </p>
                                     </div>
@@ -382,7 +322,6 @@ export default function ServiceCategory() {
                             ))}
                     </div>
                 </div>
-
             </section>
 
 
@@ -485,15 +424,7 @@ export default function ServiceCategory() {
                         </Link>
                     </p>
                 </div>
-
-
-
-
-
-
             </section>
-
-
 
             <section
                 className="tp-experience-area pt-80 pb-80"
@@ -556,10 +487,6 @@ export default function ServiceCategory() {
                                 </a>
                             </div>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </section>
@@ -675,15 +602,7 @@ export default function ServiceCategory() {
 
                     </div>
                 </div>
-
-
-
-
-
-
             </section>
-
-
 
             <section
                 className="tp-experience-area pt-80 pb-80"
@@ -739,41 +658,6 @@ export default function ServiceCategory() {
                     </div>
                 </div>
             </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </>
     );

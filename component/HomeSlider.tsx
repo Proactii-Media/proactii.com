@@ -43,7 +43,7 @@ export default function HeroBanner() {
 
     return () => clearTimeout(serviceInterval);
   }, [currentService]);
-  
+
 
   return (
     <>
@@ -107,16 +107,16 @@ export default function HeroBanner() {
 
                   {/* BUTTONS */}
                   <div className="d-flex align-items-center flex-wrap gap-3"
-                  
+
                   >
                     <Link href="/contact" className="tp-btn-yellow-square"
-                        style={{
-            display: "inline-flex",       /* Forces items into a row */
-            alignItems: "center",         /* Vertically centers the text and arrow */
-            gap: "10px",                  /* Adds space between text and arrow */
-            flexDirection: "row",         /* Ensures horizontal layout */
-            textDecoration: "none"        /* Removes underline from link */
-        }}
+                      style={{
+                        display: "inline-flex",       
+                        alignItems: "center",      
+                        gap: "10px",                  
+                        flexDirection: "row",         
+                        textDecoration: "none"      
+                      }}
                     >
                       Start Your Project
                       <span>
@@ -145,80 +145,79 @@ export default function HeroBanner() {
           </div>
         </div>
       </section>
-   <div className="pp-brand-area pp-style-2 pp-brand-style">
-                 <div className="container-fluid p-0">
-  <div
-    className="pp-brand-wrapper z-index-1"
-    style={{ backgroundColor: "#0098C6" }}
-  >
-    <div className="swiper tp-text-slide-active">
-      <div className="swiper-wrapper slide-transition">
+      <div className="pp-brand-area pp-style-2 pp-brand-style">
+        <div className="container-fluid p-0">
+          <div
+            className="pp-brand-wrapper z-index-1"
+            style={{ backgroundColor: "#0098C6" }}
+          >
+            <div className="swiper tp-text-slide-active">
+              <div className="swiper-wrapper slide-transition">
 
-        <div className="swiper-slide">
-          <div className="pp-brand-item">
-            <span className="pp-brand-title">
-              <i>01 /</i>Digital Solutions
-            </span>
+                <div className="swiper-slide">
+                  <div className="pp-brand-item">
+                    <span className="pp-brand-title">
+                      <i>01 /</i>Digital Solutions
+                    </span>
 
-            <span className="pp-brand-icon">
-              {/* your SVG */}
-            </span>
-          </div>
-        </div>
-
-        <div className="swiper-slide">
-          <div className="pp-brand-item">
-            <span className="pp-brand-title">
-              <i>02 /</i>Web Development
-            </span>
-
-            <span className="pp-brand-icon">
-              {/* your SVG */}
-            </span>
-          </div>
-        </div>
-
-        <div className="swiper-slide">
-          <div className="pp-brand-item">
-            <span className="pp-brand-title">
-              <i>03 /</i>Mobile App Development
-            </span>
-
-            <span className="pp-brand-icon">
-              {/* your SVG */}
-            </span>
-          </div>
-        </div>
-
-        <div className="swiper-slide">
-          <div className="pp-brand-item">
-            <span className="pp-brand-title">
-              <i>04 /</i>Digital Marketing
-            </span>
-
-            <span className="pp-brand-icon">
-              {/* your SVG */}
-            </span>
-          </div>
-        </div>
-
-        <div className="swiper-slide">
-          <div className="pp-brand-item">
-            <span className="pp-brand-title">
-              <i>05 /</i>Technology That Drives Growth
-            </span>
-
-            <span className="pp-brand-icon">
-              {/* your SVG */}
-            </span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
+                    <span className="pp-brand-icon">
+                      {/* your SVG */}
+                    </span>
+                  </div>
                 </div>
+
+                <div className="swiper-slide">
+                  <div className="pp-brand-item">
+                    <span className="pp-brand-title">
+                      <i>02 /</i>Web Development
+                    </span>
+
+                    <span className="pp-brand-icon">
+                      {/* your SVG */}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="swiper-slide">
+                  <div className="pp-brand-item">
+                    <span className="pp-brand-title">
+                      <i>03 /</i>Mobile App Development
+                    </span>
+
+                    <span className="pp-brand-icon">
+                      {/* your SVG */}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="swiper-slide">
+                  <div className="pp-brand-item">
+                    <span className="pp-brand-title">
+                      <i>04 /</i>Digital Marketing
+                    </span>
+
+                    <span className="pp-brand-icon">
+                      {/* your SVG */}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="swiper-slide">
+                  <div className="pp-brand-item">
+                    <span className="pp-brand-title">
+                      <i>05 /</i>Technology That Drives Growth
+                    </span>
+
+                    <span className="pp-brand-icon">
+                      {/* your SVG */}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

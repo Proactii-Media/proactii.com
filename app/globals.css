@@ -864,6 +864,7 @@ height: 543px;
     font-size: 25px;
     cursor: pointer;
     z-index: 5;
+    animation: animate-pulse 3s linear infinite;
 
     transition: background 0.3s ease,
                 transform 0.3s ease,

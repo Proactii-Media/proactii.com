@@ -1,58 +1,7 @@
 "use client";
 
-import {
-    Asterisk,
-    PieChart,
-    Award,
-    IndianRupee,
-    Settings,
-    Users,
-    Rocket, // Added new icon
-} from "lucide-react";
 
-const leftServices = [
-    {
-        title: "Proven Results",
-        description:
-            "We don’t boast about our services. On the contrary, we let our results speak for themselves. We deliver what we promised.",
-        icon: PieChart,
-
-    },
-    {
-        title: "Cost Effective",
-        description:
-            "We will try not to burn a hole in your pocket. We offer a range of marketing services at reasonable prices.",
-        icon: IndianRupee,
-    },
-    {
-        title: "Strong Teamwork",
-        description:
-            "Our versatile and talented team of digital marketers collaborate with each other to provide you with the best results.",
-        icon: Users,
-    },
-];
-
-const rightServices = [
-    {
-        title: "Standard of Excellence",
-        description:
-            "Every day our team will strive to meet your standard of excellence and do our best to exceed expectations.",
-        icon: Award,
-    },
-    {
-        title: "Spectrum of Services",
-        description:
-            "We ensure you meet all your digital marketing needs under one roof, including SEO, SMM, PPC, web design and development, and more.",
-        icon: Settings,
-    },
-
-    {
-        title: "Dedicated Support",
-        description:
-            "We provide 24/7 dedicated support to ensure your business runs smoothly and your questions are always answered.",
-        icon: Rocket,
-    },
-];
+import { leftServices, rightServices } from "@/constants/data";
 
 type ServiceItem = {
     title: string;
