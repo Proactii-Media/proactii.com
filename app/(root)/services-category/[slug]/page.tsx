@@ -43,7 +43,7 @@ export default function ServiceCategory() {
             relatedService.servicesbox.length > 0);
 
     const willRenderExpertise =
-        !!relatedService.expertise_titile || !!relatedService.expertise_des;
+        !!relatedService.expertise_title || !!relatedService.expertise_des;
 
     // Order matters — matches the JSX render order below
     const alternatingSections = [
@@ -81,7 +81,7 @@ export default function ServiceCategory() {
             <div
                 className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
                 style={{
-                    backgroundImage: "url('/assets/images/banner/about1.png')",
+                    backgroundImage: "url('/assets/images/banner/onlinebanner.png')",
                 }}
             >
                 <div className="container">
@@ -149,19 +149,19 @@ export default function ServiceCategory() {
                     </div>
                 </div>
 
-                <div className="container container-1424">
+                <div className="container container-1424 mb-40">
                     <div className="row">
                         <div className="col-xl-6 col-lg-6 col-md-6 col-12">
                             <div className="tp-experience-left-wrapper">
                                 <div className="tp-section-content-wrapper mb-40">
                                     <img
                                         src={relatedService?.website_image || "/assets/images/category/e-commerce.png"}
-                                        alt={relatedService?.website_titile || "Service image"}
+                                        alt={relatedService?.website_title || "Service image"}
                                     />
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-12">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-12 ">
                             <div className="tp-experience-wrapper tp-panel-pin-area pl-70">
                                 <div className="tp-experience-item-wrapper tp-panel-pin" data-end="bottom 85%">
                                     <div className="row">
@@ -267,7 +267,7 @@ export default function ServiceCategory() {
                     </div>
                 </div>
 
-                <div className="tp-portfolio-area tp-portfolio-space-2 pb-80 pt-60">
+                <div className="tp-portfolio-area tp-portfolio-space-2 pt-60">
                     <div className="container container-1424">
                         <div className="row protfoliomargin gx-50 grid">
                             <div className="col-12 grid-item branding marketing">
@@ -301,16 +301,20 @@ export default function ServiceCategory() {
                                     <span className="md-section-subtitle mb-15 tp_fade_anim font-extrabold" style={{ fontWeight: "600" }}>
                                         {relatedService.expertise_heading}
                                     </span>
-                                    <div className="md-section-content-wrapper">
+                                    <div className="md-section-content-wrapper mb-20">
                                         <h3
                                             className="cr-section-content-title md-section-title tp_fade_anim text-black"
-                                            dangerouslySetInnerHTML={{ __html: relatedService?.expertise_titile || "" }}
+                                            dangerouslySetInnerHTML={{ __html: relatedService?.expertise_title || "" }}
                                         />
                                     </div>
-                                    {Array.isArray(relatedService?.expertise_des) &&
-                                            relatedService.expertise_des.map((paragraph: string, index: number) => (
-                                                <p key={index} style={{ textAlign: "justify" }}>{paragraph}</p>
-                                            ))}
+{Array.isArray(relatedService?.expertise_des) &&
+    relatedService.expertise_des.map((paragraph: string, index: number) => (
+        <p
+            key={index}
+            style={{ textAlign: "center", marginBottom: "3px" }}
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+        />
+    ))}
                                 </div>
                             </div>
                         </div>
@@ -390,7 +394,7 @@ export default function ServiceCategory() {
                         <div className="row">
                             <div className="col-xl-12 text-center ">
                                 <span className="md-section-subtitle mb-15 tp_fade_anim font-extrabold" style={{ fontWeight: "600" }}>
-                                    PORTFOLIO
+                                    WHO WE SERVE
                                 </span>
                                 <div className="md-section-content-wrapper">
                                     <h3 className="cr-section-content-title md-section-title tp_fade_anim text-black">

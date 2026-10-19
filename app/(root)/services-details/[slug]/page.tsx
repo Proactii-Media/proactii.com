@@ -54,46 +54,49 @@ export default async function ServiceDetails({
 
     return (
         <>
-            {/* Breadcrumb */}
-            <div
-                className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
-                style={{
-                    backgroundImage: "url('/assets/images/banner/about1.png')",
-                }}
-            >
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-xxl-12">
-                            <div className="tp-breadcrumb-content text-center">
-                                <h3 className="tp-breadcrumb-title tp-char-animation text-white">
-                                    {service.title}
-                                </h3>
-                                <div className="tp-breadcrumb-list mb-25">
-                                    <span className="text-white">
-                                        <Link href="/">Home</Link>
-                                    </span>
+           
+{/* Breadcrumb */}
+<div
+    className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
+    style={{
+        backgroundImage: `url('${service.banner_image}')`,
+    }}
+>
+    <div className="container">
+        <div className="row justify-content-center">
+            <div className="col-xxl-12">
+                <div className="tp-breadcrumb-content text-center">
+                    <h3 className="tp-breadcrumb-title tp-char-animation text-white">
+                        {service.title}
+                    </h3>
 
-                                    <span className="dvdr text-white">
-                                        <i>|</i>
-                                    </span>
+                    <div className="tp-breadcrumb-list mb-25">
+                        <span className="text-white">
+                            <Link href="/">Home</Link>
+                        </span>
 
-                                    <span className="text-white">
-                                        <Link href="/services">Services</Link>
-                                    </span>
+                        <span className="dvdr text-white">
+                            <i>|</i>
+                        </span>
 
-                                    <span className="dvdr text-white">
-                                        <i>|</i>
-                                    </span>
+                        <span className="text-white">
+                            <Link href="/services">Services</Link>
+                        </span>
 
-                                    <span className="text-white">
-                                        {service.title}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                        <span className="dvdr text-white">
+                            <i>|</i>
+                        </span>
+
+                        <span className="text-white">
+                            {service.title}
+                        </span>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
 
             {/* Service Details */}
             <section

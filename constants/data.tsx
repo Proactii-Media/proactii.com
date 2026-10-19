@@ -727,7 +727,7 @@ type RelatedService = {
     image: string;
     link: string;
 
-    website_titile?: string;
+    website_title?: string;
     website_des?: string[];
     website_image?: string;
 
@@ -743,7 +743,7 @@ type RelatedService = {
     process_image?: string;
 
     expertise_heading?: string;
-    expertise_titile?: string;
+    expertise_title?: string;
     expertise_des?: string[];
 
     solution_title?: string;
@@ -763,6 +763,7 @@ type Service = {
     title: string;
     slug: string;
     description: string;
+    banner_image : string;
     details: string | string[];
 
     icon: string;
@@ -785,6 +786,7 @@ export const services: Service[] = [
         number: "01",
         title: "Online Branding",
         slug: "online-branding",
+        banner_image:"/assets/images/banner/onlinebanner1.png",
         description:
             "Branding helps create an impression on your target audience and communicates what they can expect from your organization.",
         details:
@@ -825,7 +827,7 @@ export const services: Service[] = [
                 image: "/assets/images/services_details/brand.png",
                 link: "/services-category/brand-identity",
 
-                website_titile: "Brand Identity",
+                website_title: "Brand Identity",
                 website_des: [
                     "Proactii Media LLP is a brand identity is the face of a brand. As discussed in the previous section, a brand is an emotional and even philosophical concept, while brand identity is the visual component of a brand that represents those larger ideas.",
                     "Brand identity includes logos, typography, colors, packaging, and messaging, and it complements and reinforces the existing reputation of a brand. Brand identity attracts new customers to a brand while making existing customers feel at home. It’s both outward- and inward-facing.",
@@ -873,10 +875,10 @@ export const services: Service[] = [
                 process_image: "/assets/images/category/web-design.gif",
 
                 expertise_heading: "LAST A LIFETIME WITH",
-                expertise_titile: "BRANDING <span class='text-red'>IDENTITY</span>",
-             expertise_des: [
-    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
-],
+                expertise_title: "BRANDING <span class='text-red'>IDENTITY</span>",
+                expertise_des: [
+                    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
+                ],
 
                 solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
                 solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
@@ -923,14 +925,14 @@ export const services: Service[] = [
                 link: "/services-category/logo-design",
 
 
-                website_titile: "Brand Identity",
+                website_title: "Brand Identity",
                 website_des: [
                     "Proactii Media LLP is a brand identity is the face of a brand. As discussed in the previous section, a brand is an emotional and even philosophical concept, while brand identity is the visual component of a brand that represents those larger ideas.",
                     "Brand identity includes logos, typography, colors, packaging, and messaging, and it complements and reinforces the existing reputation of a brand. Brand identity attracts new customers to a brand while making existing customers feel at home. It’s both outward- and inward-facing.",
                     "It’s vital that brand identity be consistent. Because it’s representing and reinforcing the emotions of a brand, the message portrayed by brand identity components needs to be clear, and it needs to be the same no matter where it’s displayed.",
                     "To manage brand identity, organizations should invest in a brand management system that helps them stay consistent while still having the flexibility and the speed necessary to succeed in today’s market. Components of this system might include a style guide, brand management software, and employee training."
                 ],
-                website_image: "/assets/images/services_details/brand.png",
+                website_image: "/assets/images/services_details/logo.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
@@ -971,10 +973,10 @@ export const services: Service[] = [
                 process_image: "/assets/images/category/web-design.gif",
 
                 expertise_heading: "LAST A LIFETIME WITH",
-                expertise_titile: "BRANDING <span class='text-red'>IDENTITY</span>",
-               expertise_des: [
-    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
-],
+                expertise_title: "BRANDING <span class='text-red'>IDENTITY</span>",
+                expertise_des: [
+                    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
+                ],
 
                 solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
                 solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
@@ -1022,7 +1024,7 @@ export const services: Service[] = [
                 link: "/services-category/graphic-design",
 
 
-                website_titile: "Brand Identity",
+                website_title: "Brand Identity",
                 website_des: [
                     "Attract a massive audience and improve customer engagement with the design that matters. Our graphic designers have the vision, creativity and potential to create a technical piece of art, which can convey your ideas through a graphic component, logo, and illustration.",
                     "Graphic design is an essential part of any business and that is as true for your company’s image and your marketing. Proactii Media LLP is a well-known graphic design company in Indore, India that offers creative graphic design solutions for all your business needs.",
@@ -1037,10 +1039,10 @@ export const services: Service[] = [
                 process_image: "/assets/images/category/web-design.gif",
 
                 expertise_heading: "LAST A LIFETIME WITH",
-                expertise_titile: "<span class='text-red'> GRAPHIC DESIGN  </span>",
-               expertise_des: [
-    "It’s a competitive world out there, and making a good first impression is vital to communicating your objectives and establishing relationships with prospective clients. That is why developing a professional image and eye-catching materials is an essential part of an effective marketing strategy. Our design team works collaboratively to give your company an eye-catching brand to put you ahead of your competitors. From logos to print work to packaging, we deliver inspired, effective, intelligent work for your brand."
-],
+                expertise_title: "<span class='text-red'> GRAPHIC DESIGN  </span>",
+                expertise_des: [
+                    "It’s a competitive world out there, and making a good first impression is vital to communicating your objectives and establishing relationships with prospective clients. That is why developing a professional image and eye-catching materials is an essential part of an effective marketing strategy. Our design team works collaboratively to give your company an eye-catching brand to put you ahead of your competitors. From logos to print work to packaging, we deliver inspired, effective, intelligent work for your brand."
+                ],
 
 
             },
@@ -1051,6 +1053,7 @@ export const services: Service[] = [
         number: "02",
         title: "Website Development",
         slug: "web-development",
+        banner_image:"/assets/images/banner/web.png",
         description:
             "Appealing and effective websites are one of the most potent marketing tools to reach wide audiences and satisfy their requirements.",
         details: [
@@ -1091,13 +1094,13 @@ export const services: Service[] = [
                 image: "/assets/images/services_details/web.png",
                 link: "/services-category/web-development",
 
-                website_titile: "Brand Identity",
+                website_title: "Brand Identity",
                 website_des: [
                     "Proactii Media LLP brings to you the appropriate websites designs that meet your needs. With providing our users with responsive web designs and amplifying it in order to increase the company's reach, our web designers believe in executing the websites that deliver a visual aspect to the audience. Our team conceptualizes and build the websites by determining the layout, graphics, text styles, colors, etc., that would be appropriate and suitable for your product.",
                     "Proactii Media LLP offers you the best path and platform to reach the audience and boost the company's sales by providing you the affordable digital marketing services. With our website development facilities, we help the clients unravel their potential. The team of talented web developers creates customized websites so that you can increase your business reach optimally.",
 
                 ],
-                website_image: "/assets/images/services_details/brand.png",
+                website_image: "/assets/images/services_details/web.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
@@ -1148,10 +1151,10 @@ export const services: Service[] = [
                 process_image: "/assets/images/category/web-design.gif",
 
                 expertise_heading: "LAST A LIFETIME WITH",
-                expertise_titile: "Of Course It's Mobile-Responsive",
+                expertise_title: "Of Course It's Mobile-Responsive",
                 expertise_des: [
-    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
-],
+                    "Our small business branding identity help companies last a lifetime. Building a brand is about the experience that people have when they interact with your business. In world of endless noise, we help small businesses stand out of the crowd by pairing your brand with exceptional marketing best practices. Thus creating a focused, niche and unique brand."
+                ],
 
                 solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
                 solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
@@ -1197,196 +1200,196 @@ export const services: Service[] = [
             {
                 title: "E-Commerce Web Solution",
                 image: "/assets/images/services_details/ewebsite.png",
-                link: "/services-category/mobile-app-development",
+                link: "/services-category/e-commerce-web-solution",
 
-                   website_titile: "Brand Identity",
+                website_title: "Brand Identity",
                 website_des: [
                     "E-commerce business Website is the medium in fact, a Platform in which you can list your multi Product furthermore, offer it online Globally. Proactii Media LLP Help you in Designing your own Digital Shop from where you can offer your Product online in various Parts of Country, City and Area. Here you ought to have your own site to feature your Products for that you have to Contact E-commerce Website Designing Company like us. We make best website designs and templates for giving you an idea about how web pages look alike. You can choose from those designed templates in fact, we can design new according to your demands.",
                     "Proactii Media LLP Services are extraordinary compared to other web based business site outlining organization in Vapi. We practice to give online business arrangements as per your necessities and market. Therefore, offering your item in an exceedingly focused market.",
 
                 ],
-                website_image: "/assets/images/services_details/brand.png",
+                website_image: "/assets/images/services_details/ewebsite.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
-               leverage: [
-    {
-        icon: "fa-solid fa-database",
-        title: "Hassle free Data Maintenance",
-        des: "Centralization of business logic will lessen your efforts, making your work worthwhile. As a result, business information's can be maintained with consistency.",
-    },
-    {
-        icon: "fa-solid fa-e",
-        title: "Easy to implement",
-        des: "It becomes easy to test business logic using various tools. It is a lightweight architecture and is good for devices, which have limited bandwidth like smart cell phones.",
-    },
-    {
-        icon: "fa-solid fa-users-gear",
-        title: "Scalable with Multi-clients",
-        des: "These RESTful Web APIs are accessible by a variety of HTTP clients like Windows 7, Windows 8, Android, iPhone, iPad, WPF Client, Windows Phone 8 etc. It uses low band-width.",
-    },
-    {
-        icon: "fa-solid fa-mobile-screen-button",
-        title: "More Mobile Traffic",
-        des: "Many surveys proved more than half of traffic to top websites came from mobile devices. It is becoming the norm because it offers greater versatility.",
-    },
-    {
-        icon: "fa-solid fa-indian-rupee-sign",
-        title: "Enhance Conversion rate",
-        des: "Consistent user experience will have a positive impact on your conversion rates as people are familiar with navigation and site or system use across devices.",
-    },
-    {
-        icon: "fa-solid fa-chart-column",
-        title: "Consolidate your analytics",
-        des: "A single responsive site means that you no longer have to track user journeys, conversion paths, funnels and redirections between your sites.",
-    }
-],
+                leverage: [
+                    {
+                        icon: "fa-solid fa-database",
+                        title: "Hassle free Data Maintenance",
+                        des: "Centralization of business logic will lessen your efforts, making your work worthwhile. As a result, business information's can be maintained with consistency.",
+                    },
+                    {
+                        icon: "fa-solid fa-e",
+                        title: "Easy to implement",
+                        des: "It becomes easy to test business logic using various tools. It is a lightweight architecture and is good for devices, which have limited bandwidth like smart cell phones.",
+                    },
+                    {
+                        icon: "fa-solid fa-users-gear",
+                        title: "Scalable with Multi-clients",
+                        des: "These RESTful Web APIs are accessible by a variety of HTTP clients like Windows 7, Windows 8, Android, iPhone, iPad, WPF Client, Windows Phone 8 etc. It uses low band-width.",
+                    },
+                    {
+                        icon: "fa-solid fa-mobile-screen-button",
+                        title: "More Mobile Traffic",
+                        des: "Many surveys proved more than half of traffic to top websites came from mobile devices. It is becoming the norm because it offers greater versatility.",
+                    },
+                    {
+                        icon: "fa-solid fa-indian-rupee-sign",
+                        title: "Enhance Conversion rate",
+                        des: "Consistent user experience will have a positive impact on your conversion rates as people are familiar with navigation and site or system use across devices.",
+                    },
+                    {
+                        icon: "fa-solid fa-chart-column",
+                        title: "Consolidate your analytics",
+                        des: "A single responsive site means that you no longer have to track user journeys, conversion paths, funnels and redirections between your sites.",
+                    }
+                ],
 
                 process_title: "OUR RECIPE FOR YOUR <span class='text-red'>PPC SUCCESS </span>",
                 process_des: "Our specific set of processes attract the right customers for your business.",
                 process_image: "/assets/images/category/web-design.gif",
 
                 expertise_heading: "LAST A LIFETIME WITH",
-                expertise_titile: "The Sparks of Collaboration",
+                expertise_title: "The Sparks of Collaboration",
                 expertise_des: [
-    "As the web becomes ever-more dynamic, we know true collaboration is what sparks success. Our creative and tech teams work in close tandem throughout the project lifecycle, ensuring our user interface, visual design, and the technologies with which we deliver them are always top of our game.",
-    "And we listen closely to our users as well, because what their behavior reveals makes them the best collaborators of all."
-],
+                    "As the web becomes ever-more dynamic, we know true collaboration is what sparks success. Our creative and tech teams work in close tandem throughout the project lifecycle, ensuring our user interface, visual design, and the technologies with which we deliver them are always top of our game.",
+                    "And we listen closely to our users as well, because what their behavior reveals makes them the best collaborators of all."
+                ],
 
                 solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
                 solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
 
-               servicesbox: [
-    {
-        servicesbox_icon: "fa-solid fa-chart-bar",
-        servicesbox_tiitle: "High Performance",
-        servicesbox_des: "The page loading time is a key factor for the overall performance of a website. To keep the speed to minimum we reduce HTTP request, minify, cookie-free domain, and use SSD hosting to maintain the speed.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-chart-simple",
-        servicesbox_tiitle: "Scalability",
-        servicesbox_des: "Customized website development gives you an advantage of selecting technologies on which you want your website to be developed. Later on, this can help you in scaling your business and update your website for future business necessities",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-lock",
-        servicesbox_tiitle: "Security",
-        servicesbox_des: "An unprotected website is a security risk to customers, and can spread a malware. A website created by our website developers is highly secure. Customers have a peace of mind that the site can be trusted and the information is safe.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-file-lines",
-        servicesbox_tiitle: "Customized Package",
-        servicesbox_des: "Option for custom web development services gives you the opportunity to pay only for those functionalities that you require. So, there is no bank breaking budget, and you can easily plan your money timeline prior to the development.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-square-check",
-        servicesbox_tiitle: "Agile Approach",
-        servicesbox_des: "We develop our projects based on agile approach that takes away time-sucks, performing frequent sanity checks, and making sure that you're not spending excessive time on things that don't add value to the project.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-gears",
-        servicesbox_tiitle: "Content Management",
-        servicesbox_des: "Web Apps that are customized comprises of easy site management tools where the non-technical members of the organization like managers, content editors, and other team members can make changes to the website without any technical assistance.",
-    }
-],
+                servicesbox: [
+                    {
+                        servicesbox_icon: "fa-solid fa-chart-bar",
+                        servicesbox_tiitle: "High Performance",
+                        servicesbox_des: "The page loading time is a key factor for the overall performance of a website. To keep the speed to minimum we reduce HTTP request, minify, cookie-free domain, and use SSD hosting to maintain the speed.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-chart-simple",
+                        servicesbox_tiitle: "Scalability",
+                        servicesbox_des: "Customized website development gives you an advantage of selecting technologies on which you want your website to be developed. Later on, this can help you in scaling your business and update your website for future business necessities",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-lock",
+                        servicesbox_tiitle: "Security",
+                        servicesbox_des: "An unprotected website is a security risk to customers, and can spread a malware. A website created by our website developers is highly secure. Customers have a peace of mind that the site can be trusted and the information is safe.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-file-lines",
+                        servicesbox_tiitle: "Customized Package",
+                        servicesbox_des: "Option for custom web development services gives you the opportunity to pay only for those functionalities that you require. So, there is no bank breaking budget, and you can easily plan your money timeline prior to the development.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-square-check",
+                        servicesbox_tiitle: "Agile Approach",
+                        servicesbox_des: "We develop our projects based on agile approach that takes away time-sucks, performing frequent sanity checks, and making sure that you're not spending excessive time on things that don't add value to the project.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-gears",
+                        servicesbox_tiitle: "Content Management",
+                        servicesbox_des: "Web Apps that are customized comprises of easy site management tools where the non-technical members of the organization like managers, content editors, and other team members can make changes to the website without any technical assistance.",
+                    }
+                ],
             },
             {
                 title: "Web Application",
                 image: "/assets/images/services_details/web-application.png",
                 link: "/services-category/web_application",
 
-                 website_titile: "Brand Identity",
+                website_title: "Brand Identity",
                 website_des: [
                     "Proactii Media LLP is a radical web app development company. We have always believed versatility and flexibility is paramount for any business organization to function at full operational effectiveness. Our custom web application development is geared to promote instinctive web solutions. We have collaborated successfully with over a 100 + projects for web application development constantly delivering products that are easy maintenance, safe, tested, and reliable.",
                     "Our web application products are capable of sorting through a huge influx of data and conduct elaborate transactions without missing performance quality. We are committed towards the advancement of technology and improved productivity through our high functioning web application development services.",
-"Proactii Media LLP gives shape to your ideas. With the boom in technology, having just a website is not enough. To keep the web alive you need to have a software which runs through a browser – Web Application. Web applications are much more interactive than websites. Applications developed over the web helps to engage more users and for organizations who want to stream lime their digital processes, web applications is a great way to achieve desired results."
+                    "Proactii Media LLP gives shape to your ideas. With the boom in technology, having just a website is not enough. To keep the web alive you need to have a software which runs through a browser – Web Application. Web applications are much more interactive than websites. Applications developed over the web helps to engage more users and for organizations who want to stream lime their digital processes, web applications is a great way to achieve desired results."
                 ],
-                website_image: "/assets/images/services_details/brand.png",
+                website_image: "/assets/images/services_details/web-application.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
- leverage: [
-   {
-        icon: "fa-solid fa-indian-rupee-sign",
-        title: "Cost effective development",
-        des: "With web-based applications, users access the system via a uniform environment—the web browser. While the user interaction with the application needs to be thoroughly tested on different web browsers, the application itself needs only be developed for a single operating system. There is no need to develop and test it on all possible operating system versions and configurations. This makes development and troubleshooting much easier and for web applications that use a Flash front end testing and troubleshooting is even easier.",
-    },
-    {
-        icon: "fa-solid fa-wheelchair-move",
-        title: "Accessible anywhere",
-        des: "Unlike traditional applications, web systems are accessible anytime, anywhere and via any PC with an Internet connection. This puts the user firmly in charge of where and when they access the application. It also opens up exciting, modern possibilities such as global teams, home working and real-time collaboration. The idea of sitting in front of a single computer and working in a fixed location is a thing of the past with web-based applications.",
-    },
-    {
-        icon: "fa-solid fa-clone",
-        title: "Easily customisable",
-        des: "The user interface of web-based applications is easier to customise than is the case with desktop applications. This makes it easier to update the look and feel of the application or to customise the presentation of information to different user groups. Therefore, there is no longer any need for everyone to settle for using exactly the same interface at all times. Instead, you can find the perfect look for each situation and user.",
-    },
-     {
-        icon: "fa-solid fa-desktop",
-        title: "Accessible for a range of devices",
-        des: "In addition to being customizable for user groups, content can also be customized for use on any device connected to the internet. This includes the likes of PDAs, mobile phones and tablets. This further extends the user's ability to receive and interact with information in a way that suits them. In this way, the up to date information is always at the fingertips of the people who need it.",
-    },
-    {
-        icon: "fa-solid fa-wrench",
-        title: "Easier installation and maintenance",
-        des: "With the web-based approach installation and maintenance becomes less complicated too. Once a new version or upgrade is installed on the host server all users can access it straight away and there is no need to upgrade the PC of each and every potential user.",
-    },
-    {
-        icon: "fa-solid fa-chart-column",
-        title: "Consolidate your analytics",
-        des: "A single responsive site means that you no longer have to track user journeys, conversion paths, funnels and redirections between your sites. Rolling out new software can be accomplished more easily, requiring only that users have up-to-date browsers and plugins. As the upgrades are only performed by an experienced professional to a single server the results are also more predictable and reliable.",
-    },
-     {
-        icon: "fa-solid fa-shield-halved",
-        title: "Increased Security",
-        des: "Web-based applications are typically deployed on dedicated servers, which are monitored and maintained by experienced server administrators. This is far more effective than monitoring hundreds or even thousands of client computers as is the case with desktop applications. This means that security is tighter and any potential breaches should be noticed far more quickly.",
-    }
-],
+                leverage: [
+                    {
+                        icon: "fa-solid fa-indian-rupee-sign",
+                        title: "Cost effective development",
+                        des: "With web-based applications, users access the system via a uniform environment—the web browser. While the user interaction with the application needs to be thoroughly tested on different web browsers, the application itself needs only be developed for a single operating system. There is no need to develop and test it on all possible operating system versions and configurations. This makes development and troubleshooting much easier and for web applications that use a Flash front end testing and troubleshooting is even easier.",
+                    },
+                    {
+                        icon: "fa-solid fa-wheelchair-move",
+                        title: "Accessible anywhere",
+                        des: "Unlike traditional applications, web systems are accessible anytime, anywhere and via any PC with an Internet connection. This puts the user firmly in charge of where and when they access the application. It also opens up exciting, modern possibilities such as global teams, home working and real-time collaboration. The idea of sitting in front of a single computer and working in a fixed location is a thing of the past with web-based applications.",
+                    },
+                    {
+                        icon: "fa-solid fa-clone",
+                        title: "Easily customisable",
+                        des: "The user interface of web-based applications is easier to customise than is the case with desktop applications. This makes it easier to update the look and feel of the application or to customise the presentation of information to different user groups. Therefore, there is no longer any need for everyone to settle for using exactly the same interface at all times. Instead, you can find the perfect look for each situation and user.",
+                    },
+                    {
+                        icon: "fa-solid fa-desktop",
+                        title: "Accessible for a range of devices",
+                        des: "In addition to being customizable for user groups, content can also be customized for use on any device connected to the internet. This includes the likes of PDAs, mobile phones and tablets. This further extends the user's ability to receive and interact with information in a way that suits them. In this way, the up to date information is always at the fingertips of the people who need it.",
+                    },
+                    {
+                        icon: "fa-solid fa-wrench",
+                        title: "Easier installation and maintenance",
+                        des: "With the web-based approach installation and maintenance becomes less complicated too. Once a new version or upgrade is installed on the host server all users can access it straight away and there is no need to upgrade the PC of each and every potential user.",
+                    },
+                    {
+                        icon: "fa-solid fa-chart-column",
+                        title: "Consolidate your analytics",
+                        des: "A single responsive site means that you no longer have to track user journeys, conversion paths, funnels and redirections between your sites. Rolling out new software can be accomplished more easily, requiring only that users have up-to-date browsers and plugins. As the upgrades are only performed by an experienced professional to a single server the results are also more predictable and reliable.",
+                    },
+                    {
+                        icon: "fa-solid fa-shield-halved",
+                        title: "Increased Security",
+                        des: "Web-based applications are typically deployed on dedicated servers, which are monitored and maintained by experienced server administrators. This is far more effective than monitoring hundreds or even thousands of client computers as is the case with desktop applications. This means that security is tighter and any potential breaches should be noticed far more quickly.",
+                    }
+                ],
 
                 process_title: "OUR RECIPE FOR YOUR <span class='text-red'>PPC SUCCESS </span>",
                 process_des: "Our specific set of processes attract the right customers for your business.",
                 process_image: "/assets/images/category/web-design.gif",
 
                 expertise_heading: "LAST A LIFETIME WITH",
-                expertise_titile: "The Sparks of Collaboration",
+                expertise_title: "The Sparks of Collaboration",
                 expertise_des: [
-    "As the web becomes ever-more dynamic, we know true collaboration is what sparks success. Our creative and tech teams work in close tandem throughout the project lifecycle, ensuring our user interface,visual design, and the technologies with which we deliver them are always top of our game.",
-    "And we listen closely to our users as well, because what their behavior reveals makes them the best collaborators of all.",
-    
-],
+                    "As the web becomes ever-more dynamic, we know true collaboration is what sparks success. Our creative and tech teams work in close tandem throughout the project lifecycle, ensuring our user interface,visual design, and the technologies with which we deliver them are always top of our game.",
+                    "And we listen closely to our users as well, because what their behavior reveals makes them the best collaborators of all.",
+
+                ],
 
                 solution_title: "OUR  SERVICES <span class='text-red'> INCLUDE</span>",
                 solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
 
-               servicesbox: [
-     {
-        servicesbox_icon: "fa-solid fa-earth-americas",
-        servicesbox_tiitle: "One Website for It All",
-        servicesbox_des: "By choosing our custom web app solutions, you'll get a user-friendly website that is compatible with all browsers and devices. This means that you won't have bother designing multiple website versions just for compatibility issues.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-clock",
-        servicesbox_tiitle: "Real-Time Maintenance and Support",
-        servicesbox_des: "We'll also provide you with a dedicated account manager and support team for your custom website. This allows you to enjoy real-time maintenance and support during the execution of the entire project.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-comment-dots",
-        servicesbox_tiitle: "Commitment to Quality",
-        servicesbox_des: "Our custom web app developers are industry experts, who strictly obey all standards as well as international coding guidelines. We also make sure that our custom websites meet the best standards of quality and we ensure timely delivery.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-thumbs-up",
-        servicesbox_tiitle: "Superb Integration",
-        servicesbox_des: "We're also experts at integrating your website with other codes and APIs. If you need any functionality from third-party sources, our project solutions will offer seamless integration. You can also get customer reviews, which are independently verified through our services.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-comment-dots",
-        servicesbox_tiitle: "Effective Communication",
-        servicesbox_des: "We work very closely with clients to ensure that our custom solutions completely reflect their business goals. Before website development begins, our team will sit down with you to understand your requirements and goals in detail. This ensures that you get the exact solution that you are looking.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-gem",
-        servicesbox_tiitle: "Exceptional Value for Money",
-        servicesbox_des: "Our custom services are priced very reasonably. Whether it is a one-time project or a multi-year arrangement, our solutions offer incredible value for money. We offer a range of flexible engagement models, which enable efficiency and a significant amount of cost savings for you.",
-    }
-],
+                servicesbox: [
+                    {
+                        servicesbox_icon: "fa-solid fa-earth-americas",
+                        servicesbox_tiitle: "One Website for It All",
+                        servicesbox_des: "By choosing our custom web app solutions, you'll get a user-friendly website that is compatible with all browsers and devices. This means that you won't have bother designing multiple website versions just for compatibility issues.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-clock",
+                        servicesbox_tiitle: "Real-Time Maintenance and Support",
+                        servicesbox_des: "We'll also provide you with a dedicated account manager and support team for your custom website. This allows you to enjoy real-time maintenance and support during the execution of the entire project.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-comment-dots",
+                        servicesbox_tiitle: "Commitment to Quality",
+                        servicesbox_des: "Our custom web app developers are industry experts, who strictly obey all standards as well as international coding guidelines. We also make sure that our custom websites meet the best standards of quality and we ensure timely delivery.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-thumbs-up",
+                        servicesbox_tiitle: "Superb Integration",
+                        servicesbox_des: "We're also experts at integrating your website with other codes and APIs. If you need any functionality from third-party sources, our project solutions will offer seamless integration. You can also get customer reviews, which are independently verified through our services.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-comment-dots",
+                        servicesbox_tiitle: "Effective Communication",
+                        servicesbox_des: "We work very closely with clients to ensure that our custom solutions completely reflect their business goals. Before website development begins, our team will sit down with you to understand your requirements and goals in detail. This ensures that you get the exact solution that you are looking.",
+                    },
+                    {
+                        servicesbox_icon: "fa-solid fa-gem",
+                        servicesbox_tiitle: "Exceptional Value for Money",
+                        servicesbox_des: "Our custom services are priced very reasonably. Whether it is a one-time project or a multi-year arrangement, our solutions offer incredible value for money. We offer a range of flexible engagement models, which enable efficiency and a significant amount of cost savings for you.",
+                    }
+                ],
 
 
             },
@@ -1397,6 +1400,7 @@ export const services: Service[] = [
         number: "03",
         title: "Mobile App Development",
         slug: "mobile-app-development",
+        banner_image:"/assets/images/banner/app.png",
         description:
             "With us, convert your ideas into user-friendly and easy-to-use applications, which increase your chances of success in the global market.",
 
@@ -1435,11 +1439,116 @@ export const services: Service[] = [
             }
         ],
         relatedServices: [
-            // {
-            //     title: "App Design",
-            //     image: "/assets/images/services_details/app.png",
-            //     link: "/services-category/mobile-app-development",
-            // },
+            {
+                title: "App Designing",
+                image: "/assets/images/services_details/app.png",
+                link: "/services-category/mobile-app-development",
+
+
+                website_title: "Brand Identity",
+                website_des: [
+                    "Proactii Media LLP is a startup android application development service providing Company. That offers impressive and highly innovative Android mobile applications that enable enterprises to improve their collaboration in marketing strategy. Android is one of the most popular platforms that have more than 85% share of the smartphone market. And above all it’s everywhere it makes perfect sense to grow your business by targeting android mobile users.",
+                    "Our Android Application Development services are provided by our experienced developers. Who are ready to provide by and large the best possible result beyond your expectation. By doing sempiternal researches until now on numerous platforms for app development. For the most part, our team is now capable of providing progressive and successful android services across the industry.",
+
+                ],
+                website_image: "/assets/images/services_details/app.png",
+
+                leverage_title: "Design is <span class='text-red'>exploration</span>",
+                leverage:
+                    [
+                        {
+                            icon: "fa-solid fa-users",
+                            title: "Epic Collaboration",
+                            des: "Real time collaboration lets your entire team work together on the same prototype at the same time.",
+                        },
+                        {
+                            icon: "fa-solid fa-chart-simple",
+                            title: "Offers High Scalability",
+                            des: "Regular apps are built to handle limited number of resources and processes. In the event of your business growing, these apps may not be able to handle the load. Custom made apps, on the other hand are built keeping in mind all these parameters and can be scaled up easily when the need arises",
+                        },
+                        {
+                            icon: "fa-solid fa-handshake",
+                            title: "Improves Customer Relationship",
+                            des: "Customized business apps allow you to send personalized updates related to your products and services to your existing customers in real-time. Additionally, it allows you to access client details and receive feedback, which can be leveraged to improve long-term customer relationships.",
+                        },
+                        {
+                            icon: "fa-solid fa-underline",
+                            title: "Uniqueness",
+                            des: "The more versatile the mobile app is built it helps the business to stand out and up in the competitive crowd.",
+                        },
+                        {
+                            icon: "fa-solid fa-share-nodes",
+                            title: "Social media integration",
+                            des: "Users are able to link their social media and email accounts to the mobile apps.",
+                        },
+                        {
+                            icon: "fa-solid fa-handshake",
+                            title: "Offers and new products",
+                            des: "Through mobile applications, business can keep the users informed about the launching of new products and offers, another way to attract users.",
+                        }
+                    ],
+
+
+                process_title: "Our Application <span class='text-red'>Development Process</span>",
+
+                process_image: "/assets/images/category/app_design.png",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_title: "The Sparks of Collaboration",
+                expertise_des: [
+                    "As the web becomes ever-more dynamic, we know true collaboration is what sparks success. Our creative and tech teams work in close tandem throughout the project lifecycle, ensuring our user interface, visual design, and the technologies with which we deliver them are always top of our game.",
+
+                    "And we listen closely to our users as well, because what their behavior reveals makes them the best collaborators of all.",
+
+                    `<span><i class="fa-solid fa-mobile-screen"></i> Phone</span>
+     <span><i class="fa-brands fa-android"></i> Android</span>
+     <span><i class="fa-solid fa-tablet-screen-button"></i> Tablet</span>`
+                ],
+
+                solution_title: "Transform your vivid ideas into rock-solid realities with our <span class='text-red'>mobile app development services </span>",
+                solution_des: "Our mobile app development company believes in giving their 100% to render you with your desired mobile application solution.",
+
+                servicesbox:
+                    [
+
+                        {
+                            servicesbox_icon: "fa-regular fa-clock",
+                            servicesbox_tiitle: "Patience and Perseverance",
+                            servicesbox_des: "It takes time to be on the same page you're on, and a lot more patience.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-paintbrush",
+                            servicesbox_tiitle: "Creative without being invasive",
+                            servicesbox_des: "Creative individuals form our team. They know what you prefer, what not.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-arrows-rotate",
+                            servicesbox_tiitle: "Watch your creation grow",
+                            servicesbox_des: "Daily updates about your project so that you can watch your baby grow.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-paper-plane",
+                            servicesbox_tiitle: "On the forefront of technology",
+                            servicesbox_des: "An impeccable expertise foreseeing technology trends before they emerge",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-user-group",
+                            servicesbox_tiitle: "A remote team at your assistance",
+                            servicesbox_des: "A global team, dedicated exclusively to your project, listens and answers you.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-shield",
+                            servicesbox_tiitle: "Security, safety and confidentiality",
+                            servicesbox_des: "A non-compromise development practise. Everything is repairable but trust.",
+                        }
+                    ],
+
+
+
+
+
+
+            },
         ],
 
     },
@@ -1448,6 +1557,7 @@ export const services: Service[] = [
         number: "04",
         title: "Digital Marketing",
         slug: "digital-marketing",
+        banner_image:"/assets/images/banner/digital.png",
         description:
             "Digital marketing allows businesses to reach their customers where they are while strengthening their brands and expanding their customer base.",
 
@@ -1490,16 +1600,348 @@ export const services: Service[] = [
                 title: "Search Engine Optimization",
                 image: "/assets/images/services_details/search.png",
                 link: "/services-category/digital-marketing",
+
+
+                     website_title: "Brand Identity",
+                website_des: [
+                    "Search Engine Optimization is the process of modifying a website with the goal of ranking better in the search engines for a specific keyword phrase, ultimately leading to an increase in the organic traffic volume to a website.",
+                    "As part of an overall Internet Marketing Campaign, Search Engine Optimization (SEO) is based around Search Engines’ complicated algorithms, which are made up of variables such as the age of the domain, the speed of the pages being downloaded from the server, whether or not there are keywords in the domain name, the keywords used in the Title Tags, Meta Keywords, Meta Description and many more variables. In fact, Google alone has hundreds of different variables that it uses to determine rankings.",
+
+                ],
+                website_image: "/assets/images/services_details/search.png",
+
+                leverage_title: "Why Seo Is Beneficial <span class='text-red'>To Your Business?</span>",
+                leverage:
+                    [
+     
+    {
+        icon: "far fa-signal",
+        title: "More Traffic",
+        des: "As you gain more visibility, you will start to see an increase in the number of website visitors.",
+    },
+    {
+        icon: "far fa-retweet",
+        title: "More Leads and Revenue",
+        des: "Regular apps are built to handle limited number of resources and processes. In the event of your business growing, these apps may not be able to handle the load. Custom made apps, on the other hand are built keeping in mind all these parameters and can be scaled up easily when the need arises",
+    },
+    {
+         icon: "fa-brands fa-bandcamp",
+        title: "More Brand Awareness",
+        des: "Branding is the only way to do it, and it's the most viable SEO strategy on the market today. Focusing on branding will help drive higher click-through rates in organic SERPs.",
+    }, {
+        icon: "fa-regular fa-star",
+        title: "Rankings provides 24/7 promotion",
+        des: "You can increase your website traffic all day, every day. Once you rank high in search engines, they will promote your business.",
+    },
+    {
+        icon: "fa-solid fa-toggle-on",
+        title: "Gets more clicks than PPC",
+        des: "Many users of search engines tend to skip paid advertisements. By investing in SEO, you will likely gain more traffic than the advertisers on the same keywords.",
+    },
+    {
+        icon: "fa-brands fa-instagram",
+        title: "Increases Your Followers on Social Media",
+        des: "By the time, you land on the first page of search engine sites, more and more people will know about you. Users visit your website, to click on your social media icons and eventually follow you.",
+    },
+    {
+        icon: "fa-solid fa-indian-rupee-sign",
+        title: "Gets Affordable and Cost-Effective",
+        des: "The amount of money you need to spend on acquiring customers through the right SEO strategy is zero. You have to spend a considerable amount to get customers, SEO is affordable.",
+    },
+    {
+        icon: "fa-solid fa-shield-halved",
+        title: "More Trust and Authority",
+        des: "When you reach the top of the search results, your customers will see you as the industry authority.",
+    },
+    {
+        icon: "fa-solid fa-magnifying-glass-plus",
+        title: "More Business Growth",
+        des: "SEO can help grow your business by attracting leads to your website. Once the leads are obtained, the sales team must take them through your sales funnel to convert them into paying customers.",
+    }
+                    ],
+
+
+                process_title: "Our Application <span class='text-red'>Development Process</span>",
+
+                process_image: "/assets/images/category/seo.png",
+
+                expertise_heading: "LAST A LIFETIME WITH",
+                expertise_title: "Our Search Engine Optimization Process",
+                expertise_des: [
+                    "You may have invested a considerable amount building a professional looking web site, but that investment won’t pay off unless you use the Internet to effectively market your business. Building a web site and doing Internet marketing are two completely different things.",
+
+                    "You’ve probably visited a few web sites that were completely useless. Maybe they looked good, but you couldn’t find the information you needed, or worse you had trouble finding the site in the first place. Don’t let this happen to your web site",
+                    "The foundation of an SEO Campaign is KeyWord Research. Ensuring you are targeting the right key terms, and directing traffic to the right pages, can make or break your SEO campaign. There is no point in attempting to rank highly for a term that has little to NO search volume.",
+
+                    "Furthermore, it is imperative that the page relates to the targeted KeyTerm or a visitor will leave the site as quickly as they got there.",
+                    
+                ],
+
+                solution_title: "What we do? <span class='text-red'>Deliver Results.</span>",
+                solution_des: "Want us to handle your complete digital marketing? Here’s what we are good at & yes it’s proven.",
+
+                servicesbox:
+                    [
+
+ 
+    {
+        servicesbox_icon: "fa-solid fa-keyboard",
+        servicesbox_tiitle: "Keyword & Market Research",
+        servicesbox_des: "Over the years, we continue to refine our keyword and market research with the continuous changes to search engine rankings. This ensures your website has a successful strategy before we even begin our SEO process – ultimately our goal is traffic not just keywords.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-gear",
+        servicesbox_tiitle: "Onpage SEO Services",
+        servicesbox_des: "On-page optimization strategies can't be ignored, no matter how small. Our team of SEO experts ensure your meta descriptions, meta tags, internal and outbound linking, and image optimization is up to standard. You should have individual pages that describe services.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-link",
+        servicesbox_tiitle: "Link Building Services",
+        servicesbox_des: "Link building is still one of the major factors for increasing rank, although much has changed in the past few years. When done incorrectly, you could just be wasting time and money – costing you a lot of sales. When working with our link building – you don't ever have to worry about the quality.",
+    },
+ 
+    {
+        servicesbox_icon: "fa-solid fa-cart-shopping",
+        servicesbox_tiitle: "Content Marketing Services",
+        servicesbox_des: "Google has openly stated they will be prioritizing websites with more quality content. We have a team of extremely talented content writers who specialize in digital marketing. Anyone can write quality content, but knowing the variables of SEO while writing is a huge advantage. A lot of our content writers go on to become SEO experts.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-flag",
+        servicesbox_tiitle: "Reporting & Analysis",
+        servicesbox_des: "Data driven decisions. We remove emotion from the equation and let the data tell your story. We run a very agile team that can pivot and change direction based on what the analytics show for your website. Our goal is not to simply increase traffic, we want to increase conversions and calls to your business. SEO auditing is an important facet of a website when it comes .",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-newspaper",
+        servicesbox_tiitle: "Customized Approached For PR",
+        servicesbox_des: "When you've been in business as long as us – you tend to build strong relationships. This allowed us to build the strongest digital marketing network in existence – enabling us to leverage our network to help you. The Excaligia network includes publishers, journalists, bloggers and other influencers from around the world.",
+    }
+                    ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             },
             {
                 title: "Social Media Optimization",
                 image: "/assets/images/services_details/social.png",
-                link: "/services-category/digital-marketing",
+                link: "/services-category/social-media-optimization",
+
+                            website_title: "Become a Brand Hero and Friend",
+                website_des: [
+                    "Social media marketing affords companies the opportunity to build relationships while driving brand awareness and promoting products and services to clients and customers. Campaigns that incorporate smart strategy, engaging brand-based experiences and buzz-worthy content create communities that consumers want to be a part of.",
+                    "Proactii Media LLP continually works to build innovative Facebook, Twitter, Pinterest, Instagram and other social media campaigns that speak to our clients’ audiences. If you’re looking for creative ways to grow your customers, we can help you realize your social media marketing goals.",
+
+                ],
+                website_image: "/assets/images/services_details/social.png",
+
+                leverage_title: "Benefits of <span class='text-red'>SMO</span> with us",
+                leverage:
+                  [
+  
+    {
+        icon: "fa-brands fa-facebook-f",
+        title: "Organic Social Media Strategy",
+        des: "Optimize your profiles, create content for regular posts, and make sure you're using the most effective hashtags.",
+    },
+    {
+        icon: "fa-solid fa-plane",
+        title: "Influencer Marketing",
+        des: "Research and strategize to determine the best influencers for your industry. We will reach out to them, manage their activities, and build ongoing relationships.",
+    },
+    {
+        icon: "fa-solid fa-pen-to-square",
+        title: "Social Media Audit",
+        des: "Take a closer look at your current social media standings and discover new opportunities to grow your community and interact with customers.",
+    },
+    {
+        icon: "fa-solid fa-trophy",
+        title: "Contests, Promotions, and Giveaways",
+        des: "Build more engagement through photo contests, sweepstakes, giveaways, and more. Keep them coming back with regular contests.",
+    },
+    {
+        icon: "fa-solid fa-indian-rupee-sign",
+        title: "Paid Social Ads",
+        des: "Paid strategies can include audience analysis, ad graphic design, A/B testing, and more. This is an effective way to get immediate engagement.",
+    },
+    {
+        icon: "fa-solid fa-cart-shopping",
+        title: "Content Marketing",
+        des: "Content is still king in the online world. This can include new on-page content, regular blogs, newsworthy press releases, or complete eBooks.",
+    },
+    {
+        icon: "fa-solid fa-money-bill",
+        title: "Gets Affordable and Cost-Effective",
+        des: "The amount of money you need to spend on acquiring customers through the right SEO strategy is zero. You have to spend a considerable amount to get customers, SEO is affordable.",
+    },
+    {
+        icon: "fa-solid fa-shield",
+        title: "More Trust and Authority",
+        des: "When you reach the top of the search results, your customers will see you as the industry authority.",
+    },
+    {
+        icon: "fa-solid fa-magnifying-glass-plus",
+        title: "More Business Growth",
+        des: "SEO can help grow your business by attracting leads to your website. Once the leads are obtained, the sales team must take them through your sales funnel to convert them into paying customers.",
+    }
+],
+                process_title: "<span class='text-red'>Our Process</span>",
+                process_image: "/assets/images/category/markteing1.png",
+
+                solution_title: "Our Services  <span class='text-red'>Include</span>",
+                solution_des: "Want us to handle your complete digital marketing? Here’s what we are good at & yes it’s proven.",
+
+                servicesbox:
+     [
+
+    {
+        servicesbox_icon: "fa-brands fa-instagram",
+        servicesbox_tiitle: "Social Media Management",
+        servicesbox_des: "We have an expertise in creating and managing all your social media accounts on various platforms. We maintain your profile actively ensuring that you connect well with your customers and grow your revenue and brand awareness simultaneously.Even if your time is limited, social media management tools .",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-users",
+        servicesbox_tiitle: "Contests on Social Media",
+        servicesbox_des: "Contests not only build up your brand image but also engage customers and empower them to do marketing for you. It is also a great source to build up a potential database. Our SMO services team strategically plan and execute relevant contests on social media according to your brand's requirements.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-indian-rupee-sign",
+        servicesbox_tiitle: "Paid Advertisements",
+        servicesbox_des: "Each social media platform offers effective budget advertising channels to increase impressions, clicks, and conversions. There are paid advertisements to increase page likes, followers, reach, impressions, engagement etc. Some of these advertisements are solely focused on driving website clicks and conversions.",
+    },
+
+    {
+        servicesbox_icon: "fa-solid fa-star",
+        servicesbox_tiitle: "Reviews",
+        servicesbox_des: "Nowadays almost everyone is active on social media making it really easy for businesses to keep in touch with their customers and gather reviews. They also help in online reputation management and higher conversion rates.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-comment-dots",
+        servicesbox_tiitle: "Discussion Threads",
+        servicesbox_des: "Participation in relevant discussions always lead to new ideas and a better connectivity with the audience. We indulge in all relevant discussions and threads on various social media platforms to mark your active presence and involvement.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-trophy",
+        servicesbox_tiitle: "Blog Promotions",
+        servicesbox_des: "Social media has a vast reach. Promoting your blog on all social media platform helps in increasing the views and engagement on your blog.Target Popular Search Terms and Phrases.Implement a Strong Social Media Promotion Plan.",
+    }
+]
+
             },
             {
                 title: "Pay Per Click Campaign",
                 image: "/assets/images/services_details/pay.png",
-                link: "/services-category/digital-marketing",
+                link: "/services-category/pay-per-click-campaign",
+
+                
+                
+
+                            website_title: "Pay Per Click Campaign",
+                website_des: [
+                    "Proactii Media LLP is a team comprised with highly qualified PPC expert’s who are dedicated to developing the most cost-effective Pay per Click campaigns for your business. Our process of building, maintaining and analyzing online advertising campaigns at Google AdWords, Bing Ads, and Facebook Ads to raise your business, provide more leads, help you to get better ROI and maintain online reputation.",
+                    "Pay per Click (PPC) marketing is one of the most effective ways to promote your company, business, brand, store, etc with various strategies, optimization and expert analysis.",
+                    "PPC marketing works on CPC (Cost per click) you have to pay only if your Ad has been clicked by a user. For which our expertise plays a major role with 8 years of niche experience with updated methods and unique methodology. Our PPC management services suitcased for every size of local, regional, national or global business keeping in mind the overall expenditure."
+
+                ],
+                website_image: "/assets/images/services_details/pay.png",
+
+                leverage_title: "Leverage your <span class='text-red'>Business</span> with us",
+                leverage:
+                  [
+ 
+    {
+        icon: "fa-solid fa-magnifying-glass",
+        title: "PPC Audits",
+        des: "Our PPC Audit process starts from understanding audit objective, coverage and leading to data analysis.",
+    },
+    {
+        icon: "fa-solid fa-comments",
+        title: "Social Advertising",
+        des: "Proactii can help you with paid social campaigns that can drive your target audience toward much targeted desired actions.",
+    },
+    {
+        icon: "fa-brands fa-google",
+        title: "Google AdWords",
+        des: "Hiring us gives you the benefit of a full-time AdWords expert without the extra cost of hiring another full-time employee.",
+    },
+    {
+        icon: "fa-solid fa-cart-arrow-down",
+        title: "Shopping Ads",
+        des: "As advertising service which assist corporation to touch the 129 million incomparable searchers, company pay-per-click service is the key aspect.",
+    },
+    {
+        icon: "fa-solid fa-indian-rupee-sign",
+        title: "Paid Search",
+        des: "We empower your paid search marketing with relevant and well-focused campaigns to ensure that your site gains high visibility, gets instant traffic, and shows high conversion rates.",
+    },
+    {
+        icon: "fa-solid fa-bell",
+        title: "Social Media Advertising",
+        des: "Develop and implement innovative social strategies to advertise on social media platforms like Facebook, LinkedIn and Twitter, and drive more business by reaching the untapped audience successfully.",
+    }
+
+],
+                process_title: "Our Recipe For Your <span class='text-red'>PPC Success</span>",
+                process_image: "/assets/images/category/paydesign.png",
+
+                solution_title: "Our Services  <span class='text-red'>Include</span>",
+                
+
+                servicesbox:
+     [
+
+    {
+        servicesbox_icon: "fa-solid fa-desktop",
+        servicesbox_tiitle: "Immediate Results",
+        servicesbox_des: "PPC does not need a long time to push your website to the top and prove substantial ROI. Simply activate the campaign and start seeing results .",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-indian-rupee-sign",
+        servicesbox_tiitle: "Only Pay For What You Get",
+        servicesbox_des: "PPC offers complete value for money. You can always expect to get the most out of your ad spend as you need to pay only when someone clicks on your ad.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-headphones",
+        servicesbox_tiitle: "Understand Your Audience",
+        servicesbox_des: "PPC helps find potential clients by identifying, understanding, and targeting the right audience irrespective of languages, locations, or devices used.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-comment",
+        servicesbox_tiitle: "Get More Conversions",
+        servicesbox_des: "Achieving higher conversion rates becomes easy and fast with result-oriented approaches, kick-ass strategies, and continual fine-tuning of campaigns in PPC.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-truck",
+        servicesbox_tiitle: "Export To New Markets",
+        servicesbox_des: "PPC provides wider exposure by giving access to new markets. It works as a catalyst for the growth of your business and accelerates your success notably.",
+    },
+    {
+        servicesbox_icon: "fa-solid fa-gears",
+        servicesbox_tiitle: "Control & Manage",
+        servicesbox_des: "PPC offers high levels of control over your paid advertising campaigns. Choose it to make your campaigns more flexible, customizable, and manageable.",
+    }
+
+]
             },
         ],
 
@@ -1507,3 +1949,38 @@ export const services: Service[] = [
 ];
 
 
+export const portfolioData = [
+    {
+        id: 1,
+        title: "Olivia Rivers",
+        slug: "olivia-rivers",
+        category: "Branding",
+        year: "2026",
+        image: "/assets/img/portfolio/inner/portfolio-2-col-thumb-5.jpg",
+        alt: "Olivia Rivers branding project",
+        position: "left",
+        classes: "branding marketing",
+    },
+    {
+        id: 2,
+        title: "Taller Alvarado",
+        slug: "taller-alvarado",
+        category: "Design",
+        year: "2026",
+        image: "/assets/img/portfolio/inner/portfolio-2-col-thumb-2.jpg",
+        alt: "Taller Alvarado design project",
+        position: "right",
+        classes: "agency design development",
+    },
+    {
+        id: 3,
+        title: "Pastel Ladies",
+        slug: "pastel-ladies",
+        category: "Branding",
+        year: "2025",
+        image: "/assets/img/portfolio/inner/portfolio-2-col-thumb-3.jpg",
+        alt: "Pastel Ladies branding project",
+        position: "left",
+        classes: "branding marketing",
+    },
+];

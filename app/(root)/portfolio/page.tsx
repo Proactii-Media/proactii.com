@@ -1,6 +1,9 @@
 
 
 "use client";
+import Link from "next/link";
+import { portfolioData } from "@/constants/data";
+
 
 export default function Portfolio() {
 
@@ -75,107 +78,92 @@ export default function Portfolio() {
             </section>
 
 
-            <div className="tp-portfolio-area tp-portfolio-space-2 pb-90">
-                <div className="container container-1424">
-                    <div className="row protfoliomargin gx-50 grid">
-                        {/* Portfolio 1 - Image Left */}
-                        <div className="col-12 grid-item branding marketing">
-                            <div className="tp-pr-item">
-                                <div className="row align-items-stretch portfolio-row">
-                                    <div className="col-12 col-md-6 portfolio-column">
-                                        <div className="tp-pr-thumb portfolio-equal-height">
-                                            <a href="portfolio-details.html">
-                                                <img
-                                                    src="/assets/img/portfolio/inner/portfolio-2-col-thumb-5.jpg"
-                                                    alt="Olivia Rivers branding project"
-                                                />
-                                            </a>
-                                        </div>
-                                    </div>
+          
+<div className="tp-portfolio-area tp-portfolio-space-2 pb-90">
+    <div className="container container-1424">
+        <div className="row protfoliomargin gx-50 grid">
+            {portfolioData.map((item) => (
+                <div
+                    key={item.id}
+                    className={`col-12 grid-item ${item.classes}`}
+                >
+                    <div className="tp-pr-item">
+                        <div className="row align-items-stretch portfolio-row">
 
-                                    <div className="col-12 col-md-6 portfolio-column">
-                                        <div className="tp-pr-content portfolio-equal-height">
-                                            <h3 className="tp-pr-title fs-34">
-                                                <a href="portfolio-details.html" className="tp-line-black">
-                                                    Olivia Rivers
-                                                </a>
-                                            </h3>
-                                            <div className="tp-pr-meta">
-                                                <span>Branding</span>
-                                                <span>2026</span>
-                                            </div>
-                                        </div>
+                            {/* Image Left */}
+                            {item.position === "left" && (
+                                <div className="col-12 col-md-6 portfolio-column text-center">
+                                    <div className="tp-pr-thumb portfolio-equal-height">
+                                        <Link href={`/portfolio/${item.slug}`}>
+                                            <img
+                                                src={item.image}
+                                                alt={item.alt}
+                                            />
+                                        </Link>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Portfolio Content */}
+                            <div
+                                className={`col-12 col-md-6 portfolio-column ${
+                                    item.position === "right"
+                                        ? "order-2 order-md-1"
+                                        : ""
+                                }`}
+                            >
+
+                      
+
+                                
+                                <div className="tp-pr-content portfolio-equal-height">
+                                    <h3 className="tp-pr-title fs-34  tp-blog-masonry-title">
+                                        <Link
+                                            href={`/portfolio/${item.slug}`}
+                                            className="tp-line-black"
+                                        >
+                                            {item.title}
+                                        </Link>
+                                    </h3>
+
+                                                <h3 className="tp-blog-masonry-title">
+                                            <a
+                                                className="tp-line-black"
+                                                href={`/blog-details/${item.slug}`}
+                                            >
+                                             {item.title}
+                                            </a>
+                                        </h3>
+
+                                    <div className="tp-pr-meta">
+                                        <span>{item.category}</span>
+                                        <span>{item.year}</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Portfolio 2 - Text Left */}
-                        <div className="col-12 grid-item agency design development">
-                            <div className="tp-pr-item ">
-                                <div className="row align-items-stretch portfolio-row">
-                                    <div className="col-12 col-md-6 portfolio-column order-2 order-md-1">
-                                        <div className="tp-pr-content portfolio-equal-height">
-                                            <h3 className="tp-pr-title fs-34">
-                                                <a href="portfolio-details.html" className="tp-line-black">
-                                                    Taller Alvarado
-                                                </a>
-                                            </h3>
-                                            <div className="tp-pr-meta">
-                                                <span>Design</span>
-                                                <span>2026</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12 col-md-6 portfolio-column order-1 order-md-2">
-                                        <div className="tp-pr-thumb portfolio-equal-height">
-                                            <a href="portfolio-details.html">
-                                                <img
-                                                    src="/assets/img/portfolio/inner/portfolio-2-col-thumb-2.jpg"
-                                                    alt="Taller Alvarado design project"
-                                                />
-                                            </a>
-                                        </div>
+                            {/* Image Right */}
+                            {item.position === "right" && (
+                                <div className="col-12 col-md-6 portfolio-column order-1 order-md-2">
+                                    <div className="tp-pr-thumb portfolio-equal-height">
+                                        <Link href={`/portfolio/${item.slug}`}>
+                                            <img
+                                                src={item.image}
+                                                alt={item.alt}
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            )}
 
-                        {/* Portfolio 3 - Image Left */}
-                        <div className="col-12 grid-item branding marketing">
-                            <div className="tp-pr-item ">
-                                <div className="row align-items-stretch portfolio-row">
-                                    <div className="col-12 col-md-6 portfolio-column">
-                                        <div className="tp-pr-thumb portfolio-equal-height">
-                                            <a href="portfolio-details.html">
-                                                <img
-                                                    src="/assets/img/portfolio/inner/portfolio-2-col-thumb-3.jpg"
-                                                    alt="Pastel Ladies branding project"
-                                                />
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12 col-md-6 portfolio-column">
-                                        <div className="tp-pr-content portfolio-equal-height">
-                                            <h3 className="tp-pr-title fs-34">
-                                                <a href="portfolio-details.html" className="tp-line-black">
-                                                    Pastel Ladies
-                                                </a>
-                                            </h3>
-                                            <div className="tp-pr-meta">
-                                                <span>Branding</span>
-                                                <span>2025</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            ))}
+        </div>
+    </div>
+</div>
+
         </>
     );
 }

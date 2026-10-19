@@ -389,33 +389,13 @@ export default function Header() {
                                                 </li>
 
                                                 {/* PORTFOLIO */}
-                                                <li className="has-dropdown">
+                                                <li>
 
                                                     <Link href="/portfolio">
                                                         Portfolio
                                                     </Link>
 
-                                                    <ul className="tp-submenu submenu">
-
-                                                        <li>
-                                                            <Link href="#">
-                                                                All Projects
-                                                            </Link>
-                                                        </li>
-
-                                                        <li>
-                                                            <Link href="#">
-                                                                Websites
-                                                            </Link>
-                                                        </li>
-
-                                                        <li>
-                                                            <Link href="#">
-                                                                Mobile Apps
-                                                            </Link>
-                                                        </li>
-
-                                                    </ul>
+                                                   
 
                                                 </li>
 
@@ -505,6 +485,8 @@ export default function Header() {
                     </div>
                 </div>
             </header>
+
+           
         </>
     );
 }

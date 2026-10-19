@@ -1,52 +1,3 @@
-/***************************************************
-==================== JS INDEX ======================
-****************************************************
-
-
-01. Mobile Menu JS
-02. Header Dropdown Static JS
-03. Common JS
-04. Masonry JS
-05. MagnificPopup Image View
-06. MagnificPopup Video View
-07. Counter JS
-08. Back-to-top
-09. Smooth Scroll JS
-10. Sticky Header JS
-11. Open Handlers
-12. Close Handlers
-13. Scroll Wrapper
-14. WebGL Images Hover Animation
-15. Service Panel Animation
-16. Panel Pin Section
-17. MD FAQ Accordion
-18. Text Scale Animation
-19. Hover Reveal for Image
-20. Button Bounce Animation
-21. Character Animation
-22. Fade Class Active
-23. Text Animation Paragraph
-24. Text Bounce Animation
-25. Portfolio Panel
-26. TP Text Perspective
-27. TP Text Reveal Animation
-28. Scale Animation
-29. Image Reveal Animation
-30. Process Expand Image
-31. AddClass / RemoveClass
-32. Ripples Images
-33. Scroll with Moving Text
-34. TP Text Invert
-35. TP Text Invert 2
-36. TP Text Invert 3
-37. Studio Project Animation
-38. Hover Button
-39. Random Text Generator in Hover
-40. Lowercase Character
-41. Split Text into Characters (SplitType)
-42. Portfolio Person Image Moving
-43. Scroll Scale Up Image
-44. Handle Data Speed Attributes
 
 
 /***************************************************
@@ -1031,3 +982,5 @@
 
 
 })(jQuery);
+
+

@@ -244,8 +244,8 @@ li,
   --tp-coffe-2: #552411;
   --tp-text-body: #030303;
   --tp-theme-blue: #5265F9;
-  --tp-theme-yellow: #FFD337;
-  --tp-theme-paste: #073333;
+  --tp-theme-yellow: #EDBC31;
+  --tp-theme-paste: #0098C6;
   --tp-theme-green-yellow: #AFF42B;
   --tp-theme-yellow-light: #FFF669;
   --tp-theme-green: #A0FF27;
@@ -22456,3 +22456,34 @@ img.categorywebsiteimage {
 .text-red {
     color: #0098C6 !important;
 }
+
+.portfolio-column {
+    text-align: -webkit-center;
+}
+
+.portfolio-equal-height {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
