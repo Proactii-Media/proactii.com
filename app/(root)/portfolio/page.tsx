@@ -78,84 +78,30 @@ export default function Portfolio() {
             </section>
 
 
-          
 <div className="tp-portfolio-area tp-portfolio-space-2 pb-90">
     <div className="container container-1424">
         <div className="row protfoliomargin gx-50 grid">
             {portfolioData.map((item) => (
                 <div
                     key={item.id}
-                    className={`col-12 grid-item ${item.classes}`}
+                    className={`col-6 col-md-6 col-12 grid-item ${item.classes}`}
                 >
                     <div className="tp-pr-item">
-                        <div className="row align-items-stretch portfolio-row">
+                        {/* Image Top */}
+                        <div className="tp-pr-thumb">
+                            <img src={item.image} alt={item.alt} />
+                        </div>
 
-                            {/* Image Left */}
-                            {item.position === "left" && (
-                                <div className="col-12 col-md-6 portfolio-column text-center">
-                                    <div className="tp-pr-thumb portfolio-equal-height">
-                                        <Link href={`/portfolio/${item.slug}`}>
-                                            <img
-                                                src={item.image}
-                                                alt={item.alt}
-                                            />
-                                        </Link>
-                                    </div>
-                                </div>
-                            )}
+                        {/* Text Below Image */}
+                        <div className="tp-pr-content">
+                            <h3 className="tp-pr-title fs-34 tp-blog-masonry-title text-white">
+                                {item.title}
+                            </h3>
 
-                            {/* Portfolio Content */}
-                            <div
-                                className={`col-12 col-md-6 portfolio-column ${
-                                    item.position === "right"
-                                        ? "order-2 order-md-1"
-                                        : ""
-                                }`}
-                            >
-
-                      
-
-                                
-                                <div className="tp-pr-content portfolio-equal-height">
-                                    <h3 className="tp-pr-title fs-34  tp-blog-masonry-title">
-                                        <Link
-                                            href={`/portfolio/${item.slug}`}
-                                            className="tp-line-black"
-                                        >
-                                            {item.title}
-                                        </Link>
-                                    </h3>
-
-                                                <h3 className="tp-blog-masonry-title">
-                                            <a
-                                                className="tp-line-black"
-                                                href={`/blog-details/${item.slug}`}
-                                            >
-                                             {item.title}
-                                            </a>
-                                        </h3>
-
-                                    <div className="tp-pr-meta">
-                                        <span>{item.category}</span>
-                                        <span>{item.year}</span>
-                                    </div>
-                                </div>
+                            <div className="tp-pr-meta">
+                                <span className="text-white">{item.category}</span>
+                                <span className="text-white">{item.year}</span>
                             </div>
-
-                            {/* Image Right */}
-                            {item.position === "right" && (
-                                <div className="col-12 col-md-6 portfolio-column order-1 order-md-2">
-                                    <div className="tp-pr-thumb portfolio-equal-height">
-                                        <Link href={`/portfolio/${item.slug}`}>
-                                            <img
-                                                src={item.image}
-                                                alt={item.alt}
-                                            />
-                                        </Link>
-                                    </div>
-                                </div>
-                            )}
-
                         </div>
                     </div>
                 </div>

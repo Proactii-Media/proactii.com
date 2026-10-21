@@ -81,7 +81,7 @@ export default function ServiceCategory() {
             <div
                 className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
                 style={{
-                    backgroundImage: "url('/assets/images/banner/onlinebanner.png')",
+                    backgroundImage: "url('/assets/images/banner/about1.png')",
                 }}
             >
                 <div className="container">

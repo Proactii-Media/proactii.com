@@ -212,7 +212,6 @@ export default function Contact() {
               {/* Office Address */}
               <div className="col-xl-4 col-lg-4 col-md-6 col-10 d-flex pb-20 pb-lg-0">
                 <div
-                  // Added 'responsive-badge-padding' class here
                   className="md-process-badge-item text-center mb-20 tp_fade_anim proactii-badge w-100 h-100 d-flex flex-column responsive-badge-padding"
                   data-delay="0.2"
                   style={{ background: "#0098C6" }}
@@ -220,17 +219,23 @@ export default function Contact() {
                   <div className="pt-15 pb-10 d-flex justify-content-center">
                     <div
                       className="d-flex align-items-center justify-content-center rounded-circle"
-                      style={{ width: "70px", height: "70px", background: "#fff" }}
+                      style={{ width: "80px", height: "80px", background: "#fff" }}
                     >
-                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0098C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
+                      <img
+                        src="/assets/images/address.gif"
+                        alt="Office Address"
+                        style={{ width: "70px", height: "70px", objectFit: "contain" }}
+                      />
                     </div>
                   </div>
+
                   <div className="md-process-badge-content">
-                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>Office Address</h4>
-                    <p style={{ color: "#fff" }}>206-A, Platinum Commercial Center, Via Char Rasta Rd, opp. VIA Ground, GIDC, Vapi, Gujarat 396195</p>
+                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>
+                      Office Address
+                    </h4>
+                    <p style={{ color: "#fff" }}>
+                      206-A, Platinum Commercial Center, Via Char Rasta Rd, opp. VIA Ground, GIDC, Vapi, Gujarat 396195
+                    </p>
                   </div>
                 </div>
               </div>
@@ -238,7 +243,6 @@ export default function Contact() {
               {/* Phone */}
               <div className="col-xl-4 col-lg-4 col-md-6 col-10 d-flex pb-20 pb-lg-0">
                 <div
-                  // Added 'responsive-badge-padding' class here
                   className="md-process-badge-item text-center mb-20 tp_fade_anim proactii-badge w-100 h-100 d-flex flex-column responsive-badge-padding"
                   data-delay="0.2"
                   style={{ background: "#0098C6" }}
@@ -246,16 +250,23 @@ export default function Contact() {
                   <div className="pt-15 pb-10 d-flex justify-content-center">
                     <div
                       className="d-flex align-items-center justify-content-center rounded-circle"
-                      style={{ width: "70px", height: "70px", background: "#fff" }}
+                      style={{ width: "80px", height: "80px", background: "#fff" }}
                     >
-                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0098C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                      </svg>
+                      <img
+                        src="/assets/images/phone.gif"
+                        alt="Phone"
+                        style={{ width: "70px", height: "70px" }}
+                      />
                     </div>
                   </div>
+
                   <div className="md-process-badge-content">
-                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>Phone</h4>
-                    <p style={{ color: "#fff", fontWeight: "bold" }}>099247 03447</p>
+                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>
+                      Phone
+                    </h4>
+                    <p style={{ color: "#fff", fontWeight: "bold" }}>
+                      099247 03447
+                    </p>
                   </div>
                 </div>
               </div>
@@ -263,7 +274,6 @@ export default function Contact() {
               {/* Email */}
               <div className="col-xl-4 col-lg-4 col-md-6 col-10 d-flex pb-20 pb-lg-0">
                 <div
-                  // Added 'responsive-badge-padding' class here
                   className="md-process-badge-item text-center mb-20 tp_fade_anim proactii-badge w-100 h-100 d-flex flex-column responsive-badge-padding"
                   data-delay="0.2"
                   style={{ background: "#0098C6" }}
@@ -271,17 +281,23 @@ export default function Contact() {
                   <div className="pt-15 pb-10 d-flex justify-content-center">
                     <div
                       className="d-flex align-items-center justify-content-center rounded-circle"
-                      style={{ width: "70px", height: "70px", background: "#fff" }}
+                      style={{ width: "90px", height: "90px", background: "#fff" }}
                     >
-                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0098C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                        <polyline points="22,6 12,13 2,6" />
-                      </svg>
+                      <img
+                        src="/assets/images/email.gif"
+                        alt="Email"
+                        style={{ width: "100px", height: "100px", }}
+                      />
                     </div>
                   </div>
+
                   <div className="md-process-badge-content">
-                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>Email</h4>
-                    <p style={{ color: "#fff", fontWeight: "bold" }}>mail@proactii.com</p>
+                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>
+                      Email
+                    </h4>
+                    <p style={{ color: "#fff", fontWeight: "bold" }}>
+                      mail@proactii.com
+                    </p>
                   </div>
                 </div>
               </div>
