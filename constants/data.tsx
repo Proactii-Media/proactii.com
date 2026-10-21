@@ -786,7 +786,7 @@ export const services: Service[] = [
         number: "01",
         title: "Online Branding",
         slug: "online-branding",
-        banner_image:"/assets/images/banner/onlinebanner1.png",
+        banner_image:"/assets/images/banner/onlinebanner2.png",
         description:
             "Branding helps create an impression on your target audience and communicates what they can expect from your organization.",
         details:

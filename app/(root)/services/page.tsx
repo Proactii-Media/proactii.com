@@ -13,9 +13,9 @@ export default function Service() {
             {/* ========== Breadcrumb Start Section ========== */}
    <div
                 className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
-                data-background="/assets/images/banner/about1.png"
+                data-background="/assets/images/banner/service.png"
                 style={{
-                    backgroundImage: "url('/assets/images/banner/about1.png')",
+                    backgroundImage: "url('/assets/images/banner/service.png')",
                 }}
             >
                 <div className="container">

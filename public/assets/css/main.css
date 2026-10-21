@@ -12969,6 +12969,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 .tp-contact-map-icon {
   position: relative;
+  display: none;
 }
 
 .tp-contact-map-icon-box {
@@ -22466,7 +22467,25 @@ img.categorywebsiteimage {
     margin-right: auto;
 }
 
+@media (max-width: 769px) {
+.social-stack-mobile {
+display: flex !important;
+    gap: 20px;  
+}
 
+.tp-footer-widget-social.mb-30 {
+    margin-bottom: 10px;
+}
+
+.tp-blog-masonry-content {
+    padding: 0px 0px;
+}
+
+.md-service-btn-wrap.tp-btn-black-bg {
+  padding: 0px 0px 20px 0px;
+}
+
+}
 
 
 

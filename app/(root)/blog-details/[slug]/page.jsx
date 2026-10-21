@@ -225,7 +225,7 @@ export default async function BlogDetailsPage({ params }) {
                         <div className="col-xl-8 col-lg-10">
                             <div className="postbox-wrapper mb-115">
 
-                                <div className="postbox-details-text mb-40">
+                                <div className="postbox-details-text mb-20">
                                     <h1 className="cr-section-content-title">
                                         {post.title}
                                     </h1>
@@ -237,7 +237,7 @@ export default async function BlogDetailsPage({ params }) {
                                 {contentItems.map((item, index) => (
                                     <div
                                         key={`${post.slug}-${index}`}
-                                        className="postbox-details-text mb-40"
+                                        className="postbox-details-text mb-10"
                                     >
                                         {/* Paragraph */}
                                         {item.type === "paragraph" && (
