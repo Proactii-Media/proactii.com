@@ -4,41 +4,66 @@
 
 import { services } from "@/constants/data"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Service() {
 
     return (
         <>
             {/* ========== Breadcrumb Start Section ========== */}
-{services.map((service) => (
-    <div
-        key={service.title}
-        className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
-        style={{
-            backgroundImage: `url('${service.banner_image}')`,
-        }}
-    >
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-xxl-12">
-                    <div className="tp-breadcrumb-content text-center">
-                        <h3 className="tp-breadcrumb-title tp-char-animation text-white">
-                            {service.title}
-                        </h3>
+   <div
+                className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
+                data-background="/assets/images/banner/about1.png"
+                style={{
+                    backgroundImage: "url('/assets/images/banner/about1.png')",
+                }}
+            >
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-xxl-12">
+                            <div className="tp-breadcrumb-content text-center ">
+                                <h3 className="tp-breadcrumb-title tp-char-animation text-white">
+                                    Our Services
+                                </h3>
 
-                        <div className="tp-breadcrumb-list mb-25">
-                            <span className="text-white">
-                                <a href="/">Home</a>
-                            </span>
-                            <span className="dvdr text-white"><i>|</i></span>
-                            <span className="text-white">{service.title}</span>
+                                <div className="tp-breadcrumb-list mb-25 ">
+                                    <span className="text-white">
+                                        <a href="/">Home</a>
+                                    </span>
+
+                                    <span className="dvdr text-white  ">
+                                        <i>|</i>
+                                    </span>
+
+                                    <span className="text-white">Services</span>
+                                </div>
+
+                                <div className="tp-breadcrumb-scrolldown smooth">
+                                    <a href="#about">
+                                        <span>
+                                            <svg
+                                                width="16"
+                                                height="9"
+                                                viewBox="0 0 16 9"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M1 1L8 8L15 1"
+                                                    stroke="#111013"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-))}
             {/* ========== Breadcrumb End Section ========== */}
 
             <section
