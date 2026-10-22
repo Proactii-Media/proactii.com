@@ -142,47 +142,51 @@ export default function HomeWeAre() {
 
 
         </section>
-
-            {/* <section
+            <section
                 className="tp-experience-area pt-80 pb-80"
-                style={{
-                    backgroundImage: "url('/assets/images/banner/2.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundColor: "#333",
-                }}
+ style={{
+    backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/11.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+}}
             >
                 <div className="container container-1424">
                     <div className="row align-items-center">
                         <div className="col-xl-7 col-lg-7 text-start mb-4 mb-lg-0">
-                            <p className="text-black">
+                            <p  style={{ color: "#fff" }}>
                                 Industries We Serve
                             </p>
 
                             <div className="md-section-content-wrapper">
                                 <h3
                                     className="cr-section-content-title mb-20 md-section-title tp_fade_anim"
-                                    style={{ color: "#0098C6" }}
+                                    style={{ color: "#fff" }}
                                 >
                                     WE WORK WITH GLOBAL BRANDS
                                 </h3>
                             </div>
 
-                            <p className="text-black mb-0">
+                            <p className=" mb-0"  style={{ color: "#fff" }}>
                                 Our vertical solutions expertise allows your business
                                 to streamline workflow, and increase productivity.
                             </p>
 
-                            <p className="text-black mb-0">
+                            <p className=" mb-0"  style={{ color: "#fff" }}>
                                 No matter the business, Proactii Media LLP has you
                                 covered with industry compliant solutions.
                             </p>
                         </div>
 
                         <div className="col-xl-5 col-lg-5 text-lg-center text-start">
+                            <div className="mb-10">
+                                <i
+                                    className="fal fa-phone"
+                                    style={{ color: "#fff", fontSize: "30px" }}
+                                ></i>
+                            </div>
                             <div>
-                                <p>Reach Out Now</p>
+                                <p className="text-margin" style={{ color: "#fff" }}>Reach Out Now</p>
                             </div>
                             <div className="phone-hover">
                                 <h2>099247 03447</h2>
@@ -190,16 +194,33 @@ export default function HomeWeAre() {
 
 
 
-                            <a
-                                href="/contact"
-                                className="contact-hover-btn d-inline-flex align-items-center gap-2 px-4 py-3 rounded-1 shadow-sm"
-                            >
-                                View Profile
-                            </a>
+                      
+                              <a
+                                            href="/contact"
+                                            className="people-special-link bg-red"
+                                        >
+                                           View Profile
+                                            <svg
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 14 14"
+                                                fill="none"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                
+                                                    d="M1 7H13M13 7L7.5 1.5M13 7L7.5 12.5"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                        </a>
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
         </>
 
     );

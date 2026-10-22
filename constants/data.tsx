@@ -12,16 +12,21 @@ import {
 
 export const slides = [
     {
-        image: "/assets/images/home/weare1.png",
+        image: "/assets/images/about/innovation.png",
         text: "INNOVATION",
     },
     {
-        image: "/assets/images/home/weare2.png",
-        text: "DEVELOPMENT",
+        image: "/assets/images/about/commitment.png",
+        text: "COMMITMENT",
     },
     {
-        image: "/assets/images/home/weare3.png",
-        text: "DIGITAL PRESENCE",
+        image: "/assets/images/about/reputation.png",
+        text: "REPUTATION",
+    },
+    
+      {
+        image: "/assets/images/about/excellence.png",
+        text: "EXCELLENCE",
     },
 ];
 

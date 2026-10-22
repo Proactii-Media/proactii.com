@@ -22477,14 +22477,21 @@ display: flex !important;
 
 }
 
-/* .phone-hover h2 {
+p.text-margin {
+    margin-bottom: 8px !important;
+}
+
+.phone-hover h2 {
     display: inline-block;
     position: relative;
     cursor: pointer;
+    color: red;
+    font-weight: 700 !important;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
 }
 
 .phone-hover h2::after {
-     font-weight: 600;
     content: "";
     position: absolute;
     left: 0;
@@ -22497,9 +22504,14 @@ display: flex !important;
     transition: transform 0.4s ease;
 }
 
+.phone-hover h2:hover {
+    color: #fff;
+}
+
 .phone-hover h2:hover::after {
     transform: scaleX(1);
-} */
+}
+
 
 
 
