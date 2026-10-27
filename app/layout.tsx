@@ -26,7 +26,7 @@ export default function RootLayout({
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
         <link rel="stylesheet" href="/assets/css/bootstrap.css" />
-        <link rel="stylesheet" href="/assets/css/swiper-bundle.css" />
+  
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/css/font-awesome-pro.css" />
         <link rel="stylesheet" href="/assets/css/spacing.css" />
@@ -122,10 +122,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        <Script
+        {/* <Script
           src="/assets/js/tp-cursor.js"
           strategy="afterInteractive"
-        />
+        /> */}
 
         <Script
           src="/assets/js/main.js"

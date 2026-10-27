@@ -51,7 +51,7 @@ export default function HeroBanner() {
         className=" cr-hero-space paste-bg pl-130 pr-125 pb-20 include-bg"
         style={{
           backgroundImage:
-            "url('/assets/img/home-4/hero/hero-bg-shape.png')",
+            "url('/assets/images/banner/background_image.png')",
         }}
       >
         <div className="container-fluid p-0">

@@ -128,38 +128,38 @@
 
 
 	//******* home-2 testimonial-slider *******
-    var md_testimonial = new Swiper(".md_testimonial_slider_active", {
-		slidesPerView: 1,
-		spaceBetween: 30,
-		loop: true,
-		centeredSlides: true,
-		allowTouchMove: false,
-		speed: 10000,
-		autoplay: {
-			delay: 1,
-			disableOnInteraction: false,
-		},
-		breakpoints: {
-			576: {
-			slidesPerView: 2,
-			},
-			768: {
-			slidesPerView: 2,
-			},
-			992: {
-			slidesPerView: 3,
-			},
-			1200: {
-			slidesPerView: 3,
-			},
-			1401: {
-			slidesPerView: 4,
-			},
-			1750: {
-			slidesPerView: 5,
-			},
-		},
-    });
+    // var md_testimonial = new Swiper(".md_testimonial_slider_active", {
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 30,
+	// 	loop: true,
+	// 	centeredSlides: true,
+	// 	allowTouchMove: false,
+	// 	speed: 10000,
+	// 	autoplay: {
+	// 		delay: 1,
+	// 		disableOnInteraction: false,
+	// 	},
+	// 	breakpoints: {
+	// 		576: {
+	// 		slidesPerView: 2,
+	// 		},
+	// 		768: {
+	// 		slidesPerView: 2,
+	// 		},
+	// 		992: {
+	// 		slidesPerView: 3,
+	// 		},
+	// 		1200: {
+	// 		slidesPerView: 3,
+	// 		},
+	// 		1401: {
+	// 		slidesPerView: 4,
+	// 		},
+	// 		1750: {
+	// 		slidesPerView: 5,
+	// 		},
+	// 	},
+    // });
 
 
 

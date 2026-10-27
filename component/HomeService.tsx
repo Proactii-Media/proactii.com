@@ -30,8 +30,8 @@ export default function HomeServices() {
         <>
             <section
                 className="dgs-service-area dgs-service-space pt-100 pb-80"
-                data-bg-color="#0098C6"
-                style={{ backgroundColor: "#0098C6" }}
+                data-bg-color="#8B3082"
+                style={{ backgroundColor: "#8B3082" }}
             >
                 <div className="container container-1424">
                     <div className="dgs-service-inner">

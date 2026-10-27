@@ -1,12 +1,7 @@
-
-
 "use client";
 
-
-import { logos } from "@/constants/data";
+import { logos, slides, teamMembers } from "@/constants/data";
 import Image from "next/image";
-
-import { slides, teamMembers } from "@/constants/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -16,7 +11,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function About() {
-
+    // Logo loop ke liye duplicate logos
+    const duplicatedLogos = logos.length < 10 ? [...logos, ...logos, ...logos] : logos;
 
     return (
         <>
@@ -269,6 +265,12 @@ export default function About() {
                                         pagination={{ clickable: true }}
                                         navigation={true}
                                         speed={700}
+                                        // ✅ Added onSwiper to prevent freeze issue after back navigation
+                                        onSwiper={(swiper) => {
+                                            setTimeout(() => {
+                                                swiper?.autoplay?.start();
+                                            }, 150);
+                                        }}
                                     >
                                         {slides.map((slide, index) => (
                                             <SwiperSlide key={index}>
@@ -407,40 +409,51 @@ export default function About() {
                 </div>
             </section>
 
-            <div className="cr-brand-area-2 cr-brand-style-3 tp-brand fix pt-60 pb-60" data-bg-color="#f7f7f7">
-
+            {/* ✅ FIXED: Client Logo Slider (React Swiper with Box Borders) */}
+            <div
+                className="cr-brand-area-2 cr-brand-style-3 tp-brand fix pt-60 pb-60"
+                style={{ backgroundColor: "#EEBE31" }}
+            >
                 <div className="container-fluid p-0">
                     <div className="cr-brand-inner-wrap">
-                        <div className="swiper cr-brand-logo-slide-active" data-bg-color="#fff">
-                            <div className="swiper-wrapper slide-transition">
-                                {logos.map((logo, index) => (
-                                    <div className="swiper-slide" key={index}>
-
-                                        <div
-                                            className="cr-brand-item-2"
-                                            style={{
-                                                width: "100%",
-                                                height: "120px",
-                                                display: "flex",
-                                                alignItems: "center",
-                                                justifyContent: "center",
-                                                padding: "10px"
-                                            }}
-                                        >
-                                            <img
-                                                src={`/assets/images/client/${logo}`}
-                                                alt={logo.replace('.png', '')}
-                                                style={{
-                                                    width: "80%",
-                                                    height: "100%",
-                                                    objectFit: "contain"
-                                                }}
-                                            />
-                                        </div>
+                        <Swiper
+                            className="cr-brand-logo-slide-active"
+                            modules={[Autoplay]}
+                            loop
+                            speed={4000}
+                            autoplay={{
+                                delay: 0,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: false,
+                            }}
+                            allowTouchMove={true}
+                            slidesPerView={2}
+                            spaceBetween={0}
+                            onSwiper={(swiper) => {
+                                setTimeout(() => {
+                                    swiper?.autoplay?.start();
+                                }, 150);
+                            }}
+                            breakpoints={{
+                                0:    { slidesPerView: 2, spaceBetween: 0 },
+                                576:  { slidesPerView: 3, spaceBetween: 0 },
+                                768:  { slidesPerView: 4, spaceBetween: 0 },
+                                1024: { slidesPerView: 5, spaceBetween: 0 },
+                                1200: { slidesPerView: 6, spaceBetween: 0 },
+                            }}
+                        >
+                            {duplicatedLogos.map((logo, index) => (
+                                <SwiperSlide key={`${logo}-${index}`}>
+                                    <div className="client-logo-box">
+                                        <img
+                                            src={`/assets/images/client/${logo}`}
+                                            alt={logo.replace('.png', '')}
+                                            className="client-logo-img"
+                                        />
                                     </div>
-                                ))}
-                            </div>
-                        </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </div>

@@ -12,9 +12,9 @@ export default function Portfolio() {
             {/* ========== Breadcrumb Start Section ========== */}
             <div
                 className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
-                data-background="/assets/images/banner/about1.png"
+                data-background="/assets/images/banner/protfolio.png"
                 style={{
-                    backgroundImage: "url('/assets/images/banner/about1.png')",
+                    backgroundImage: "url('/assets/images/banner/protfolio.png')",
                 }}
             >
                 <div className="container">

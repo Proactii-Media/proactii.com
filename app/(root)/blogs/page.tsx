@@ -11,9 +11,9 @@ export default function Blogs() {
             {/* ========== Breadcrumb Start Section ========== */}
             <div
                 className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
-                data-background="/assets/images/banner/about1.png"
+                data-background="/assets/images/banner/blog_banner.png"
                 style={{
-                    backgroundImage: "url('/assets/images/banner/about1.png')",
+                    backgroundImage: "url('/assets/images/banner/blog_banner.png')",
                 }}
             >
                 <div className="container">

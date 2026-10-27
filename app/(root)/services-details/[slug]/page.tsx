@@ -1,5 +1,6 @@
 import { services } from "@/constants/data";
 import { notFound } from "next/navigation";
+import ServiceWorkingProcess from "@/component/ServiceWorkingProcess";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -193,54 +194,16 @@ export default async function ServiceDetails({
             </section>
 
             {/* Working Process */}
-            <section
-                className="tp-process-area tp-process-space pt-80"
-                data-bg-color="#0098C6"
-            >
-                <div className="container container-1424">
-                    <div className="row">
-                        <div className="tp-section-content-wrapper text-center mb-75">
-                            <h2
-                                className="cr-section-content-title tp-section-title-teko mb-20"
-                                style={{ color: "#fff" }}
-                            >
-                                Our Working Process
-                            </h2>
-                        </div>
-                    </div>
+      {/* Working Process */}
+<ServiceWorkingProcess
+    serviceId={service.id}
+    process={service.process || []}
+/>
 
-                    <div className="tp-process-inner-item-wrap tp-process-inner-border-top pb-80">
-                        <div className="row">
-                            {(service.process || []).map((step, index) => (
-                                <div
-                                    className="col-xl-3 col-md-6"
-                                    key={`${service.id}-${step.title}`}
-                                >
-                                    <div
-                                        className="tp-process-inner-item p-relative mb-40"
-                                        data-delay={0.2 + index * 0.2}
-                                    >
-                                        <span className="tp-process-inner-dot"></span>
 
-                                        <div
-                                            className="tp-process-inner-content"
-                                            style={{ textAlign: "center" }}
-                                        >
-                                            <h3 className="tp-process-inner-title mb-20">
-                                                {step.title}
-                                            </h3>
 
-                                            <div className="tp-process-inner-text">
-                                                <p>{step.description}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+
 
             <div className="tp-instagram-area p-relative pt-80 pb-80">
                 <div className="container container-1424">

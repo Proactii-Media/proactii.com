@@ -66,7 +66,7 @@ export default async function BlogDetailsPage({ params }) {
                 className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
                 style={{
                     backgroundImage:
-                        "url('/assets/images/banner/about1.png')",
+                        "url('/assets/images/blogs/blog3_banner.png')",
                 }}
             >
                 <div className="container">
@@ -223,7 +223,7 @@ export default async function BlogDetailsPage({ params }) {
 
                         {/* Blog Content */}
                         <div className="col-xl-8 col-lg-10">
-                            <div className="postbox-wrapper mb-115">
+                            <div className="postbox-wrapper ">
 
                                 <div className="postbox-details-text mb-20">
                                     <h1 className="cr-section-content-title">

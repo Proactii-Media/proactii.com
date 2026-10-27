@@ -23,8 +23,8 @@ export const slides = [
         image: "/assets/images/about/reputation.png",
         text: "REPUTATION",
     },
-    
-      {
+
+    {
         image: "/assets/images/about/excellence.png",
         text: "EXCELLENCE",
     },
@@ -34,42 +34,42 @@ export const teamMembers = [
     {
         name: "Manhar Nakhuva",
         role: "Founder",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/1.png"
     },
     {
         name: "Dainik Tandel",
         role: "Web developer",
-        image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/2.png"
     },
     {
         name: "Sonali Kharpade",
         role: "Graphic Designer",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/3.png"
     },
     {
         name: "Trupal Patel",
         role: "Social Media Marketer",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/4.png"
     },
     {
         name: "Roshani Mistry",
         role: "Web Developer",
-        image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/5.png"
     },
     {
         name: "Satish Patel",
         role: "App Developer",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/6.png"
     },
     {
         name: "Nitin Patel",
         role: "Web Designer",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/7.png"
     },
     {
         name: "Ramiya Nair",
         role: "SEO Executive",
-        image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop"
+        image: "/assets/images/team/8.png"
     }
 ];
 
@@ -199,8 +199,8 @@ export const logos = [
     "aic.png", "atri.png", "blazol.png", "cafe.png", "casamia.png",
     "claart.png", "creativfish.png", "daily.png", "decent.png", "desre.png",
     "doctor.png", "duville.png", "escube.png", "finlube.png", "flavarich.png",
-    "foxy.png", "future.png", "furnipart.png", "glass.png", "hm.png",
-    "home.png", "lsaline.png", "kalapataru.png", "kesarnya.png", "kinder.png",
+    "foxy.png", "fulure.png", "furnipart.png", "glass.png", "hm.png",
+    "home.png", "lsaline.png", "kalapataru.png", "kesariya.png", "kinder.png",
     "kumkum.png", "moto.png", "newlook.png", "nissanol.png", "pizza.png",
     "river.png", "roopani.png", "sakti.png", "shreevallabg.png", "starkenn.png",
     "tridat.png", "turning.png", "valram.png", "vifi.png"
@@ -726,7 +726,7 @@ export const blogPosts = [
 ];
 
 
-``
+
 type RelatedService = {
     title: string;
     image: string;
@@ -735,6 +735,7 @@ type RelatedService = {
     website_title?: string;
     website_des?: string[];
     website_image?: string;
+    cat_banner_image?: string;
 
     leverage_title?: string;
     leverage?: {
@@ -768,7 +769,7 @@ type Service = {
     title: string;
     slug: string;
     description: string;
-    banner_image : string;
+    banner_image: string;
     details: string | string[];
 
     icon: string;
@@ -791,7 +792,7 @@ export const services: Service[] = [
         number: "01",
         title: "Online Branding",
         slug: "online-branding",
-        banner_image:"/assets/images/banner/onlinebanner2.png",
+        banner_image: "/assets/images/banner/onlinebanner2.png",
         description:
             "Branding helps create an impression on your target audience and communicates what they can expect from your organization.",
         details:
@@ -832,6 +833,7 @@ export const services: Service[] = [
                 image: "/assets/images/services_details/brand.png",
                 link: "/services-category/brand-identity",
 
+
                 website_title: "Brand Identity",
                 website_des: [
                     "Proactii Media LLP is a brand identity is the face of a brand. As discussed in the previous section, a brand is an emotional and even philosophical concept, while brand identity is the visual component of a brand that represents those larger ideas.",
@@ -840,6 +842,7 @@ export const services: Service[] = [
                     "To manage brand identity, organizations should invest in a brand management system that helps them stay consistent while still having the flexibility and the speed necessary to succeed in today’s market. Components of this system might include a style guide, brand management software, and employee training."
                 ],
                 website_image: "/assets/images/services_details/brand.png",
+                cat_banner_image: "/assets/images/banner/brand_banner.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
@@ -938,6 +941,7 @@ export const services: Service[] = [
                     "To manage brand identity, organizations should invest in a brand management system that helps them stay consistent while still having the flexibility and the speed necessary to succeed in today’s market. Components of this system might include a style guide, brand management software, and employee training."
                 ],
                 website_image: "/assets/images/services_details/logo.png",
+                cat_banner_image: "/assets/images/banner/logo.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
@@ -1023,6 +1027,7 @@ export const services: Service[] = [
 
 
             },
+
             {
                 title: "Graphic Design – Continue",
                 image: "/assets/images/services_details/graphic.png",
@@ -1037,6 +1042,7 @@ export const services: Service[] = [
 
                 ],
                 website_image: "/assets/images/services_details/graphic.png",
+                cat_banner_image: "/assets/images/banner/graphic.png",
 
 
                 process_title: "OUR <span class='text-red'>GRAPHIC DESIGN </span> PROCESS",
@@ -1058,7 +1064,7 @@ export const services: Service[] = [
         number: "02",
         title: "Website Development",
         slug: "web-development",
-        banner_image:"/assets/images/banner/web.png",
+        banner_image: "/assets/images/banner/web.png",
         description:
             "Appealing and effective websites are one of the most potent marketing tools to reach wide audiences and satisfy their requirements.",
         details: [
@@ -1095,7 +1101,7 @@ export const services: Service[] = [
         ],
         relatedServices: [
             {
-                title: "Website Designing and Development",
+                title: "Website Designing ",
                 image: "/assets/images/services_details/web.png",
                 link: "/services-category/web-development",
 
@@ -1106,6 +1112,7 @@ export const services: Service[] = [
 
                 ],
                 website_image: "/assets/images/services_details/web.png",
+                cat_banner_image: "/assets/images/banner/web_banner.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
@@ -1214,6 +1221,7 @@ export const services: Service[] = [
 
                 ],
                 website_image: "/assets/images/services_details/ewebsite.png",
+                cat_banner_image: "/assets/images/banner/e-commerce.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
@@ -1308,6 +1316,7 @@ export const services: Service[] = [
                     "Proactii Media LLP gives shape to your ideas. With the boom in technology, having just a website is not enough. To keep the web alive you need to have a software which runs through a browser – Web Application. Web applications are much more interactive than websites. Applications developed over the web helps to engage more users and for organizations who want to stream lime their digital processes, web applications is a great way to achieve desired results."
                 ],
                 website_image: "/assets/images/services_details/web-application.png",
+                cat_banner_image: "/assets/images/banner/web_application_banner.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span>",
                 leverage: [
@@ -1405,7 +1414,7 @@ export const services: Service[] = [
         number: "03",
         title: "Mobile App Development",
         slug: "mobile-app-development",
-        banner_image:"/assets/images/banner/app.png",
+        banner_image: "/assets/images/banner/app.png",
         description:
             "With us, convert your ideas into user-friendly and easy-to-use applications, which increase your chances of success in the global market.",
 
@@ -1457,6 +1466,7 @@ export const services: Service[] = [
 
                 ],
                 website_image: "/assets/images/services_details/app.png",
+                cat_banner_image: "/assets/images/banner/mobile_banner.png",
 
                 leverage_title: "Design is <span class='text-red'>exploration</span>",
                 leverage:
@@ -1562,7 +1572,7 @@ export const services: Service[] = [
         number: "04",
         title: "Digital Marketing",
         slug: "digital-marketing",
-        banner_image:"/assets/images/banner/digital.png",
+        banner_image: "/assets/images/banner/digital.png",
         description:
             "Digital marketing allows businesses to reach their customers where they are while strengthening their brands and expanding their customer base.",
 
@@ -1607,62 +1617,63 @@ export const services: Service[] = [
                 link: "/services-category/digital-marketing",
 
 
-                     website_title: "Brand Identity",
+                website_title: "Brand Identity",
                 website_des: [
                     "Search Engine Optimization is the process of modifying a website with the goal of ranking better in the search engines for a specific keyword phrase, ultimately leading to an increase in the organic traffic volume to a website.",
                     "As part of an overall Internet Marketing Campaign, Search Engine Optimization (SEO) is based around Search Engines’ complicated algorithms, which are made up of variables such as the age of the domain, the speed of the pages being downloaded from the server, whether or not there are keywords in the domain name, the keywords used in the Title Tags, Meta Keywords, Meta Description and many more variables. In fact, Google alone has hundreds of different variables that it uses to determine rankings.",
 
                 ],
                 website_image: "/assets/images/services_details/search.png",
+                cat_banner_image: "/assets/images/banner/sco_banner.png",
 
                 leverage_title: "Why Seo Is Beneficial <span class='text-red'>To Your Business?</span>",
                 leverage:
                     [
-     
-    {
-        icon: "far fa-signal",
-        title: "More Traffic",
-        des: "As you gain more visibility, you will start to see an increase in the number of website visitors.",
-    },
-    {
-        icon: "far fa-retweet",
-        title: "More Leads and Revenue",
-        des: "Regular apps are built to handle limited number of resources and processes. In the event of your business growing, these apps may not be able to handle the load. Custom made apps, on the other hand are built keeping in mind all these parameters and can be scaled up easily when the need arises",
-    },
-    {
-         icon: "fa-brands fa-bandcamp",
-        title: "More Brand Awareness",
-        des: "Branding is the only way to do it, and it's the most viable SEO strategy on the market today. Focusing on branding will help drive higher click-through rates in organic SERPs.",
-    }, {
-        icon: "fa-regular fa-star",
-        title: "Rankings provides 24/7 promotion",
-        des: "You can increase your website traffic all day, every day. Once you rank high in search engines, they will promote your business.",
-    },
-    {
-        icon: "fa-solid fa-toggle-on",
-        title: "Gets more clicks than PPC",
-        des: "Many users of search engines tend to skip paid advertisements. By investing in SEO, you will likely gain more traffic than the advertisers on the same keywords.",
-    },
-    {
-        icon: "fa-brands fa-instagram",
-        title: "Increases Your Followers on Social Media",
-        des: "By the time, you land on the first page of search engine sites, more and more people will know about you. Users visit your website, to click on your social media icons and eventually follow you.",
-    },
-    {
-        icon: "fa-solid fa-indian-rupee-sign",
-        title: "Gets Affordable and Cost-Effective",
-        des: "The amount of money you need to spend on acquiring customers through the right SEO strategy is zero. You have to spend a considerable amount to get customers, SEO is affordable.",
-    },
-    {
-        icon: "fa-solid fa-shield-halved",
-        title: "More Trust and Authority",
-        des: "When you reach the top of the search results, your customers will see you as the industry authority.",
-    },
-    {
-        icon: "fa-solid fa-magnifying-glass-plus",
-        title: "More Business Growth",
-        des: "SEO can help grow your business by attracting leads to your website. Once the leads are obtained, the sales team must take them through your sales funnel to convert them into paying customers.",
-    }
+
+                        {
+                            icon: "far fa-signal",
+                            title: "More Traffic",
+                            des: "As you gain more visibility, you will start to see an increase in the number of website visitors.",
+                        },
+                        {
+                            icon: "far fa-retweet",
+                            title: "More Leads and Revenue",
+                            des: "Regular apps are built to handle limited number of resources and processes. In the event of your business growing, these apps may not be able to handle the load. Custom made apps, on the other hand are built keeping in mind all these parameters and can be scaled up easily when the need arises",
+                        },
+                        {
+                            icon: "fa-brands fa-bandcamp",
+                            title: "More Brand Awareness",
+                            des: "Branding is the only way to do it, and it's the most viable SEO strategy on the market today. Focusing on branding will help drive higher click-through rates in organic SERPs.",
+                        }, {
+                            icon: "fa-regular fa-star",
+                            title: "Rankings provides 24/7 promotion",
+                            des: "You can increase your website traffic all day, every day. Once you rank high in search engines, they will promote your business.",
+                        },
+                        {
+                            icon: "fa-solid fa-toggle-on",
+                            title: "Gets more clicks than PPC",
+                            des: "Many users of search engines tend to skip paid advertisements. By investing in SEO, you will likely gain more traffic than the advertisers on the same keywords.",
+                        },
+                        {
+                            icon: "fa-brands fa-instagram",
+                            title: "Increases Your Followers on Social Media",
+                            des: "By the time, you land on the first page of search engine sites, more and more people will know about you. Users visit your website, to click on your social media icons and eventually follow you.",
+                        },
+                        {
+                            icon: "fa-solid fa-indian-rupee-sign",
+                            title: "Gets Affordable and Cost-Effective",
+                            des: "The amount of money you need to spend on acquiring customers through the right SEO strategy is zero. You have to spend a considerable amount to get customers, SEO is affordable.",
+                        },
+                        {
+                            icon: "fa-solid fa-shield-halved",
+                            title: "More Trust and Authority",
+                            des: "When you reach the top of the search results, your customers will see you as the industry authority.",
+                        },
+                        {
+                            icon: "fa-solid fa-magnifying-glass-plus",
+                            title: "More Business Growth",
+                            des: "SEO can help grow your business by attracting leads to your website. Once the leads are obtained, the sales team must take them through your sales funnel to convert them into paying customers.",
+                        }
                     ],
 
 
@@ -1679,7 +1690,7 @@ export const services: Service[] = [
                     "The foundation of an SEO Campaign is KeyWord Research. Ensuring you are targeting the right key terms, and directing traffic to the right pages, can make or break your SEO campaign. There is no point in attempting to rank highly for a term that has little to NO search volume.",
 
                     "Furthermore, it is imperative that the page relates to the targeted KeyTerm or a visitor will leave the site as quickly as they got there.",
-                    
+
                 ],
 
                 solution_title: "What we do? <span class='text-red'>Deliver Results.</span>",
@@ -1688,38 +1699,38 @@ export const services: Service[] = [
                 servicesbox:
                     [
 
- 
-    {
-        servicesbox_icon: "fa-solid fa-keyboard",
-        servicesbox_tiitle: "Keyword & Market Research",
-        servicesbox_des: "Over the years, we continue to refine our keyword and market research with the continuous changes to search engine rankings. This ensures your website has a successful strategy before we even begin our SEO process – ultimately our goal is traffic not just keywords.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-gear",
-        servicesbox_tiitle: "Onpage SEO Services",
-        servicesbox_des: "On-page optimization strategies can't be ignored, no matter how small. Our team of SEO experts ensure your meta descriptions, meta tags, internal and outbound linking, and image optimization is up to standard. You should have individual pages that describe services.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-link",
-        servicesbox_tiitle: "Link Building Services",
-        servicesbox_des: "Link building is still one of the major factors for increasing rank, although much has changed in the past few years. When done incorrectly, you could just be wasting time and money – costing you a lot of sales. When working with our link building – you don't ever have to worry about the quality.",
-    },
- 
-    {
-        servicesbox_icon: "fa-solid fa-cart-shopping",
-        servicesbox_tiitle: "Content Marketing Services",
-        servicesbox_des: "Google has openly stated they will be prioritizing websites with more quality content. We have a team of extremely talented content writers who specialize in digital marketing. Anyone can write quality content, but knowing the variables of SEO while writing is a huge advantage. A lot of our content writers go on to become SEO experts.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-flag",
-        servicesbox_tiitle: "Reporting & Analysis",
-        servicesbox_des: "Data driven decisions. We remove emotion from the equation and let the data tell your story. We run a very agile team that can pivot and change direction based on what the analytics show for your website. Our goal is not to simply increase traffic, we want to increase conversions and calls to your business. SEO auditing is an important facet of a website when it comes .",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-newspaper",
-        servicesbox_tiitle: "Customized Approached For PR",
-        servicesbox_des: "When you've been in business as long as us – you tend to build strong relationships. This allowed us to build the strongest digital marketing network in existence – enabling us to leverage our network to help you. The Excaligia network includes publishers, journalists, bloggers and other influencers from around the world.",
-    }
+
+                        {
+                            servicesbox_icon: "fa-solid fa-keyboard",
+                            servicesbox_tiitle: "Keyword & Market Research",
+                            servicesbox_des: "Over the years, we continue to refine our keyword and market research with the continuous changes to search engine rankings. This ensures your website has a successful strategy before we even begin our SEO process – ultimately our goal is traffic not just keywords.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-gear",
+                            servicesbox_tiitle: "Onpage SEO Services",
+                            servicesbox_des: "On-page optimization strategies can't be ignored, no matter how small. Our team of SEO experts ensure your meta descriptions, meta tags, internal and outbound linking, and image optimization is up to standard. You should have individual pages that describe services.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-link",
+                            servicesbox_tiitle: "Link Building Services",
+                            servicesbox_des: "Link building is still one of the major factors for increasing rank, although much has changed in the past few years. When done incorrectly, you could just be wasting time and money – costing you a lot of sales. When working with our link building – you don't ever have to worry about the quality.",
+                        },
+
+                        {
+                            servicesbox_icon: "fa-solid fa-cart-shopping",
+                            servicesbox_tiitle: "Content Marketing Services",
+                            servicesbox_des: "Google has openly stated they will be prioritizing websites with more quality content. We have a team of extremely talented content writers who specialize in digital marketing. Anyone can write quality content, but knowing the variables of SEO while writing is a huge advantage. A lot of our content writers go on to become SEO experts.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-flag",
+                            servicesbox_tiitle: "Reporting & Analysis",
+                            servicesbox_des: "Data driven decisions. We remove emotion from the equation and let the data tell your story. We run a very agile team that can pivot and change direction based on what the analytics show for your website. Our goal is not to simply increase traffic, we want to increase conversions and calls to your business. SEO auditing is an important facet of a website when it comes .",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-newspaper",
+                            servicesbox_tiitle: "Customized Approached For PR",
+                            servicesbox_des: "When you've been in business as long as us – you tend to build strong relationships. This allowed us to build the strongest digital marketing network in existence – enabling us to leverage our network to help you. The Excaligia network includes publishers, journalists, bloggers and other influencers from around the world.",
+                        }
                     ],
 
 
@@ -1752,64 +1763,65 @@ export const services: Service[] = [
                 image: "/assets/images/services_details/social.png",
                 link: "/services-category/social-media-optimization",
 
-                            website_title: "Become a Brand Hero and Friend",
+                website_title: "Become a Brand Hero and Friend",
                 website_des: [
                     "Social media marketing affords companies the opportunity to build relationships while driving brand awareness and promoting products and services to clients and customers. Campaigns that incorporate smart strategy, engaging brand-based experiences and buzz-worthy content create communities that consumers want to be a part of.",
                     "Proactii Media LLP continually works to build innovative Facebook, Twitter, Pinterest, Instagram and other social media campaigns that speak to our clients’ audiences. If you’re looking for creative ways to grow your customers, we can help you realize your social media marketing goals.",
 
                 ],
                 website_image: "/assets/images/services_details/social.png",
+                cat_banner_image: "/assets/images/banner/social_media_banner.png",
 
                 leverage_title: "Benefits of <span class='text-red'>SMO</span> with us",
                 leverage:
-                  [
-  
-    {
-        icon: "fa-brands fa-facebook-f",
-        title: "Organic Social Media Strategy",
-        des: "Optimize your profiles, create content for regular posts, and make sure you're using the most effective hashtags.",
-    },
-    {
-        icon: "fa-solid fa-plane",
-        title: "Influencer Marketing",
-        des: "Research and strategize to determine the best influencers for your industry. We will reach out to them, manage their activities, and build ongoing relationships.",
-    },
-    {
-        icon: "fa-solid fa-pen-to-square",
-        title: "Social Media Audit",
-        des: "Take a closer look at your current social media standings and discover new opportunities to grow your community and interact with customers.",
-    },
-    {
-        icon: "fa-solid fa-trophy",
-        title: "Contests, Promotions, and Giveaways",
-        des: "Build more engagement through photo contests, sweepstakes, giveaways, and more. Keep them coming back with regular contests.",
-    },
-    {
-        icon: "fa-solid fa-indian-rupee-sign",
-        title: "Paid Social Ads",
-        des: "Paid strategies can include audience analysis, ad graphic design, A/B testing, and more. This is an effective way to get immediate engagement.",
-    },
-    {
-        icon: "fa-solid fa-cart-shopping",
-        title: "Content Marketing",
-        des: "Content is still king in the online world. This can include new on-page content, regular blogs, newsworthy press releases, or complete eBooks.",
-    },
-    {
-        icon: "fa-solid fa-money-bill",
-        title: "Gets Affordable and Cost-Effective",
-        des: "The amount of money you need to spend on acquiring customers through the right SEO strategy is zero. You have to spend a considerable amount to get customers, SEO is affordable.",
-    },
-    {
-        icon: "fa-solid fa-shield",
-        title: "More Trust and Authority",
-        des: "When you reach the top of the search results, your customers will see you as the industry authority.",
-    },
-    {
-        icon: "fa-solid fa-magnifying-glass-plus",
-        title: "More Business Growth",
-        des: "SEO can help grow your business by attracting leads to your website. Once the leads are obtained, the sales team must take them through your sales funnel to convert them into paying customers.",
-    }
-],
+                    [
+
+                        {
+                            icon: "fa-brands fa-facebook-f",
+                            title: "Organic Social Media Strategy",
+                            des: "Optimize your profiles, create content for regular posts, and make sure you're using the most effective hashtags.",
+                        },
+                        {
+                            icon: "fa-solid fa-plane",
+                            title: "Influencer Marketing",
+                            des: "Research and strategize to determine the best influencers for your industry. We will reach out to them, manage their activities, and build ongoing relationships.",
+                        },
+                        {
+                            icon: "fa-solid fa-pen-to-square",
+                            title: "Social Media Audit",
+                            des: "Take a closer look at your current social media standings and discover new opportunities to grow your community and interact with customers.",
+                        },
+                        {
+                            icon: "fa-solid fa-trophy",
+                            title: "Contests, Promotions, and Giveaways",
+                            des: "Build more engagement through photo contests, sweepstakes, giveaways, and more. Keep them coming back with regular contests.",
+                        },
+                        {
+                            icon: "fa-solid fa-indian-rupee-sign",
+                            title: "Paid Social Ads",
+                            des: "Paid strategies can include audience analysis, ad graphic design, A/B testing, and more. This is an effective way to get immediate engagement.",
+                        },
+                        {
+                            icon: "fa-solid fa-cart-shopping",
+                            title: "Content Marketing",
+                            des: "Content is still king in the online world. This can include new on-page content, regular blogs, newsworthy press releases, or complete eBooks.",
+                        },
+                        {
+                            icon: "fa-solid fa-money-bill",
+                            title: "Gets Affordable and Cost-Effective",
+                            des: "The amount of money you need to spend on acquiring customers through the right SEO strategy is zero. You have to spend a considerable amount to get customers, SEO is affordable.",
+                        },
+                        {
+                            icon: "fa-solid fa-shield",
+                            title: "More Trust and Authority",
+                            des: "When you reach the top of the search results, your customers will see you as the industry authority.",
+                        },
+                        {
+                            icon: "fa-solid fa-magnifying-glass-plus",
+                            title: "More Business Growth",
+                            des: "SEO can help grow your business by attracting leads to your website. Once the leads are obtained, the sales team must take them through your sales funnel to convert them into paying customers.",
+                        }
+                    ],
                 process_title: "<span class='text-red'>Our Process</span>",
                 process_image: "/assets/images/category/markteing1.png",
 
@@ -1817,40 +1829,40 @@ export const services: Service[] = [
                 solution_des: "Want us to handle your complete digital marketing? Here’s what we are good at & yes it’s proven.",
 
                 servicesbox:
-     [
+                    [
 
-    {
-        servicesbox_icon: "fa-brands fa-instagram",
-        servicesbox_tiitle: "Social Media Management",
-        servicesbox_des: "We have an expertise in creating and managing all your social media accounts on various platforms. We maintain your profile actively ensuring that you connect well with your customers and grow your revenue and brand awareness simultaneously.Even if your time is limited, social media management tools .",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-users",
-        servicesbox_tiitle: "Contests on Social Media",
-        servicesbox_des: "Contests not only build up your brand image but also engage customers and empower them to do marketing for you. It is also a great source to build up a potential database. Our SMO services team strategically plan and execute relevant contests on social media according to your brand's requirements.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-indian-rupee-sign",
-        servicesbox_tiitle: "Paid Advertisements",
-        servicesbox_des: "Each social media platform offers effective budget advertising channels to increase impressions, clicks, and conversions. There are paid advertisements to increase page likes, followers, reach, impressions, engagement etc. Some of these advertisements are solely focused on driving website clicks and conversions.",
-    },
+                        {
+                            servicesbox_icon: "fa-brands fa-instagram",
+                            servicesbox_tiitle: "Social Media Management",
+                            servicesbox_des: "We have an expertise in creating and managing all your social media accounts on various platforms. We maintain your profile actively ensuring that you connect well with your customers and grow your revenue and brand awareness simultaneously.Even if your time is limited, social media management tools .",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-users",
+                            servicesbox_tiitle: "Contests on Social Media",
+                            servicesbox_des: "Contests not only build up your brand image but also engage customers and empower them to do marketing for you. It is also a great source to build up a potential database. Our SMO services team strategically plan and execute relevant contests on social media according to your brand's requirements.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-indian-rupee-sign",
+                            servicesbox_tiitle: "Paid Advertisements",
+                            servicesbox_des: "Each social media platform offers effective budget advertising channels to increase impressions, clicks, and conversions. There are paid advertisements to increase page likes, followers, reach, impressions, engagement etc. Some of these advertisements are solely focused on driving website clicks and conversions.",
+                        },
 
-    {
-        servicesbox_icon: "fa-solid fa-star",
-        servicesbox_tiitle: "Reviews",
-        servicesbox_des: "Nowadays almost everyone is active on social media making it really easy for businesses to keep in touch with their customers and gather reviews. They also help in online reputation management and higher conversion rates.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-comment-dots",
-        servicesbox_tiitle: "Discussion Threads",
-        servicesbox_des: "Participation in relevant discussions always lead to new ideas and a better connectivity with the audience. We indulge in all relevant discussions and threads on various social media platforms to mark your active presence and involvement.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-trophy",
-        servicesbox_tiitle: "Blog Promotions",
-        servicesbox_des: "Social media has a vast reach. Promoting your blog on all social media platform helps in increasing the views and engagement on your blog.Target Popular Search Terms and Phrases.Implement a Strong Social Media Promotion Plan.",
-    }
-]
+                        {
+                            servicesbox_icon: "fa-solid fa-star",
+                            servicesbox_tiitle: "Reviews",
+                            servicesbox_des: "Nowadays almost everyone is active on social media making it really easy for businesses to keep in touch with their customers and gather reviews. They also help in online reputation management and higher conversion rates.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-comment-dots",
+                            servicesbox_tiitle: "Discussion Threads",
+                            servicesbox_des: "Participation in relevant discussions always lead to new ideas and a better connectivity with the audience. We indulge in all relevant discussions and threads on various social media platforms to mark your active presence and involvement.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-trophy",
+                            servicesbox_tiitle: "Blog Promotions",
+                            servicesbox_des: "Social media has a vast reach. Promoting your blog on all social media platform helps in increasing the views and engagement on your blog.Target Popular Search Terms and Phrases.Implement a Strong Social Media Promotion Plan.",
+                        }
+                    ]
 
             },
             {
@@ -1858,10 +1870,10 @@ export const services: Service[] = [
                 image: "/assets/images/services_details/pay.png",
                 link: "/services-category/pay-per-click-campaign",
 
-                
-                
 
-                            website_title: "Pay Per Click Campaign",
+
+
+                website_title: "Pay Per Click Campaign",
                 website_des: [
                     "Proactii Media LLP is a team comprised with highly qualified PPC expert’s who are dedicated to developing the most cost-effective Pay per Click campaigns for your business. Our process of building, maintaining and analyzing online advertising campaigns at Google AdWords, Bing Ads, and Facebook Ads to raise your business, provide more leads, help you to get better ROI and maintain online reputation.",
                     "Pay per Click (PPC) marketing is one of the most effective ways to promote your company, business, brand, store, etc with various strategies, optimization and expert analysis.",
@@ -1869,84 +1881,85 @@ export const services: Service[] = [
 
                 ],
                 website_image: "/assets/images/services_details/pay.png",
+                cat_banner_image: "/assets/images/banner/pay_banner.png",
 
                 leverage_title: "Leverage your <span class='text-red'>Business</span> with us",
                 leverage:
-                  [
- 
-    {
-        icon: "fa-solid fa-magnifying-glass",
-        title: "PPC Audits",
-        des: "Our PPC Audit process starts from understanding audit objective, coverage and leading to data analysis.",
-    },
-    {
-        icon: "fa-solid fa-comments",
-        title: "Social Advertising",
-        des: "Proactii can help you with paid social campaigns that can drive your target audience toward much targeted desired actions.",
-    },
-    {
-        icon: "fa-brands fa-google",
-        title: "Google AdWords",
-        des: "Hiring us gives you the benefit of a full-time AdWords expert without the extra cost of hiring another full-time employee.",
-    },
-    {
-        icon: "fa-solid fa-cart-arrow-down",
-        title: "Shopping Ads",
-        des: "As advertising service which assist corporation to touch the 129 million incomparable searchers, company pay-per-click service is the key aspect.",
-    },
-    {
-        icon: "fa-solid fa-indian-rupee-sign",
-        title: "Paid Search",
-        des: "We empower your paid search marketing with relevant and well-focused campaigns to ensure that your site gains high visibility, gets instant traffic, and shows high conversion rates.",
-    },
-    {
-        icon: "fa-solid fa-bell",
-        title: "Social Media Advertising",
-        des: "Develop and implement innovative social strategies to advertise on social media platforms like Facebook, LinkedIn and Twitter, and drive more business by reaching the untapped audience successfully.",
-    }
+                    [
 
-],
+                        {
+                            icon: "fa-solid fa-magnifying-glass",
+                            title: "PPC Audits",
+                            des: "Our PPC Audit process starts from understanding audit objective, coverage and leading to data analysis.",
+                        },
+                        {
+                            icon: "fa-solid fa-comments",
+                            title: "Social Advertising",
+                            des: "Proactii can help you with paid social campaigns that can drive your target audience toward much targeted desired actions.",
+                        },
+                        {
+                            icon: "fa-brands fa-google",
+                            title: "Google AdWords",
+                            des: "Hiring us gives you the benefit of a full-time AdWords expert without the extra cost of hiring another full-time employee.",
+                        },
+                        {
+                            icon: "fa-solid fa-cart-arrow-down",
+                            title: "Shopping Ads",
+                            des: "As advertising service which assist corporation to touch the 129 million incomparable searchers, company pay-per-click service is the key aspect.",
+                        },
+                        {
+                            icon: "fa-solid fa-indian-rupee-sign",
+                            title: "Paid Search",
+                            des: "We empower your paid search marketing with relevant and well-focused campaigns to ensure that your site gains high visibility, gets instant traffic, and shows high conversion rates.",
+                        },
+                        {
+                            icon: "fa-solid fa-bell",
+                            title: "Social Media Advertising",
+                            des: "Develop and implement innovative social strategies to advertise on social media platforms like Facebook, LinkedIn and Twitter, and drive more business by reaching the untapped audience successfully.",
+                        }
+
+                    ],
                 process_title: "Our Recipe For Your <span class='text-red'>PPC Success</span>",
                 process_image: "/assets/images/category/paydesign.png",
 
                 solution_title: "Our Services  <span class='text-red'>Include</span>",
-                
+
 
                 servicesbox:
-     [
+                    [
 
-    {
-        servicesbox_icon: "fa-solid fa-desktop",
-        servicesbox_tiitle: "Immediate Results",
-        servicesbox_des: "PPC does not need a long time to push your website to the top and prove substantial ROI. Simply activate the campaign and start seeing results .",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-indian-rupee-sign",
-        servicesbox_tiitle: "Only Pay For What You Get",
-        servicesbox_des: "PPC offers complete value for money. You can always expect to get the most out of your ad spend as you need to pay only when someone clicks on your ad.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-headphones",
-        servicesbox_tiitle: "Understand Your Audience",
-        servicesbox_des: "PPC helps find potential clients by identifying, understanding, and targeting the right audience irrespective of languages, locations, or devices used.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-comment",
-        servicesbox_tiitle: "Get More Conversions",
-        servicesbox_des: "Achieving higher conversion rates becomes easy and fast with result-oriented approaches, kick-ass strategies, and continual fine-tuning of campaigns in PPC.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-truck",
-        servicesbox_tiitle: "Export To New Markets",
-        servicesbox_des: "PPC provides wider exposure by giving access to new markets. It works as a catalyst for the growth of your business and accelerates your success notably.",
-    },
-    {
-        servicesbox_icon: "fa-solid fa-gears",
-        servicesbox_tiitle: "Control & Manage",
-        servicesbox_des: "PPC offers high levels of control over your paid advertising campaigns. Choose it to make your campaigns more flexible, customizable, and manageable.",
-    }
+                        {
+                            servicesbox_icon: "fa-solid fa-desktop",
+                            servicesbox_tiitle: "Immediate Results",
+                            servicesbox_des: "PPC does not need a long time to push your website to the top and prove substantial ROI. Simply activate the campaign and start seeing results .",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-indian-rupee-sign",
+                            servicesbox_tiitle: "Only Pay For What You Get",
+                            servicesbox_des: "PPC offers complete value for money. You can always expect to get the most out of your ad spend as you need to pay only when someone clicks on your ad.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-headphones",
+                            servicesbox_tiitle: "Understand Your Audience",
+                            servicesbox_des: "PPC helps find potential clients by identifying, understanding, and targeting the right audience irrespective of languages, locations, or devices used.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-comment",
+                            servicesbox_tiitle: "Get More Conversions",
+                            servicesbox_des: "Achieving higher conversion rates becomes easy and fast with result-oriented approaches, kick-ass strategies, and continual fine-tuning of campaigns in PPC.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-truck",
+                            servicesbox_tiitle: "Export To New Markets",
+                            servicesbox_des: "PPC provides wider exposure by giving access to new markets. It works as a catalyst for the growth of your business and accelerates your success notably.",
+                        },
+                        {
+                            servicesbox_icon: "fa-solid fa-gears",
+                            servicesbox_tiitle: "Control & Manage",
+                            servicesbox_des: "PPC offers high levels of control over your paid advertising campaigns. Choose it to make your campaigns more flexible, customizable, and manageable.",
+                        }
 
-]
+                    ]
             },
         ],
 

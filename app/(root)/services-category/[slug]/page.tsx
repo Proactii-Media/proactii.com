@@ -78,34 +78,39 @@ export default function ServiceCategory() {
     return (
         <>
             {/* ========== Breadcrumb ========== */}
-            <div
-                className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
-                style={{
-                    backgroundImage: "url('/assets/images/banner/about1.png')",
-                }}
-            >
+     {/* ========== Breadcrumb ========== */}
+<div
+    className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
+    style={{
+        backgroundImage: `url("${relatedService?.cat_banner_image}")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "350px",
+    }}
+>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xxl-12">
                             <div className="tp-breadcrumb-content text-center ">
-                                <h3 className="tp-breadcrumb-title tp-char-animation text-white">
+                                <h3 className="tp-breadcrumb-title tp-char-animation " style={{color:"#fff"}}>
                                     {relatedService?.title}
                                 </h3>
 
                                 <div className="tp-breadcrumb-list mb-25">
-                                    <span className="text-white">
+                                    <span className="" style={{color:"#fff"}}>
                                         <Link href="/">Home</Link>
                                     </span>
 
-                                    <span className="dvdr text-white"><i>|</i></span>
+                                    <span className="dvdr " style={{color:"#fff"}}><i>|</i></span>
 
-                                    <span className="text-white">
+                                    <span className="" style={{color:"#fff"}}>
                                         <Link href="/services">Services</Link>
                                     </span>
 
-                                    <span className="dvdr text-white"><i>|</i></span>
+                                    <span className="dvdr " style={{color:"#fff"}}><i>|</i></span>
 
-                                    <span className="text-white">
+                                    <span className="" style={{color:"#fff"}}>
                                         <Link
                                             href={
                                                 matchedParent
@@ -117,9 +122,9 @@ export default function ServiceCategory() {
                                         </Link>
                                     </span>
 
-                                    <span className="dvdr text-white"><i>|</i></span>
+                                    <span className="dvdr " style={{color:"#fff"}}><i>|</i></span>
 
-                                    <span className="text-white">
+                                    <span className="" style={{color:"#fff"}}>
                                         {relatedService.title}
                                     </span>
                                 </div>
