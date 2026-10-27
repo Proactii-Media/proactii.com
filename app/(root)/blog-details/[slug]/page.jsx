@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -60,13 +59,19 @@ export default async function BlogDetailsPage({ params }) {
             ? [{ type: "paragraph", text: post.content }]
             : post.content || [];
 
+    // Per-post banner with a safe fallback.
+    const bannerImage =
+        post.bannerImage || "/assets/images/blogs/blog6_banner.png";
+
     return (
         <>
             <div
                 className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
                 style={{
-                    backgroundImage:
-                        "url('/assets/images/blogs/blog3_banner.png')",
+                    backgroundImage: `url('${bannerImage}')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
                 }}
             >
                 <div className="container">
@@ -74,7 +79,7 @@ export default async function BlogDetailsPage({ params }) {
                         <div className="col-xxl-12">
                             <div className="tp-breadcrumb-content text-center">
                                 <h1 className="tp-breadcrumb-title text-white">
-                                    Blog Details
+                                   Blog Details
                                 </h1>
 
                                 <div className="tp-breadcrumb-list mb-25">
@@ -95,7 +100,7 @@ export default async function BlogDetailsPage({ params }) {
                                     </span>
 
                                     <span className="text-white">
-                                        Details
+                                       {post.title}
                                     </span>
                                 </div>
                             </div>

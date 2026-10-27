@@ -208,8 +208,6 @@ export const logos = [
 
 
 export const blogPosts = [
-
-
     {
         id: 1,
         slug: "mobile-app-development-strategy",
@@ -217,6 +215,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2018-05-08",
         image: "/assets/images/blogs/8rule.png",
+        bannerImage: "/assets/images/blogs/blog1_banner.png",
 
         content: [
             {
@@ -234,7 +233,6 @@ export const blogPosts = [
         ]
     },
 
-
     {
         id: 2,
         slug: "outsource-php-development-project",
@@ -242,6 +240,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2018-05-08",
         image: "/assets/images/blogs/whyshould.png",
+        bannerImage: "/assets/images/blogs/blog2_banner.png",
 
         content: [
             {
@@ -280,6 +279,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2018-05-08",
         image: "/assets/images/blogs/software.png",
+        bannerImage: "/assets/images/blogs/blog3_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -307,6 +307,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2018-05-08",
         image: "/assets/images/blogs/web.png",
+        bannerImage: "/assets/images/blogs/blog4_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -350,6 +351,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2018-05-08",
         image: "/assets/images/blogs/mobile.png",
+        bannerImage: "/assets/images/blogs/blog5_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -377,6 +379,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2018-05-08",
         image: "/assets/images/blogs/grabbing.png",
+        bannerImage: "/assets/images/blogs/blog6_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -420,6 +423,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2022-08-08",
         image: "/assets/images/blogs/crypto.png",
+        bannerImage: "/assets/images/blogs/blog7_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -511,6 +515,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2022-08-08",
         image: "/assets/images/blogs/blog.png",
+        bannerImage: "/assets/images/blogs/blog8_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -594,6 +599,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2022-08-10",
         image: "/assets/images/blogs/seo.png",
+        bannerImage: "/assets/images/blogs/blog9_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -642,6 +648,7 @@ export const blogPosts = [
         author: "By Admin",
         date: "2022-08-20",
         image: "/assets/images/blogs/multi.png",
+        bannerImage: "/assets/images/blogs/blog10_banner.png",
         content: [
             {
                 type: "paragraph",
@@ -721,8 +728,7 @@ export const blogPosts = [
                 text: "Retail income from live online shopping is expected to climb threefold by 2024, hitting $35 billion. Live streaming, which is both interesting and immersive, may help you increase conversions, improve the brand appeal, and boost your market position with existing customers while also attracting new ones."
             }
         ]
-    },
-
+    }
 ];
 
 
