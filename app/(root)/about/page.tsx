@@ -44,27 +44,7 @@ export default function About() {
                                     <span className="text-white">About Us</span>
                                 </div>
 
-                                <div className="tp-breadcrumb-scrolldown smooth">
-                                    <a href="#about">
-                                        <span>
-                                            <svg
-                                                width="16"
-                                                height="9"
-                                                viewBox="0 0 16 9"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M1 1L8 8L15 1"
-                                                    stroke="#111013"
-                                                    strokeWidth="2"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>

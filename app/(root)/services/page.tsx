@@ -148,7 +148,7 @@ export default function Service() {
                                         </div>
                                     </div>
 
-                                    <div className="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-10">
+                                    <div className="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12">
                                         <div className="md-service-thumb text-lg-end">
                                             <Image
                                                 className="tp_fade_anim"

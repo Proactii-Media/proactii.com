@@ -145,9 +145,9 @@ export async function POST(request: Request) {
         "Message:",
         message,
       ].join("\n"),
-    
 
-html: `
+
+      html: `
 <div style="margin:0;padding:20px 10px;background:#f3f5f8;font-family:Arial,Helvetica,sans-serif;color:#263445;">
 
   <div style="max-width:580px;margin:0 auto;background:#ffffff;border:1px solid #e5e9ef;border-radius:8px;overflow:hidden;">
@@ -155,25 +155,26 @@ html: `
     <!-- Brand Colors -->
     <div style="height:4px;background:linear-gradient(90deg,#E80028 25%,#FFC928 25%,#FFC928 50%,#28A745 50%,#28A745 75%,#0098C6 75%);"></div>
 
-    <!-- Header -->
-    <div style="padding:20px 24px;border-bottom:1px solid #edf0f4;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-        <tr>
-          <td style="vertical-align:middle;">
+     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style ="background:008000 ">
+        <tr  style="background:#008000;">
+          <td style="vertical-align:middle; padding:22px 20px; ">
             <img
-              src="https://proactii.com/assets/images/logo/Proactii-New-Final-01-1-260x79.png"
+              src="https://proactii.com/assets/images/logo/Proactii-Footer-260x79.png"
               alt="Proactii Media LLP"
               width="135"
               style="display:block;width:135px;max-width:100%;height:auto;"
             />
           </td>
-          <td style="text-align:right;vertical-align:middle;">
+          <td style="text-align:right;vertical-align:middle;padding:22px 20px;">
             <span style="display:inline-block;padding:6px 9px;background:#eaf7fc;border-radius:4px;color:#007da5;font-size:10px;font-weight:bold;letter-spacing:0.5px;">
               NEW ENQUIRY
             </span>
           </td>
         </tr>
       </table>
+    <!-- Header -->
+    <div style="padding:20px 24px;border-bottom:1px solid #edf0f4;">
+     
 
       <h2 style="margin:20px 0 5px;font-size:21px;line-height:1.4;color:#172b3a;font-weight:700;">
         New Contact Message
@@ -227,13 +228,13 @@ html: `
     </div>
 
     <!-- Footer -->
-    <div style="padding:16px 24px;background:#f8fafc;border-top:1px solid #edf0f4;">
-      <p style="margin:0 0 5px;color:#263445;font-size:12px;font-weight:bold;">
+    <div style="padding:16px 24px;background:#000;border-top:1px solid #fff;">
+      <p style="margin:0 0 5px;color:#fff;font-size:12px;font-weight:bold;">
         Proactii Media LLP
       </p>
-      <p style="margin:0;color:#7b8794;font-size:11px;line-height:1.7;">
+      <p style="margin:0;color:#fff;font-size:11px;line-height:1.7;">
         Digital Solutions &nbsp;|&nbsp;
-        <a href="https://proactii.com" style="color:#0086ad;text-decoration:none;">proactii.com</a>
+        <a href="https://proactii.com" style="color:#fff;text-decoration:none;">proactii.com</a>
       </p>
     </div>
 

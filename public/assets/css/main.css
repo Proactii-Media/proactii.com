@@ -634,7 +634,7 @@ input[type=password],
 input[type=url],
 textarea {
   outline: none;
-  height: 60px;
+  height: 50px;
   width: 100%;
   line-height: 60px;
   font-size: 16px;
@@ -20124,7 +20124,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 @media only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 575px) {
   .tp-portfolio-space-2 {
-    padding-bottom: 50px;
+    padding-bottom: 5px;
   }
 }
 
@@ -22757,11 +22757,11 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 .cr-service-item:hover::after {
   height: 100%;
-  background-color: var(--tp-theme-yellow);
+  background-color: #ffff;
 }
 
 .cr-service-item:hover {
-  border-color: var(--tp-theme-yellow);
+  border-color: #ffff;
 }
 
 .cr-service-item:hover .cr-service-content-left span {
@@ -22785,7 +22785,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
   font-family: var(--tp-ff-poppins);
   font-weight: 500;
   font-size: 16px;
-  min-width: 75px;
+  min-width: 60px;
   color: var(--tp-common-white);
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -22796,7 +22796,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .cr-service-content-left span {
-    min-width: 60px;
+    min-width: 45px;
   }
 }
 
@@ -22804,7 +22804,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 only screen and (min-width: 576px) and (max-width: 767px),
 only screen and (min-width: 768px) and (max-width: 991px) {
   .cr-service-content-left span {
-    min-width: 50px;
+    min-width: 40px;
   }
 }
 
@@ -22860,32 +22860,32 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .cr-service-title-sm {
-    font-size: 70px;
+    font-size: 35px;
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px),
 only screen and (min-width: 768px) and (max-width: 991px) {
   .cr-service-title-sm {
-    font-size: 60px;
+    font-size: 35px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .cr-service-title-sm {
-    font-size: 50px;
+    font-size: 28px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .cr-service-title-sm {
-    font-size: 45px;
+    font-size: 25px;
   }
 }
 
 @media (max-width: 575px) {
   .cr-service-title-sm {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 
@@ -23215,7 +23215,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .dga-style .cr-service-content-left span {
-    min-width: 60px;
+    min-width: 50px;
   }
 }
 
@@ -23223,7 +23223,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 only screen and (min-width: 576px) and (max-width: 767px),
 only screen and (min-width: 768px) and (max-width: 991px) {
   .dga-style .cr-service-content-left span {
-    min-width: 50px;
+    min-width: 45px;
   }
 }
 
@@ -26220,7 +26220,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
   border-radius: 50px !important;
   font-size: 16px !important;
   font-weight: 600 !important;
-  padding: 9px 28px !important;
+  padding: 9px 26px !important;
   display: inline-flex !important;
   align-items: center;
   gap: 10px;
@@ -26379,6 +26379,33 @@ only screen and (min-width: 576px) and (max-width: 767px),
   color: #0b1e3a;
   margin: 8px 0 18px;
   transition: color 0.45s ease;
+}
+
+
+/* TEAMWORK - Blue */
+.neo-section.career .neo-card:nth-child(1) {
+    background-color: #0098C6;
+}
+
+/* RESPECT - Red */
+.neo-section.career .neo-card:nth-child(2) {
+    background-color: #E80028;
+}
+
+/* PASSION - Purple */
+.neo-section.career .neo-card:nth-child(3) {
+      background-color: #D16F2E;;
+}
+
+/* INNOVATION - Green */
+.neo-section.career .neo-card:nth-child(4) {
+    background-color: #16A34A;
+}
+
+/* Force all card text to white */
+.neo-section.career .neo-card h3,
+.neo-section.career .neo-card p {
+    color: #fff !important;
 }
 
 
@@ -27124,6 +27151,30 @@ p.text-margin {
   transform: scaleX(1);
 }
 
+.linkedin-hover {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.linkedin-hover::after {
+    content: "";
+    position: absolute;
+    
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #E80028;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    
+}
+
+.linkedin-hover:hover::after {
+    transform: scaleX(1);
+}
 
 .md_testimonial_slider_active .swiper-wrapper {
     transition-timing-function: linear !important;
@@ -27131,6 +27182,10 @@ p.text-margin {
 
 .md_testimonial_slider_active .swiper-slide {
     height: auto;
+}
+
+.linkedin-hover:hover {
+    color: #E80028 !important;
 }
 
 .md_testimonial_slider_active .md-testimonial-item {
@@ -27167,4 +27222,141 @@ p.text-margin {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+
+
+
+.cr-service-item .dgs-service-read-more {
+    color: red !important;
+    background-color: orange !important;
+    transition: all 0.3s ease;
+}
+
+
+.cr-service-item:hover .dgs-service-read-more {
+    color: #000 !important;
+    background-color: #FF0000 !important;
+}
+
+
+.read-more-hover .people-special-link {
+    color: #8C3084 !important;
+    background-color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+
+.cr-service-item:hover .read-more-hover .people-special-link {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.cr-service-item:hover .career-job-type {
+    color: #000 !important;
+    transition: color 0.3s ease;
+}
+
+.cr-service-item .cr-service-content-left p {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.cr-service-item .cr-service-content-left p {
+    color: #fff !important;
+}
+
+.cr-service-item:hover .career-job-type,
+.cr-service-item:hover .career-location-icon {
+    color: #000 !important;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 800px) {
+    .sm-mt-10 {
+        display: block !important;
+        margin-top: 15px;
+    }
+
+    .sm-mb-15 {
+      margin-bottom: 15px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .cr-service-item .dgs-service-read-more,
+    .cr-service-item .read-more-hover {
+        text-align: end;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.career-form-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 99999;
+}
+
+.career-form-modal {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.career-form-close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #000;
+}
+
+.career-form-modal label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000;
+}
+
+.career-form-modal .form-control {
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+
+
+@media (max-width: 576px) {
+    .career-form-modal {
+        padding: 25px 18px;
+    }
 }

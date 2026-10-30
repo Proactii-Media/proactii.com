@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 
 import "swiper/css";
@@ -15,6 +15,8 @@ type ContactFormData = {
   message: string;
 };
 
+const SUCCESS_MESSAGE_DURATION = 4000; 
+
 export default function Contact() {
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
@@ -25,10 +27,22 @@ export default function Contact() {
   });
 
   const [formMessage, setFormMessage] = useState("");
-  const [messageType, setMessageType] = useState<"success" | "error" | "">(
-    ""
-  );
+  const [messageType, setMessageType] = useState<"success" | "error" | "">("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const successTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearSuccessTimer = () => {
+    if (successTimer.current) {
+      clearTimeout(successTimer.current);
+      successTimer.current = null;
+    }
+  };
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => clearSuccessTimer();
+  }, []);
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -43,6 +57,8 @@ export default function Contact() {
       [name]: updatedValue,
     }));
 
+    // Cancel any pending auto‑hide when the user starts typing again
+    clearSuccessTimer();
     setFormMessage("");
     setMessageType("");
   };
@@ -57,6 +73,9 @@ export default function Contact() {
     const phone = formData.phone.trim();
     const subject = formData.subject.trim();
     const message = formData.message.trim();
+
+    // Cancel any stale auto‑hide timer from a previous success
+    clearSuccessTimer();
 
     // Required field validation
     if (!name || !email || !phone || !subject || !message) {
@@ -134,6 +153,13 @@ export default function Contact() {
         subject: "",
         message: "",
       });
+
+      // ⏱ Auto‑hide the success message after 5 seconds
+      successTimer.current = setTimeout(() => {
+        setFormMessage("");
+        setMessageType("");
+        successTimer.current = null;
+      }, SUCCESS_MESSAGE_DURATION);
     } catch (error) {
       setMessageType("error");
       setFormMessage(
@@ -175,28 +201,6 @@ export default function Contact() {
 
                   <span className="text-white">Contact us</span>
                 </div>
-
-                <div className="tp-breadcrumb-scrolldown smooth">
-                  <a href="#down">
-                    <span>
-                      <svg
-                        width="16"
-                        height="9"
-                        viewBox="0 0 16 9"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 1L8 8L15 1"
-                          stroke="#111013"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -208,7 +212,6 @@ export default function Contact() {
         <div className="container container-1424">
           <div className="md-process-badge-box">
             <div className="row gx-30 justify-content-center justify-content-md-start ">
-
               {/* Office Address */}
               <div className="col-xl-4 col-lg-4 col-md-6 col-10 d-flex pb-20 pb-lg-0">
                 <div
@@ -224,17 +227,25 @@ export default function Contact() {
                       <img
                         src="/assets/images/address.gif"
                         alt="Office Address"
-                        style={{ width: "70px", height: "70px", objectFit: "contain" }}
+                        style={{
+                          width: "70px",
+                          height: "70px",
+                          objectFit: "contain",
+                        }}
                       />
                     </div>
                   </div>
 
                   <div className="md-process-badge-content">
-                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>
+                    <h4
+                      className="font"
+                      style={{ fontWeight: "bold", color: "#fff" }}
+                    >
                       Office Address
                     </h4>
                     <p style={{ color: "#fff" }}>
-                      206-A, Platinum Commercial Center, Via Char Rasta Rd, opp. VIA Ground, GIDC, Vapi, Gujarat 396195
+                      206-A, Platinum Commercial Center, Via Char Rasta Rd, opp.
+                      VIA Ground, GIDC, Vapi, Gujarat 396195
                     </p>
                   </div>
                 </div>
@@ -261,7 +272,10 @@ export default function Contact() {
                   </div>
 
                   <div className="md-process-badge-content">
-                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>
+                    <h4
+                      className="font"
+                      style={{ fontWeight: "bold", color: "#fff" }}
+                    >
                       Phone
                     </h4>
                     <p style={{ color: "#fff", fontWeight: "bold" }}>
@@ -286,13 +300,16 @@ export default function Contact() {
                       <img
                         src="/assets/images/email.gif"
                         alt="Email"
-                        style={{ width: "100px", height: "100px", }}
+                        style={{ width: "100px", height: "100px" }}
                       />
                     </div>
                   </div>
 
                   <div className="md-process-badge-content">
-                    <h4 className="font" style={{ fontWeight: "bold", color: "#fff" }}>
+                    <h4
+                      className="font"
+                      style={{ fontWeight: "bold", color: "#fff" }}
+                    >
                       Email
                     </h4>
                     <p style={{ color: "#fff", fontWeight: "bold" }}>
@@ -301,7 +318,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -380,11 +396,7 @@ export default function Contact() {
                     Send a Message
                   </h3>
 
-                  <form
-                    id="contact-form"
-                    onSubmit={handleSubmit}
-                    noValidate
-                  >
+                  <form id="contact-form" onSubmit={handleSubmit} noValidate>
                     <div className="row">
                       <div className="col-lg-6">
                         <div className="tp-contact-form-input mb-20">
@@ -395,7 +407,6 @@ export default function Contact() {
                             type="text"
                             value={formData.name}
                             onChange={handleChange}
-
                             autoComplete="name"
                             maxLength={100}
                             required
@@ -406,16 +417,13 @@ export default function Contact() {
 
                       <div className="col-lg-6">
                         <div className="tp-contact-form-input mb-20">
-                          <label htmlFor="contact-email">
-                            Email address*
-                          </label>
+                          <label htmlFor="contact-email">Email address*</label>
                           <input
                             id="contact-email"
                             name="email"
                             type="email"
                             value={formData.email}
                             onChange={handleChange}
-
                             autoComplete="email"
                             maxLength={254}
                             required
@@ -426,9 +434,7 @@ export default function Contact() {
 
                       <div className="col-lg-12">
                         <div className="tp-contact-form-input mb-20">
-                          <label htmlFor="contact-phone">
-                            Phone number*
-                          </label>
+                          <label htmlFor="contact-phone">Phone number*</label>
                           <input
                             id="contact-phone"
                             name="phone"
@@ -436,7 +442,6 @@ export default function Contact() {
                             inputMode="numeric"
                             value={formData.phone}
                             onChange={handleChange}
-
                             autoComplete="tel"
                             maxLength={10}
                             required
@@ -454,7 +459,6 @@ export default function Contact() {
                             type="text"
                             value={formData.subject}
                             onChange={handleChange}
-
                             maxLength={200}
                             required
                             disabled={isSubmitting}
@@ -472,7 +476,6 @@ export default function Contact() {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-
                             maxLength={5000}
                             rows={5}
                             required

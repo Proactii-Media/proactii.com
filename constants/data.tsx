@@ -2185,3 +2185,34 @@ export const portfolioData = [
         classes: "web design development",
     },
 ];
+
+
+export const careerData  = [
+    {
+        id: 1,
+        title: "Video Animator",
+        jobType: "Full Time",
+        location: "Vapi",
+        description:
+            "We are currently seeking a highly motivated individual to fill an I.T. This position will provide remote and onsite hands-on support to staff, vendors, and customers as well as, proactively identify issues.",
+        link: "/careers/video-animator",
+    },
+    {
+        id: 2,
+        title: "Content Writer",
+        jobType: "Full Time",
+        location: "Vapi",
+        description:
+            "The Mitech IT team believes in full transparency, being flexible, reliable and being great team players. We are problem solvers, always ready to help and support each other and the organization.",
+        link: "/careers/mern-stack-developer",
+    },
+    {
+        id: 3,
+        title: "IT Marketing",
+        jobType: "Full Time",
+        location: "Vapi",
+        description:
+            "Mitech is looking for a summer intern to work in the Information & Technology Services area. This position is part of a team which supports Microsoft Server Operating Systems, storage systems, and Client device technologies.",
+        link: "/careers/digital-marketing-executive",
+    },
+];

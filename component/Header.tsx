@@ -180,6 +180,28 @@ export default function Header() {
                                         </Link>
                                     </li>
 
+                                          <li>
+                                        <Link
+                                            href="/contact"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            Contact
+                                        </Link>
+
+                                        <ul className="tp-submenu submenu">
+                                            <li>
+                                                <Link
+                                                    href="career"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    Careers
+                                                </Link>
+                                            </li>
+
+                                          
+                                        </ul>
+                                    </li>
+
                                 </ul>
                             </nav>
                         </div>
@@ -407,11 +429,37 @@ export default function Header() {
                                                 </li>
 
                                                 {/* CONTACT */}
-                                                <li>
+                                                {/* <li>
                                                     <Link href="/contact">
                                                         Contact
                                                     </Link>
+                                                </li> */}
+
+
+                                                    {/* Contact */}
+                                                <li className="has-dropdown">
+
+                                                   <Link href="/contact">
+                                                        Contact
+                                                    </Link>
+                                                    <ul className="tp-submenu submenu">
+                                                 
+
+                                                        <li>
+                                                            <Link href="/career">
+                                                                Career
+                                                            </Link>
+                                                        </li>
+
+                                                    </ul>
+
+
                                                 </li>
+
+
+
+                                             
+
 
                                             </ul>
                                         </nav>
