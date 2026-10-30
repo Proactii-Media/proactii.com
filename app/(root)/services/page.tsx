@@ -5,8 +5,19 @@
 import { services } from "@/constants/data"
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Service() {
+
+    useEffect(() => {
+    const timer = setTimeout(() => {
+        document.dispatchEvent(
+            new Event("nextjs-navigation-complete")
+        );
+    }, 300);
+
+    return () => clearTimeout(timer);
+}, []);
 
     return (
         <>

@@ -216,23 +216,47 @@
 
 
 	// 15. service panel animation
-	pr.add("(min-width: 1199px)", () => {
-		let panels = document.querySelectorAll('.tp-panel-pin-sr')
-		panels.forEach((section, index) => {
-			tl.to(section, {
-				scrollTrigger: {
-					trigger: section,
-					pin: section,
-					scrub: 1,
-					start: 'top 10%',
-					end: "bottom 99%",
-					endTrigger: '.tp-panel-pin-service-area',
-					pinSpacing: false,
-					markers: false,
-				},
-			})
-		})
-	});
+
+// 15. service panel animation
+function initServicePanelAnimation() {
+    ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars.trigger?.classList?.contains("tp-panel-pin-sr")) {
+            trigger.kill();
+        }
+    });
+
+    if (window.innerWidth < 1199) return;
+
+    const panels = gsap.utils.toArray(".tp-panel-pin-sr");
+    const serviceArea = document.querySelector(".tp-panel-pin-service-area");
+
+    if (!panels.length || !serviceArea) return;
+
+    panels.forEach((section) => {
+        ScrollTrigger.create({
+            trigger: section,
+            pin: section,
+            scrub: 1,
+            start: "top 10%",
+            end: "bottom 99%",
+            endTrigger: serviceArea,
+            pinSpacing: false,
+            markers: false,
+            invalidateOnRefresh: true,
+        });
+    });
+
+    ScrollTrigger.refresh();
+}
+
+// Initial page load
+initServicePanelAnimation();
+
+// Reinitialize after Next.js navigation
+document.addEventListener("nextjs-navigation-complete", () => {
+    initServicePanelAnimation();
+});
+
 
 
 
