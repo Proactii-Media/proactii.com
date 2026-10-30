@@ -503,7 +503,7 @@ export default function Contact() {
                           <ReCAPTCHA
                             ref={recaptchaRef}
                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                            onChange={(token) => setRecaptchaToken(token)}
+                            onChange={(token: string | null) => setRecaptchaToken(token)}
                           />
                         </div>
 
