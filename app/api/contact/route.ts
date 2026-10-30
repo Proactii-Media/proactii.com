@@ -173,7 +173,7 @@ export async function POST(request: Request) {
         </tr>
       </table>
     <!-- Header -->
-    <div style="padding:20px 24px;border-bottom:1px solid #edf0f4;">
+    <div style="padding:20px 24px;border-bottom:2px solid #edf0f4;">
      
 
       <h2 style="margin:20px 0 5px;font-size:21px;line-height:1.4;color:#172b3a;font-weight:700;">
