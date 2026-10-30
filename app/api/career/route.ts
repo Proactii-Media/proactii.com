@@ -1,10 +1,53 @@
-
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
+const RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
+
+type RecaptchaVerifyResponse = {
+    success: boolean;
+    challenge_ts?: string;
+    hostname?: string;
+    "error-codes"?: string[];
+};
+
+// V2 Verification Logic (No score/action check)
+async function verifyRecaptchaToken(token: string): Promise<boolean> {
+    const secret = process.env.RECAPTCHA_SECRET_KEY;
+
+    if (!secret) {
+        throw new Error("RECAPTCHA_SECRET_KEY is not configured.");
+    }
+
+    const body = new URLSearchParams();
+    body.append("secret", secret);
+    body.append("response", token);
+
+    const response = await fetch(RECAPTCHA_VERIFY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+        cache: "no-store",
+    });
+
+    if (!response.ok) {
+        throw new Error(`reCAPTCHA verify HTTP ${response.status}`);
+    }
+
+    const data = (await response.json()) as RecaptchaVerifyResponse;
+
+    if (!data.success) {
+        if (data["error-codes"]) {
+            console.warn("reCAPTCHA error-codes:", data["error-codes"]);
+        }
+        return false;
+    }
+
+    // For v2, success is enough.
+    return true;
+}
 
 export async function POST(request: Request) {
     try {
@@ -15,6 +58,7 @@ export async function POST(request: Request) {
         const phone = String(formData.get("phone") || "").trim();
         const experience = String(formData.get("experience") || "").trim();
         const jobTitle = String(formData.get("jobTitle") || "").trim();
+        const recaptchaToken = String(formData.get("recaptchaToken") || "").trim();
         const resume = formData.get("resume");
 
         if (!name || !email || !phone || !experience || !jobTitle) {
@@ -69,6 +113,35 @@ export async function POST(request: Request) {
         ) {
             return NextResponse.json(
                 { message: "Only PDF, DOC, and DOCX resumes are allowed." },
+                { status: 400 }
+            );
+        }
+
+        if (!recaptchaToken) {
+            return NextResponse.json(
+                { message: "Security verification failed. Please try again." },
+                { status: 400 }
+            );
+        }
+
+        let isRecaptchaVerified: boolean;
+        try {
+            // V2 call (No action argument needed)
+            isRecaptchaVerified = await verifyRecaptchaToken(recaptchaToken);
+        } catch (verifyError) {
+            console.error(
+                "Career API reCAPTCHA verification error:",
+                verifyError instanceof Error ? verifyError.message : verifyError
+            );
+            return NextResponse.json(
+                { message: "Security verification is unavailable. Please try again later." },
+                { status: 500 }
+            );
+        }
+
+        if (!isRecaptchaVerified) {
+            return NextResponse.json(
+                { message: "Security verification failed. Please try again." },
                 { status: 400 }
             );
         }
@@ -132,7 +205,6 @@ The applicant's resume is attached.
                     style="width:100%;max-width:600px;background:#ffffff;border-collapse:collapse;">
 
                     <!-- Logo Header -->
-                 <!-- Header with Logo -->
                     <tr>
                         <td align="center"
                             style="background:#008000;padding:22px 20px;">
@@ -166,8 +238,6 @@ The applicant's resume is attached.
                             <h2 style="margin:0 0 15px;color:#222222;font-size:24px;line-height:1.4;">
                                 New Job Application Received
                             </h2>
-
-                           
 
                         </td>
                     </tr>
@@ -282,7 +352,8 @@ The applicant's resume is attached.
 
 </body>
 </html>
-    `, attachments: [
+    `, 
+            attachments: [
                 {
                     filename: resume.name,
                     content: resumeBuffer,

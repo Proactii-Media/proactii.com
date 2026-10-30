@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -30,6 +31,10 @@ export default function Contact() {
   const [messageType, setMessageType] = useState<"success" | "error" | "">("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // reCAPTCHA v2 State
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+
   const successTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const clearSuccessTimer = () => {
@@ -39,7 +44,6 @@ export default function Contact() {
     }
   };
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => clearSuccessTimer();
   }, []);
@@ -57,7 +61,6 @@ export default function Contact() {
       [name]: updatedValue,
     }));
 
-    // Cancel any pending auto‑hide when the user starts typing again
     clearSuccessTimer();
     setFormMessage("");
     setMessageType("");
@@ -74,7 +77,6 @@ export default function Contact() {
     const subject = formData.subject.trim();
     const message = formData.message.trim();
 
-    // Cancel any stale auto‑hide timer from a previous success
     clearSuccessTimer();
 
     // Required field validation
@@ -114,6 +116,13 @@ export default function Contact() {
       return;
     }
 
+    // V2 Checkbox validation
+    if (!recaptchaToken) {
+      setMessageType("error");
+      setFormMessage("Please check the 'I'm not a robot' box.");
+      return;
+    }
+
     try {
       setIsSubmitting(true);
       setFormMessage("");
@@ -130,6 +139,7 @@ export default function Contact() {
           phone,
           subject,
           message,
+          recaptchaToken, // Sending v2 token
         }),
       });
 
@@ -154,7 +164,12 @@ export default function Contact() {
         message: "",
       });
 
-      // ⏱ Auto‑hide the success message after 5 seconds
+      // Reset the checkbox after success
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setRecaptchaToken(null);
+
       successTimer.current = setTimeout(() => {
         setFormMessage("");
         setMessageType("");
@@ -480,6 +495,15 @@ export default function Contact() {
                             rows={5}
                             required
                             disabled={isSubmitting}
+                          />
+                        </div>
+
+                        {/* 👇 reCAPTCHA v2 Checkbox 👇 */}
+                        <div className="mb-20">
+                          <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                            onChange={(token) => setRecaptchaToken(token)}
                           />
                         </div>
 

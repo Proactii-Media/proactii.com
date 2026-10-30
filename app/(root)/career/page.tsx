@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha"; // V2 import
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -18,6 +19,11 @@ export default function Career() {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const formRef = useRef<HTMLFormElement>(null);
+    
+    // V2 reCAPTCHA State & Ref
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+
     const autoCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const clearAutoCloseTimer = () => {
@@ -47,6 +53,12 @@ export default function Career() {
         setSuccessMessage("");
         setErrorMessage("");
         setIsSubmitting(false);
+        
+        // Reset captcha when closing
+        if (recaptchaRef.current) {
+            recaptchaRef.current.reset();
+        }
+        setRecaptchaToken(null);
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -58,8 +70,15 @@ export default function Career() {
             return;
         }
 
+        // V2 Checkbox Validation
+        if (!recaptchaToken) {
+            setErrorMessage("Please check the 'I'm not a robot' box.");
+            return;
+        }
+
         const formData = new FormData(form);
         formData.append("jobTitle", selectedJob);
+        formData.append("recaptchaToken", recaptchaToken); // Append V2 Token
 
         // Clear previous messages and any pending auto‑close timer
         clearAutoCloseTimer();
@@ -86,7 +105,6 @@ export default function Career() {
                 );
             }
 
-        
             setSuccessMessage(
                 result.message ||
                 "Your application has been submitted successfully!"
@@ -95,14 +113,21 @@ export default function Career() {
             if (form.isConnected) {
                 form.reset();
             }
+            
+            // Reset the captcha
+            if (recaptchaRef.current) {
+                recaptchaRef.current.reset();
+            }
+            setRecaptchaToken(null);
 
-            // ⏱ Auto‑close the modal after 5 seconds
+            // ⏱ Auto‑close the modal after 4 seconds
             autoCloseTimer.current = setTimeout(() => {
                 setShowForm(false);
                 setSuccessMessage("");
                 setErrorMessage("");
                 autoCloseTimer.current = null;
             }, AUTO_CLOSE_DELAY);
+            
         } catch (error) {
             let message =
                 "Unable to submit your application. Please try again.";
@@ -478,6 +503,15 @@ export default function Career() {
                                         className="form-control"
                                         accept=".pdf,.doc,.docx"
                                         required
+                                    />
+                                </div>
+
+                                {/* V2 reCAPTCHA Checkbox */}
+                                <div className="mb-20">
+                                    <ReCAPTCHA
+                                        ref={recaptchaRef}
+                                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                                        onChange={(token) => setRecaptchaToken(token)}
                                     />
                                 </div>
 

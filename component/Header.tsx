@@ -169,16 +169,7 @@ export default function Header() {
                                         </Link>
                                     </li>
 
-                                    <li>
-                                        <Link
-                                            href="/contact"
-                                            onClick={() =>
-                                                setMobileMenuOpen(false)
-                                            }
-                                        >
-                                            Contact
-                                        </Link>
-                                    </li>
+                                  
 
                                           <li>
                                         <Link
@@ -242,7 +233,7 @@ export default function Header() {
 
                                 <li>
                                     <a href="mailto:mail@proactii.com">
-                                        E: mail@proactii.com
+                                 mail@proactii.com
                                     </a>
                                 </li>
 

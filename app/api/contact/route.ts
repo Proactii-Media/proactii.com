@@ -3,6 +3,51 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+const RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
+
+type RecaptchaVerifyResponse = {
+  success: boolean;
+  challenge_ts?: string;
+  hostname?: string;
+  "error-codes"?: string[];
+};
+
+// v2 Verification function
+async function verifyRecaptchaToken(token: string): Promise<boolean> {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+
+  if (!secret) {
+    throw new Error("RECAPTCHA_SECRET_KEY is not configured.");
+  }
+
+  const body = new URLSearchParams();
+  body.append("secret", secret);
+  body.append("response", token);
+
+  const response = await fetch(RECAPTCHA_VERIFY_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: body.toString(),
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    throw new Error(`reCAPTCHA verify HTTP ${response.status}`);
+  }
+
+  const data = (await response.json()) as RecaptchaVerifyResponse;
+
+  if (!data.success) {
+    if (data["error-codes"]) {
+      console.warn("reCAPTCHA error-codes:", data["error-codes"]);
+    }
+    return false;
+  }
+
+  // v2 mein score ya action nahi hota, bas success true hona chahiye
+  return true;
+}
+
 export async function POST(request: Request) {
   try {
     let body: Record<string, unknown>;
@@ -24,61 +69,72 @@ export async function POST(request: Request) {
     const phone = getString(body.phone);
     const subject = getString(body.subject);
     const message = getString(body.message);
+    const recaptchaToken = getString(body.recaptchaToken);
 
-    // Required fields
     if (!name || !email || !phone || !subject || !message) {
       return NextResponse.json(
-        {
-          success: false,
-          message: "Please fill in all five required fields.",
-        },
+        { success: false, message: "Please fill in all five required fields." },
         { status: 400 }
       );
     }
 
-    // Field length validation
     if (name.length < 2 || name.length > 100) {
       return NextResponse.json(
-        {
-          success: false,
-          message: "Name must contain between 2 and 100 characters.",
-        },
+        { success: false, message: "Name must contain between 2 and 100 characters." },
         { status: 400 }
       );
     }
 
-    if (
-      email.length > 254 ||
-      subject.length > 200 ||
-      message.length > 5000
-    ) {
+    if (email.length > 254 || subject.length > 200 || message.length > 5000) {
       return NextResponse.json(
-        {
-          success: false,
-          message: "One or more fields exceed the allowed length.",
-        },
+        { success: false, message: "One or more fields exceed the allowed length." },
         { status: 400 }
       );
     }
 
-    // Email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
-        {
-          success: false,
-          message: "Please enter a valid email address.",
-        },
+        { success: false, message: "Please enter a valid email address." },
         { status: 400 }
       );
     }
 
-    // Exactly 10 digits
     if (!/^[0-9]{10}$/.test(phone)) {
       return NextResponse.json(
-        {
-          success: false,
-          message: "Phone number must contain exactly 10 digits.",
-        },
+        { success: false, message: "Phone number must contain exactly 10 digits." },
+        { status: 400 }
+      );
+    }
+
+    if (!process.env.RECAPTCHA_SECRET_KEY) {
+      console.error("Contact API: RECAPTCHA_SECRET_KEY is not set.");
+      return NextResponse.json(
+        { success: false, message: "Security service is not configured." },
+        { status: 500 }
+      );
+    }
+
+    if (!recaptchaToken) {
+      return NextResponse.json(
+        { success: false, message: "Security verification failed. Please try again." },
+        { status: 400 }
+      );
+    }
+
+    let isRecaptchaVerified: boolean;
+    try {
+      isRecaptchaVerified = await verifyRecaptchaToken(recaptchaToken);
+    } catch (verifyError) {
+      console.error("Contact API reCAPTCHA verification error:", verifyError);
+      return NextResponse.json(
+        { success: false, message: "Security verification is unavailable." },
+        { status: 500 }
+      );
+    }
+
+    if (!isRecaptchaVerified) {
+      return NextResponse.json(
+        { success: false, message: "Security verification failed. Please try again." },
         { status: 400 }
       );
     }
@@ -87,13 +143,8 @@ export async function POST(request: Request) {
     const gmailPassword = process.env.GMAIL_APP_PASSWORD;
 
     if (!gmailUser || !gmailPassword) {
-      console.error("Contact API: Gmail environment variables are missing.");
-
       return NextResponse.json(
-        {
-          success: false,
-          message: "Email service is not configured. Please try again later.",
-        },
+        { success: false, message: "Email service is not configured." },
         { status: 500 }
       );
     }
@@ -107,7 +158,6 @@ export async function POST(request: Request) {
           '"': "&quot;",
           "'": "&#39;",
         };
-
         return entities[character];
       });
 
@@ -119,36 +169,20 @@ export async function POST(request: Request) {
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
-      auth: {
-        user: gmailUser,
-        pass: gmailPassword,
-      },
+      auth: { user: gmailUser, pass: gmailPassword },
     });
 
     await transporter.sendMail({
       from: `"Proactii Website Contact" <${gmailUser}>`,
-      to: [
-        "pm7244875@gmail.com",
-        "mukeshproactii@gmail.com",
-        "hello@proactii.com",
-      ],
+      to: ["pm7244875@gmail.com", "mukeshproactii@gmail.com", "hello@proactii.com"],
       replyTo: email,
       subject: `Website Contact: ${subject}`,
       text: [
-        "New contact form submission",
-        "",
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Phone: ${phone}`,
-        `Subject: ${subject}`,
-        "",
-        "Message:",
-        message,
+        "New contact form submission", "", `Name: ${name}`, `Email: ${email}`,
+        `Phone: ${phone}`, `Subject: ${subject}`, "", "Message:", message,
       ].join("\n"),
-
-
-      html: `
-<div style="margin:0;padding:20px 10px;background:#f3f5f8;font-family:Arial,Helvetica,sans-serif;color:#263445;">
+      html: ` 
+      <div style="margin:0;padding:20px 10px;background:#f3f5f8;font-family:Arial,Helvetica,sans-serif;color:#263445;">
 
   <div style="max-width:580px;margin:0 auto;background:#ffffff;border:1px solid #e5e9ef;border-radius:8px;overflow:hidden;">
 
@@ -242,8 +276,7 @@ export async function POST(request: Request) {
 
   </div>
 </div>
-`,
-
+      `,
     });
 
     return NextResponse.json({
@@ -251,17 +284,9 @@ export async function POST(request: Request) {
       message: "Thank you! Your message has been sent successfully.",
     });
   } catch (error) {
-    console.error(
-      "Contact form email error:",
-      error instanceof Error ? error.message : "Unknown error"
-    );
-
+    console.error("Contact form email error:", error);
     return NextResponse.json(
-      {
-        success: false,
-        message:
-          "Unable to send your message right now. Please try again later.",
-      },
+      { success: false, message: "Unable to send your message right now. Please try again later." },
       { status: 500 }
     );
   }
