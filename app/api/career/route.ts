@@ -187,172 +187,172 @@ The applicant's resume is attached.
     `,
 
             html: `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Job Application - Proactii Media LLP</title>
-</head>
-<body style="margin:0;padding:0;background-color:#f2f2f2;font-family:Arial,Helvetica,sans-serif;color:#16A34A;">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>New Job Application - Proactii Media LLP</title>
+            </head>
+            <body style="margin:0;padding:0;background-color:#f2f2f2;font-family:Arial,Helvetica,sans-serif;color:#16A34A;">
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-        style="background-color:#f2f2f2;padding:25px 10px;">
-        <tr>
-            <td align="center">
-
-                <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
-                    style="width:100%;max-width:600px;background:#ffffff;border-collapse:collapse;">
-
-                    <!-- Logo Header -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                    style="background-color:#f2f2f2;padding:25px 10px;">
                     <tr>
-                        <td align="center"
-                            style="background:#008000;padding:22px 20px;">
+                        <td align="center">
 
-                            <img
-                                src="https://proactii.com/assets/images/logo/Proactii-Footer-260x79.png"
-                                alt="Proactii Media LLP Logo"
-                                width="230"
-                                style="display:block;width:100%;max-width:230px;height:auto;border:0;"
-                            />
+                            <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+                                style="width:100%;max-width:600px;background:#ffffff;border-collapse:collapse;">
 
-                        </td>
-                    </tr>
-
-                    <!-- Gradient Border -->
-                    <tr>
-                        <td style="padding:0;height:4px;line-height:4px;font-size:0;
-                            background:linear-gradient(90deg,#e80028,#ffc928,#28a745,#0098c6);">
-                            &nbsp;
-                        </td>
-                    </tr>
-
-                    <!-- Title -->
-                    <tr>
-                        <td style="padding:30px 28px 10px;">
-
-                            <p style="margin:0 0 8px;color:#0098C6;font-size:12px;font-weight:bold;letter-spacing:2px;">
-                                PROACTII MEDIA LLP
-                            </p>
-
-                            <h2 style="margin:0 0 15px;color:#222222;font-size:24px;line-height:1.4;">
-                                New Job Application Received
-                            </h2>
-
-                        </td>
-                    </tr>
-
-                    <!-- Applicant Details -->
-                    <tr>
-                        <td style="padding:0 28px 25px;">
-
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-                                style="width:100%;border-collapse:collapse;border:1px solid #eeeeee;">
-
+                                <!-- Logo Header -->
                                 <tr>
-                                    <td colspan="2"
-                                        style="padding:14px;background:#0098C6;color:#ffffff;font-size:16px;font-weight:bold;">
-                                        Applicant Details
+                                    <td align="center"
+                                        style="background:#008000;padding:22px 20px;">
+
+                                        <img
+                                            src="https://proactii.com/assets/images/logo/Proactii-Footer-260x79.png"
+                                            alt="Proactii Media LLP Logo"
+                                            width="230"
+                                            style="display:block;width:100%;max-width:230px;height:auto;border:0;"
+                                        />
+
                                     </td>
                                 </tr>
 
+                                <!-- Gradient Border -->
                                 <tr>
-                                    <td width="35%" style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
-                                        Job Position
-                                    </td>
-                                    <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;color:#222222;">
-                                        ${jobTitle}
+                                    <td style="padding:0;height:4px;line-height:4px;font-size:0;
+                                        background:linear-gradient(90deg,#e80028,#ffc928,#28a745,#0098c6);">
+                                        &nbsp;
                                     </td>
                                 </tr>
 
+                                <!-- Title -->
                                 <tr>
-                                    <td style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
-                                        Applicant Name
-                                    </td>
-                                    <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;color:#222222;">
-                                        ${name}
-                                    </td>
-                                </tr>
+                                    <td style="padding:30px 28px 10px;">
 
-                                <tr>
-                                    <td style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
-                                        Email Address
-                                    </td>
-                                    <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;word-break:break-word;">
-                                        <a href="mailto:${email}" style="color:#0098C6;text-decoration:none;">
-                                            ${email}
-                                        </a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
-                                        Phone Number
-                                    </td>
-                                    <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;color:#222222;">
-                                        ${phone}
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="padding:12px;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
-                                        Experience
-                                    </td>
-                                    <td style="padding:12px;font-size:14px;color:#222222;">
-                                        ${experience}
-                                    </td>
-                                </tr>
-
-                            </table>
-
-                            <!-- Resume Notice -->
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-                                style="margin-top:22px;border-collapse:collapse;">
-                                <tr>
-                                    <td style="padding:16px;background:#f5f0f6;border-left:4px solid #8C3084;">
-                                        <p style="margin:0;font-size:14px;line-height:1.7;color:#444444;">
-                                            <strong style="color:#8C3084;">Resume Attached</strong><br>
-                                            The candidate's resume is attached to this email for review.
+                                        <p style="margin:0 0 8px;color:#0098C6;font-size:12px;font-weight:bold;letter-spacing:2px;">
+                                            PROACTII MEDIA LLP
                                         </p>
+
+                                        <h2 style="margin:0 0 15px;color:#222222;font-size:24px;line-height:1.4;">
+                                            New Job Application Received
+                                        </h2>
+
                                     </td>
                                 </tr>
+
+                                <!-- Applicant Details -->
+                                <tr>
+                                    <td style="padding:0 28px 25px;">
+
+                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="width:100%;border-collapse:collapse;border:1px solid #eeeeee;">
+
+                                            <tr>
+                                                <td colspan="2"
+                                                    style="padding:14px;background:#0098C6;color:#ffffff;font-size:16px;font-weight:bold;">
+                                                    Applicant Details
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="35%" style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
+                                                    Job Position
+                                                </td>
+                                                <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;color:#222222;">
+                                                    ${jobTitle}
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
+                                                    Applicant Name
+                                                </td>
+                                                <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;color:#222222;">
+                                                    ${name}
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
+                                                    Email Address
+                                                </td>
+                                                <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;word-break:break-word;">
+                                                    <a href="mailto:${email}" style="color:#0098C6;text-decoration:none;">
+                                                        ${email}
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding:12px;border-bottom:1px solid #eeeeee;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
+                                                    Phone Number
+                                                </td>
+                                                <td style="padding:12px;border-bottom:1px solid #eeeeee;font-size:14px;color:#222222;">
+                                                    ${phone}
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding:12px;background:#f8f9fa;font-size:14px;font-weight:bold;color:#555555;">
+                                                    Experience
+                                                </td>
+                                                <td style="padding:12px;font-size:14px;color:#222222;">
+                                                    ${experience}
+                                                </td>
+                                            </tr>
+
+                                        </table>
+
+                                        <!-- Resume Notice -->
+                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:22px;border-collapse:collapse;">
+                                            <tr>
+                                                <td style="padding:16px;background:#f5f0f6;border-left:4px solid #8C3084;">
+                                                    <p style="margin:0;font-size:14px;line-height:1.7;color:#444444;">
+                                                        <strong style="color:#8C3084;">Resume Attached</strong><br>
+                                                        The candidate's resume is attached to this email for review.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="padding:0;height:4px;line-height:4px;font-size:0;background:linear-gradient(90deg,#e80028,#ffc928,#28a745,#0098c6);">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+
+                                <!-- Footer -->
+                                <tr>
+                                    <td align="center"
+                                        style="padding:24px 20px;background:#171717;border-top:4px ">
+
+                                        <a href="https://proactii.com"
+                                            style="font-size:13px;color:#0098C6;text-decoration:none;">
+                                            www.proactii.com
+                                        </a>
+
+                                        <p style="margin:15px 0 0;font-size:11px;color:#999999;">
+                                            &copy; 2026 Proactii Media LLP. All rights reserved.
+                                        </p>
+
+                                    </td>
+                                </tr>
+
                             </table>
 
                         </td>
                     </tr>
-
-                    <tr>
-                        <td style="padding:0;height:4px;line-height:4px;font-size:0;background:linear-gradient(90deg,#e80028,#ffc928,#28a745,#0098c6);">
-                            &nbsp;
-                        </td>
-                    </tr>
-
-                    <!-- Footer -->
-                    <tr>
-                        <td align="center"
-                            style="padding:24px 20px;background:#171717;border-top:4px ">
-
-                            <a href="https://proactii.com"
-                                style="font-size:13px;color:#0098C6;text-decoration:none;">
-                                www.proactii.com
-                            </a>
-
-                            <p style="margin:15px 0 0;font-size:11px;color:#999999;">
-                                &copy; 2026 Proactii Media LLP. All rights reserved.
-                            </p>
-
-                        </td>
-                    </tr>
-
                 </table>
 
-            </td>
-        </tr>
-    </table>
-
-</body>
-</html>
-    `, 
+            </body>
+            </html>
+    `,
             attachments: [
                 {
                     filename: resume.name,
