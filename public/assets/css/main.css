@@ -27385,6 +27385,11 @@ p.text-margin {
     /* border-color: #0098C6; */
     transform: translateY(-5px);
 }
+@media (max-width: 767px) {
+    .scroll-to-top {
+        display: none !important;
+    }
+}
 
 @media (min-width: 1200px) {
     .tp-website-sticky-row {
