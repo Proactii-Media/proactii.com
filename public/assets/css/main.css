@@ -27360,3 +27360,28 @@ p.text-margin {
         padding: 25px 18px;
     }
 }
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #E80028;
+    border-radius: 50%;
+    background: #fff;
+    color: #E80028;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background: #E80028;
+    color: #fff;
+    /* border-color: #0098C6; */
+    transform: translateY(-5px);
+}

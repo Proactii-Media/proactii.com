@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
+import ScrollToTop from "@/component/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Proactii Media | IT Services & Digital Solutions",
@@ -17,6 +18,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+
 }>) {
   return (
     <html lang="en">
@@ -37,6 +39,7 @@ export default function RootLayout({
         <Header />
 
         {children}
+         <ScrollToTop />
 
         <Footer />
 

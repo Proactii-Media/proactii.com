@@ -245,7 +245,7 @@ export default function About() {
                                         pagination={{ clickable: true }}
                                         navigation={true}
                                         speed={700}
-                                        // ✅ Added onSwiper to prevent freeze issue after back navigation
+                                        
                                         onSwiper={(swiper) => {
                                             setTimeout(() => {
                                                 swiper?.autoplay?.start();
@@ -256,13 +256,14 @@ export default function About() {
                                             <SwiperSlide key={index}>
 
                                                 <div className="experience-slide">
-                                                    <Image
-                                                        src={slide.image}
-                                                        alt={`Proactii Media LLP - ${index + 1}`}
-                                                        fill
-                                                        className="experience-slide-image"
-                                                        priority={index === 0}
-                                                    />
+<Image
+    src={slide.image}
+    alt={`Proactii Media LLP - ${index + 1}`}
+    fill
+    sizes="(max-width: 767px) 100vw, (max-width: 991px) 100vw, 66.67vw"
+    className="experience-slide-image"
+    priority={index === 0}
+/>
                                                     <p className="experience-slide-text">
                                                         {slide.text}
                                                     </p>
