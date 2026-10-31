@@ -28,9 +28,7 @@ export default function ServiceCategory() {
     if (!relatedService) {
         return <div>Service not found</div>;
     }
-    // ============================================================
-    // Determine which alternating sections will render
-    // ============================================================
+
     const willRenderLeverage =
         !!relatedService.leverage_title ||
         (Array.isArray(relatedService.leverage) &&
@@ -78,39 +76,39 @@ export default function ServiceCategory() {
     return (
         <>
             {/* ========== Breadcrumb ========== */}
-     {/* ========== Breadcrumb ========== */}
-<div
-    className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
-    style={{
-        backgroundImage: `url("${relatedService?.cat_banner_image}")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        minHeight: "350px",
-    }}
->
+            {/* ========== Breadcrumb ========== */}
+            <div
+                className="tp-breadcrumb-area tp-breadcrumb-ptb include-bg"
+                style={{
+                    backgroundImage: `url("${relatedService?.cat_banner_image}")`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    minHeight: "350px",
+                }}
+            >
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xxl-12">
                             <div className="tp-breadcrumb-content text-center ">
-                                <h3 className="tp-breadcrumb-title tp-char-animation " style={{color:"#fff"}}>
+                                <h3 className="tp-breadcrumb-title tp-char-animation " style={{ color: "#fff" }}>
                                     {relatedService?.title}
                                 </h3>
 
                                 <div className="tp-breadcrumb-list mb-25">
-                                    <span className="" style={{color:"#fff"}}>
+                                    <span className="" style={{ color: "#fff" }}>
                                         <Link href="/">Home</Link>
                                     </span>
 
-                                    <span className="dvdr " style={{color:"#fff"}}><i>|</i></span>
+                                    <span className="dvdr " style={{ color: "#fff" }}><i>|</i></span>
 
-                                    <span className="" style={{color:"#fff"}}>
+                                    <span className="" style={{ color: "#fff" }}>
                                         <Link href="/services">Services</Link>
                                     </span>
 
-                                    <span className="dvdr " style={{color:"#fff"}}><i>|</i></span>
+                                    <span className="dvdr " style={{ color: "#fff" }}><i>|</i></span>
 
-                                    <span className="" style={{color:"#fff"}}>
+                                    <span className="" style={{ color: "#fff" }}>
                                         <Link
                                             href={
                                                 matchedParent
@@ -122,9 +120,9 @@ export default function ServiceCategory() {
                                         </Link>
                                     </span>
 
-                                    <span className="dvdr " style={{color:"#fff"}}><i>|</i></span>
+                                    <span className="dvdr " style={{ color: "#fff" }}><i>|</i></span>
 
-                                    <span className="" style={{color:"#fff"}}>
+                                    <span className="" style={{ color: "#fff" }}>
                                         {relatedService.title}
                                     </span>
                                 </div>
@@ -141,11 +139,11 @@ export default function ServiceCategory() {
                 style={{ backgroundColor: bgIntro ?? "#FFFFFF" }}
             >
                 <div className="container container-1424">
-                    <div className="md-section-content-top-wrapper mb-40">
+                    <div className="md-section-content-top-wrapper">
                         <div className="row">
                             <div className="col-xl-12 text-center ">
                                 <div className="md-section-content-wrapper">
-                                    <h3 className="cr-section-content-title md-section-title tp_fade_anim text-black">
+                                    <h3 className="cr-section-content-title md-section-title tp_fade_anim text-black mb-40">
                                         {relatedService?.title}
                                     </h3>
                                 </div>
@@ -154,32 +152,37 @@ export default function ServiceCategory() {
                     </div>
                 </div>
 
-                <div className="container container-1424 mb-40">
+   <div className="container container-1424 ">
+    <div className="row tp-website-sticky-row">
+
+        <div className="col-xl-6 col-lg-6 col-md-6 col-12">
+            <div className="tp-experience-left-wrapper tp-website-sticky-image">
+                <div className="tp-section-content-wrapper mb-40">
+                    <img
+                        src={relatedService?.website_image || "/assets/images/category/e-commerce.png"}
+                        alt={relatedService?.website_title || "Service image"}
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div className="col-xl-6 col-lg-6 col-md-6 col-12">
+            <div className="tp-experience-wrapper pl-70">
+                <div className="tp-experience-item-wrapper">
                     <div className="row">
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                            <div className="tp-experience-left-wrapper">
-                                <div className="tp-section-content-wrapper mb-40">
-                                    <img
-                                        src={relatedService?.website_image || "/assets/images/category/e-commerce.png"}
-                                        alt={relatedService?.website_title || "Service image"}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-12 ">
-                            <div className="tp-experience-wrapper tp-panel-pin-area pl-70">
-                                <div className="tp-experience-item-wrapper tp-panel-pin" data-end="bottom 85%">
-                                    <div className="row">
-                                        {Array.isArray(relatedService?.website_des) &&
-                                            relatedService.website_des.map((paragraph: string, index: number) => (
-                                                <p key={index} style={{ textAlign: "justify" }}>{paragraph}</p>
-                                            ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {Array.isArray(relatedService?.website_des) &&
+                            relatedService.website_des.map((paragraph: string, index: number) => (
+                                <p key={index} style={{ textAlign: "justify" }}>
+                                    {paragraph}
+                                </p>
+                            ))}
                     </div>
                 </div>
+            </div>
+        </div>
+
+    </div>
+</div>
             </section>
 
             {/* ========== Leverage (alternating) ========== */}
@@ -312,14 +315,14 @@ export default function ServiceCategory() {
                                             dangerouslySetInnerHTML={{ __html: relatedService?.expertise_title || "" }}
                                         />
                                     </div>
-{Array.isArray(relatedService?.expertise_des) &&
-    relatedService.expertise_des.map((paragraph: string, index: number) => (
-        <p
-            key={index}
-            style={{ textAlign: "center", marginBottom: "3px" }}
-            dangerouslySetInnerHTML={{ __html: paragraph }}
-        />
-    ))}
+                                    {Array.isArray(relatedService?.expertise_des) &&
+                                        relatedService.expertise_des.map((paragraph: string, index: number) => (
+                                            <p
+                                                key={index}
+                                                style={{ textAlign: "center", marginBottom: "3px" }}
+                                                dangerouslySetInnerHTML={{ __html: paragraph }}
+                                            />
+                                        ))}
                                 </div>
                             </div>
                         </div>

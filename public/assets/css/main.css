@@ -27385,3 +27385,21 @@ p.text-margin {
     /* border-color: #0098C6; */
     transform: translateY(-5px);
 }
+
+@media (min-width: 1200px) {
+    .tp-website-sticky-row {
+        align-items: stretch;
+    }
+
+    .tp-website-sticky-image {
+        position: sticky;
+        top: 120px;
+        align-self: flex-start;
+    }
+
+    .tp-website-sticky-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
